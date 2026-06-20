@@ -130,14 +130,6 @@ export default async function ItemsCategoryPage({
             <p className={styles.visitText}>
               8500 Torbram Rd #59, Brampton, ON L6T 5C6 · Open Daily: 10:00 AM - 01:00 AM
             </p>
-            <a
-              href="https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.visitBtn}
-            >
-              📍 Get Directions
-            </a>
           </div>
         </div>
       </section>

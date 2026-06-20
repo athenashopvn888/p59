@@ -32,7 +32,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Beyond Flower — Edibles, Vapes, Concentrates & More",
-        body: "PLANETS 59 is more than just a flower shop. We carry a comprehensive selection of cannabis edibles (gummies, chocolates, baked goods), vape pens and disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, magic mushrooms, native cigarettes, rolling papers, and accessories. Our live digital menu at planets59.com updates in real time so you always know exactly what's in stock before you make the trip.",
+        body: "PLANETS 59 is more than just a flower shop. We carry a comprehensive selection of cannabis edibles (gummies, chocolates, baked goods), vape pens and disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, native cigarettes, rolling papers, and accessories. Our live digital menu at planets59.com updates in real time so you always know exactly what's in stock before you make the trip.",
       },
       {
         heading: "Open Daily: 10:00 AM - 01:00 AM on Torbram Rd & Steeles Ave E",
@@ -50,7 +50,7 @@ export const SEO_PAGES: SeoPageData[] = [
     faqs: [
       { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6 — in the heart of Torbram Rd & Steeles Ave E area — one of Brampton's most accessible areas. We're near major transit bus routes and close to major highways." },
       { q: "What are the hours for PLANETS 59?", a: "We are open daily from 10:00 AM to 01:00 AM. Walk in anytime — no appointment needed. Whether it's day or night, our staff is here to help." },
-      { q: "What cannabis products does PLANETS 59 carry?", a: "We carry 200+ strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles, vapes, concentrates, pre-rolls, magic mushrooms, native cigarettes, and accessories. Our menu updates in real time online." },
+      { q: "What cannabis products does PLANETS 59 carry?", a: "We carry 200+ strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles, vapes, concentrates, pre-rolls, native cigarettes, and accessories. Our menu updates in real time online." },
       { q: "What is the cheapest weed at PLANETS 59?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. Every tier includes our Buy 2g Get 1g FREE promotion, making our prices even more competitive." },
       { q: "Does PLANETS 59 have a live menu?", a: "Yes! Our online menu at planets59.com updates in real time with current stock, prices, and availability. You can see exactly what we have before you visit." },
       { q: "What makes PLANETS 59 different from other Brampton dispensaries?", a: "Three things set us apart: (1) we are open daily from 10:00 AM to 01:00 AM, (2) our transparent 5-tier pricing system means no confusing markups, and (3) every purchase includes our Buy 2g Get 1g FREE promotion. Plus we carry one of Brampton's largest selections with over 200 strains." },
@@ -158,7 +158,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         heading: "Full Menu — Cannabis, Edibles, Vapes & More",
-        body: "When you make the trip up to Brampton, make it count. PLANETS 59 carries a full selection including 200+ flower strains, edibles, vape pens, disposable vapes, concentrates (shatter, wax, hash, live resin), pre-rolled joints, magic mushrooms, native cigarettes, and accessories. Check our live online menu at planets59.com before you visit to see exactly what's in stock.",
+        body: "When you make the trip up to Brampton, make it count. PLANETS 59 carries a full selection including 200+ flower strains, edibles, vape pens, disposable vapes, concentrates (shatter, wax, hash, live resin), pre-rolled joints, native cigarettes, and accessories. Check our live online menu at planets59.com before you visit to see exactly what's in stock.",
       },
     ],
     faqs: [

@@ -109,20 +109,9 @@ const jsonLd = {
     "closes": "01:00"
   }
 ],
-  sameAs: [
-    "https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6",
-    "https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6",
-  ],
-  hasMap: "https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6",
   areaServed: {
     "@type": "City",
     name: "Brampton",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "15",
-    bestRating: "5",
   },
 };
 

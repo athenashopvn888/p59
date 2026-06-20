@@ -191,14 +191,6 @@ export default function BlogContent() {
             ))}
           </div>
           <div className={styles.reviewsCta}>
-            <a
-              href="https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.reviewsBtn}
-            >
-              📍 See All Reviews on Google
-            </a>
           </div>
         </div>
       </section>

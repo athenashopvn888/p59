@@ -98,7 +98,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
 
   BUDGET: {
     seoTitle: "Budget Cannabis Brampton — Cheap Weed From $3/g",
-    seoIntro: "Cheap weed in Brampton starting at $3/g. PLANETS 59 Budget tier features shreds and value ounces for cost-conscious smokers. Open daily on Brampton St.",
+    seoIntro: "Cheap weed in Brampton starting at $3/g. PLANETS 59 Budget tier features shreds and value ounces for cost-conscious smokers. Check current store hours before visiting PLANETS 59.",
     sections: [
       {
         heading: "Affordable Cannabis Without Compromise",

@@ -44,14 +44,6 @@ export default function ContactPage() {
                 <br />
                 <span className={styles.infoMuted}>Torbram Rd & Steeles Ave E</span>
               </p>
-              <a
-                href="https://maps.google.com/?q=8500+Torbram+Rd+%2359,+Brampton,+ON+L6T+5C6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.infoBtn}
-              >
-                Get Directions →
-              </a>
             </div>
 
             {/* Hours */}
@@ -107,16 +99,6 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
-            <iframe
-              src="https://maps.google.com/maps?q=8500%20Torbram%20Rd%20%2359,+Brampton,+ON+L6T%205C6&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="PLANETS 59 — 8500 Torbram Rd #59, Brampton"
-            ></iframe>
           </div>
         </div>
       </section>
