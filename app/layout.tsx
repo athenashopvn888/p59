@@ -5,11 +5,11 @@ import AgeGate from "./components/AgeGate";
 export const metadata: Metadata = {
   metadataBase: new URL("https://planets59.com"),
   title: {
-    default: "PLANETS 59 — Premium Cannabis Dispensary, Brampton",
+    default: "PLANETS 59 | Brampton Cannabis Dispensary",
     template: "%s | PLANETS 59",
   },
   description:
-    "Shop 200+ premium cannabis strains at PLANETS 59. Exotic, Premium, AAA+, AA & Budget flower from $3/g. Brampton's uplifting dispensary at 8500 Torbram Rd #59. Open Daily: 10:00 AM - 01:00 AM.",
+    "PLANETS 59 is a Brampton cannabis dispensary on Torbram Rd with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 01:00 AM.",
   keywords: [
     "cannabis dispensary Brampton",
     "weed store Brampton",
