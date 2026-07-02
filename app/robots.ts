@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/"],
     },
-    sitemap: "https://planets59.com/sitemap.xml",
+    sitemap: "https://www.planets59.com/sitemap.xml",
   };
 }
