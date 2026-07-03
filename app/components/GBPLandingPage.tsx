@@ -131,6 +131,10 @@ export function GBPLandingPage() {
         <p className={styles.infoBlock}>
           Helpful local reference points include {landmarkList}. Customers also use this page when planning from {nearbyAreaList}.
         </p>
+        <p className={styles.infoText}>
+          For a fuller local overview, read the{" "}
+          <Link href="/blog/planets-59-cannabis-brampton-store-guide">Planets 59 Brampton guide</Link>.
+        </p>
       </section>
 
       {/* Location & NAP Section */}
