@@ -39,7 +39,7 @@ export const STATIC_POSTS: StaticBlogPost[] = [
     meta_description: "Adult 19+ guide to Planets 59 Cannabis around Brampton, with local store-page checks, menu-category context, and safe visit planning.",
     h1: "Planets 59 Cannabis Local Store Guide for Adults 19+",
     excerpt: "Planets 59 Cannabis guide for adults 19+ reviewing store information around Brampton.",
-    author: "Athena SEO Team",
+    author: "The Planets 59 Cannabis Team",
     date: "2026-07-02",
     category: "Store Guide",
     readTime: "4 min",
