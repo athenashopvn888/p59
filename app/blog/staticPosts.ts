@@ -191,17 +191,17 @@ This guide is for adults 19+ who want a simple way to understand Planets 59 Cann
     relatedLinks: [
       {
         title: "Planets 59 Cannabis store page",
-        url: "https://planets59cannabis.ca/weed-dispensary-brampton",
+        url: "https://www.planets59.com/weed-dispensary-brampton",
         description: "Store-specific page for directions, contact details, and visit planning."
       },
       {
         title: "Planets 59 Cannabis homepage",
-        url: "https://planets59cannabis.ca/",
+        url: "https://www.planets59.com/",
         description: "Store-scoped homepage navigation for adults 19+."
       },
       {
         title: "More Planets 59 Cannabis guides",
-        url: "https://planets59cannabis.ca/blog",
+        url: "https://www.planets59.com/blog",
         description: "Store-scoped blog index for future approved guides."
       }
     ],
