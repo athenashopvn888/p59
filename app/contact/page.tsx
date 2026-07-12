@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact PLANETS 59 — Brampton Dispensary",
     description:
-      "8500 Torbram Rd #59, Brampton. We are open daily from 10:00 AM to 01:00 AM. Premium cannabis, always fire.",
+      "8500 Torbram Rd #59, Brampton. We are open daily from 10:00 AM to 01:00 AM. Store info, menu categories, and resources.",
   },
 };
 
@@ -74,16 +74,16 @@ export default function ContactPage() {
                 <br />
                 Just walk in and our staff will
                 <br />
-                help you find the perfect strain.
+                help you compare the current menu.
               </p>
               <div className={styles.featureList}>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  200+ strains in stock
+                  Current menu categories
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  Lab-tested &amp; safe
+                  Current item notes
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>

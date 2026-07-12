@@ -1,5 +1,3 @@
-/* ── Tier-specific SEO content for below-the-fold sections ── */
-
 export interface TierSeoData {
   seoTitle: string;
   seoIntro: string;
@@ -8,111 +6,128 @@ export interface TierSeoData {
 }
 
 export const TIER_SEO: Record<string, TierSeoData> = {
-  EXOTIC: {
-    seoTitle: "Exotic Cannabis Flower Brampton — Ultra-Rare, Top-Shelf Genetics",
-    seoIntro: "Explore the Exotic tier at PLANETS 59 — our most exclusive cannabis flower selection. Hand-picked strains with THC levels up to 39%, stunning bag appeal, and unique terpene profiles you won't find anywhere else in Brampton.",
-    sections: [
+  "EXOTIC": {
+    "seoTitle": "Exotic Cannabis Flower Brampton | PLANETS 59",
+    "seoIntro": "Use the Exotic flower lane at PLANETS 59 to compare higher-shelf listings by current product name, format, weight, posted price, and item notes.",
+    "sections": [
       {
-        heading: "What Makes Exotic Flower Special?",
-        body: "Exotic cannabis flower represents the absolute pinnacle of cannabis cultivation. These strains are grown by elite craft cultivators, hand-trimmed to perfection, and selected for their exceptional terpene profiles, bag appeal, and potency. At PLANETS 59, our Exotic tier features strains with THC levels ranging from 35% to 39% — the highest potency flower available in Brampton.",
+        "heading": "Start With The Exotic Lane",
+        "body": "Exotic flower is easiest to compare when shoppers stay inside the tier first. Open the current Exotic menu, then compare the listed product details before choosing."
       },
       {
-        heading: "Exotic Pricing — $20/g with 3g bundle pricing",
-        body: "Our Exotic flower starts at $20 per gram. With our 3g bundle pricing, you get 3 grams for just $40 — that's $13.33/g. For even better value, our 6g bundle offer gives you 6 grams for $60 — just $10.00/g. 14g is available for $140 ($10/g) and full ounces (28g) for $250 ($8.93/g).",
+        "heading": "Check Current Pricing",
+        "body": "The homepage shows Exotic flower in the $10-$12/g lane. Menu details can change, so confirm the current listing or ask staff before making the trip."
       },
       {
-        heading: "Why Shop Exotic at PLANETS 59?",
-        body: "PLANETS 59 is located at 8500 Torbram Rd #59 in the heart of Brampton's ByWard Market neighbourhood. Our live digital menu is updated in real time, so you can check exactly what Exotic strains are in stock before you visit. Our knowledgeable budtenders can help you find the perfect strain based on your preferred effects, aroma, and potency level.",
-      },
+        "heading": "Torbram Visit Notes",
+        "body": "PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton. Use the store page for address, hours, directions, and menu paths."
+      }
     ],
-    faqs: [
-      { q: "What is Exotic cannabis flower?", a: "Exotic flower is our top-tier cannabis, featuring ultra-rare genetics with THC levels from 35% to 39%. These strains are hand-selected for exceptional bag appeal, unique terpene profiles, and maximum potency." },
-      { q: "How much does Exotic flower cost?", a: "Exotic flower is $20/g. With our 3g bundle pricing, 3g is just $40. 6g bundle pricing gives you 6g for $60. 14g is $140 and 28g is $250." },
-      { q: "What strains are available in the Exotic tier?", a: "Our Exotic selection rotates frequently. Check our live online menu for the current strains in stock — it updates in real time." },
-      { q: "Is Exotic worth the price?", a: "If you value the highest potency, rarest genetics, and best bag appeal, Exotic is absolutely worth it. Our bundle pricing brings the per-gram price down significantly — as low as $8.93/g for an ounce." },
-    ],
+    "faqs": [
+      {
+        "q": "How should shoppers compare Exotic flower?",
+        "a": "Open the Exotic tier and compare current product name, format, weight, price, and item notes."
+      },
+      {
+        "q": "Are Exotic prices always the same?",
+        "a": "No. Use the current menu or staff for details that can change."
+      }
+    ]
   },
-
-  PREMIUM: {
-    seoTitle: "Premium Cannabis Flower Brampton — Hand-Picked Connoisseur Grade",
-    seoIntro: "Shop Premium cannabis flower at PLANETS 59, Brampton. Connoisseur-grade strains with THC 32-34%, exceptional flavour, and smooth smoke. Starting at $15/g.",
-    sections: [
+  "PREMIUM": {
+    "seoTitle": "Premium Cannabis Flower Brampton | PLANETS 59",
+    "seoIntro": "Use the Premium flower lane at PLANETS 59 for shoppers comparing quality and value without jumping across every category.",
+    "sections": [
       {
-        heading: "What is Premium Cannabis Flower?",
-        body: "Premium flower sits just below Exotic in our quality hierarchy. These are connoisseur-grade strains with THC levels between 32% and 34%, offering exceptional flavour, smooth smoke, and consistent potency. Premium is the sweet spot for cannabis enthusiasts who want top-quality flower without the Exotic price tag.",
+        "heading": "Premium Flower In Its Own Lane",
+        "body": "Premium flower should be compared inside the Premium tier first. That keeps the visit focused and avoids mixing flower decisions with edibles, vapes, or concentrates."
       },
       {
-        heading: "Premium Pricing — $15/g with Bundle Pricing",
-        body: "Premium flower starts at $15 per gram. Our 3g bundle pricing gets you 3 grams for $30 ($10/g). The 6g bundle offer delivers 6 grams for just $45 ($7.50/g). 14g is available for $100 ($7.14/g) and 28g for $180 ($6.43/g).",
-      },
-      {
-        heading: "Best Value in ByWard Market",
-        body: "At PLANETS 59 on Brampton St, our Premium tier offers the best quality-to-price ratio in the neighbourhood. Every strain in this tier has been personally vetted by our team for potency, flavour, and bag appeal.",
-      },
+        "heading": "Use Current Menu Details",
+        "body": "The homepage shows Premium flower in the $7-$10/g lane. Confirm current names, prices, formats, and availability on the menu or with staff."
+      }
     ],
-    faqs: [
-      { q: "What is Premium cannabis flower?", a: "Premium is our connoisseur-grade tier featuring strains with THC 32-34%. Hand-picked for exceptional flavour, smooth smoke, and consistent quality." },
-      { q: "How much does Premium flower cost?", a: "Premium starts at $15/g. 3g bundle pricing = $30/3g. 6g bundle pricing = $45/6g. 14g = $100. 28g = $180." },
-      { q: "What's the difference between Exotic and Premium?", a: "Exotic features ultra-rare genetics with THC 35-39%, while Premium offers excellent connoisseur-grade strains at THC 32-34% — still top-shelf, but at a lower price point." },
-    ],
+    "faqs": [
+      {
+        "q": "Where should Premium shoppers start?",
+        "a": "Start with the Premium tier page, then compare the current listings."
+      },
+      {
+        "q": "Can menu details change?",
+        "a": "Yes. Product names, prices, and availability can move."
+      }
+    ]
   },
-
   "AAA+": {
-    seoTitle: "AAA+ Cannabis Flower Brampton — Heavy Hitters at Great Prices",
-    seoIntro: "Shop AAA+ cannabis flower at PLANETS 59, Brampton. Strong, reliable strains with THC 30-32% starting at just $10/g. The best value for experienced smokers.",
-    sections: [
+    "seoTitle": "AAA+ Cannabis Flower Brampton | PLANETS 59",
+    "seoIntro": "Use the AAA+ lane at PLANETS 59 for a middle flower tier with clear current-menu comparison.",
+    "sections": [
       {
-        heading: "What is AAA+ Cannabis Flower?",
-        body: "AAA+ is where potency meets value. These heavy-hitting strains deliver THC levels from 30% to 32%, making them perfect for daily smokers who want solid potency without paying the premium markup. AAA+ flower at PLANETS 59 is sourced from trusted Canadian craft growers.",
+        "heading": "Compare AAA+ Clearly",
+        "body": "AAA+ works best as its own comparison lane. Open the tier, read the current product details, and ask staff when a close call needs a current answer."
       },
       {
-        heading: "AAA+ Pricing — $10/g with Bundle Pricing",
-        body: "AAA+ flower starts at just $10 per gram. Our 3g bundle pricing delivers 3 grams for $20 ($6.67/g). The 6g bundle offer gives you 6 grams for $30 — just $5.00/g. 14g is $60 ($4.29/g) and full ounces (28g) start at $100 ($3.57/g).",
+        "heading": "Check The Posted Lane",
+        "body": "The homepage shows AAA+ flower in the $5-$6/g lane. Confirm the current item page before choosing."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What should shoppers compare in AAA+?",
+        "a": "Compare current product name, format, weight, posted price, and notes."
       },
-    ],
-    faqs: [
-      { q: "What is AAA+ cannabis flower?", a: "AAA+ is our value-potency tier featuring strains with THC 30-32%. Heavy hitters with proven genetics at unbeatable prices." },
-      { q: "How much does AAA+ flower cost?", a: "AAA+ starts at $10/g. 3g bundle pricing = $20/3g. 6g bundle pricing = $30/6g. 14g = $60. 28g from $100." },
-      { q: "Is AAA+ good quality?", a: "Absolutely. AAA+ strains deliver THC 30-32% with excellent potency and smoke quality. They're the best value-to-potency ratio in our lineup." },
-    ],
+      {
+        "q": "Should shoppers use old examples?",
+        "a": "No. Use the current menu for details that change."
+      }
+    ]
   },
-
-  AA: {
-    seoTitle: "AA Cannabis Flower Brampton — Quality Daily Drivers",
-    seoIntro: "Shop AA cannabis flower at PLANETS 59, Brampton. Solid everyday strains with THC 27-29% at just $5/g. Perfect for regular smokers on a budget.",
-    sections: [
+  "AA": {
+    "seoTitle": "AA Cannabis Flower Brampton | PLANETS 59",
+    "seoIntro": "Use the AA flower lane at PLANETS 59 for straightforward value-minded flower comparison.",
+    "sections": [
       {
-        heading: "What is AA Cannabis Flower?",
-        body: "AA flower is designed for the everyday smoker. These quality daily drivers deliver consistent THC levels between 27% and 29%, providing reliable effects at an affordable price. AA is perfect for regular smokers who want quality without overspending.",
+        "heading": "AA Is A Value Lane",
+        "body": "AA flower gives value-minded shoppers a clean place to start before moving into other tiers. Compare the current item notes and price before choosing."
       },
       {
-        heading: "AA Pricing — $5/g, 5g bundle for $20",
-        body: "AA flower is just $5 per gram. Our 5g bundle for $20 gives you 5 grams total ($4.00/g). 14g is available for $50 ($3.57/g) and 28g for $90 ($3.21/g). Great value for daily use.",
+        "heading": "Confirm The Current Listing",
+        "body": "The homepage shows AA flower in the $4/g lane. Current products and package details can change."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Where should value flower shoppers start?",
+        "a": "AA and Budget are practical first stops for value-minded flower shopping."
       },
-    ],
-    faqs: [
-      { q: "What is AA cannabis flower?", a: "AA is our everyday-value tier with strains at THC 27-29%. Reliable quality at an affordable price point." },
-      { q: "How much does AA flower cost?", a: "AA starts at $5/g. 5g bundle = $20/5g ($4.00/g). 14g = $50. 28g = $90." },
-    ],
+      {
+        "q": "Are details fixed?",
+        "a": "No. Confirm current menu details before visiting."
+      }
+    ]
   },
-
-  BUDGET: {
-    seoTitle: "Budget Cannabis Brampton — Cheap Weed From $3/g",
-    seoIntro: "Cheap weed in Brampton starting at $3/g. PLANETS 59 Budget tier features shreds and value ounces for cost-conscious smokers. Check current store hours before visiting PLANETS 59.",
-    sections: [
+  "BUDGET": {
+    "seoTitle": "Budget Cannabis Brampton | Cheap Weed at PLANETS 59",
+    "seoIntro": "Use the Budget lane at PLANETS 59 when cheap weed or affordable flower is the goal.",
+    "sections": [
       {
-        heading: "Affordable Cannabis Without Compromise",
-        body: "Our Budget tier proves that affordable cannabis doesn't mean low quality. With THC levels from 24% to 27%, these value strains deliver solid effects at rock-bottom prices. Whether you're looking for shreds or value ounces, PLANETS 59 has the cheapest weed in Brampton's ByWard Market neighbourhood.",
+        "heading": "Start With Budget",
+        "body": "Budget flower is the cleanest first stop for shoppers focused on low spend. Compare the current product name, format, size, and item notes."
       },
       {
-        heading: "Budget Pricing — From $3/g, OZs from $40",
-        body: "Budget flower starts at just $3 per gram. Value ounces start from $40 — some of the best prices you'll find in Brampton. Our 3g bundle pricing applies here too, giving you even more savings.",
+        "heading": "Check Current Value Details",
+        "body": "The homepage shows Budget flower from $3/g. Value ounces or other formats should be confirmed on the current menu or with staff."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the first value lane?",
+        "a": "Start with Budget, then compare AA if you want another value-minded tier."
       },
-    ],
-    faqs: [
-      { q: "What is the cheapest weed at PLANETS 59?", a: "Our Budget tier starts at $3/g with value ounces from $40. These are quality strains at the lowest possible price." },
-      { q: "Is budget flower still good quality?", a: "Yes! Budget strains still deliver THC 24-27%. They're perfect for daily smokers who want value without sacrificing potency." },
-      { q: "Do you have shreds?", a: "Yes, our Budget tier includes shredded flower options — great for rolling and value pricing." },
-    ],
-  },
+      {
+        "q": "Where can shoppers confirm current prices?",
+        "a": "Use the current menu or ask staff before making the trip."
+      }
+    ]
+  }
 };

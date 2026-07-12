@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/blog", destination: "/resources", permanent: true },
+      { source: "/blog/:path*", destination: "/resources", permanent: true },
+      { source: "/games", destination: "/resources", permanent: true },
+      { source: "/games/:path*", destination: "/resources", permanent: true },
       { source: "/edibles", destination: "/items/edibles", permanent: true },
       { source: "/vapes", destination: "/items/vapes", permanent: true },
       { source: "/vape-disposables", destination: "/items/vape-disposables", permanent: true },
@@ -18,6 +22,10 @@ const nextConfig: NextConfig = {
       { source: "/add-ons", destination: "/items/add-ons", permanent: true },
       { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
       { source: "/magic", destination: "/items/magic", permanent: true },
+      { source: "/info/york-weed-dispensary", destination: "/info/brampton-weed-dispensary", permanent: true },
+      { source: "/info/cheap-weed-york", destination: "/info/cheap-weed-brampton", permanent: true },
+      { source: "/info/native-cigarettes-york", destination: "/info/native-cigarettes-brampton", permanent: true },
+      { source: "/info/dispensary-near-me-york", destination: "/info/dispensary-near-me-brampton", permanent: true },
     ];
   },
 };

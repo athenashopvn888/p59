@@ -48,27 +48,13 @@ export function getStrainData(
       ? SATIVA_EFFECTS
       : HYBRID_EFFECTS;
 
-  const description = `${name} is a ${tierDesc} ${typeLabel} strain${
-    thc ? ` testing at ${thc} THC` : ""
-  }. Known for its ${effects
-    .map((e) => e.label.toLowerCase())
-    .join(", ")} effects, this ${typeLabel.toLowerCase()} delivers ${
-    type === "indica"
-      ? "deep body relaxation and a heavy, sedating high perfect for unwinding after a long day"
-      : type === "sativa"
-      ? "an uplifting cerebral buzz and creative energy ideal for daytime use"
-      : "a balanced experience combining physical relaxation with mental clarity"
-  }. Available in-store at PLANETS 59, Brampton.`;
+  const description = `${name} is listed as a ${tierDesc} ${typeLabel} strain${
+    thc ? ` with ${thc} THC shown in the current menu data` : ""
+  }. Use the item page to compare current format, weight, posted price, and notes before choosing. Available in-store at PLANETS 59, Brampton.`;
 
   const metaDescription = `${name} - ${tierDesc} ${typeLabel}${
-    thc ? ` at ${thc} THC` : ""
-  }. ${
-    type === "indica"
-      ? "Relaxing body high."
-      : type === "sativa"
-      ? "Uplifting cerebral buzz."
-      : "Balanced hybrid effects."
-  } Walk-in welcome at PLANETS 59 Brampton. Real-time stock.`;
+    thc ? ` with ${thc} THC shown` : ""
+  }. Compare current menu details at PLANETS 59 in Brampton before visiting.`;
 
   return { effects, description, metaDescription };
 }

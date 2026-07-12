@@ -6,27 +6,18 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.grid}>
-          {/* Column 1 — Store Description */}
           <div className={styles.col}>
-            <div className={styles.brand}>
-              PLANETS 59
-            </div>
+            <div className={styles.brand}>PLANETS 59</div>
             <p className={styles.desc}>
-              Your Local Cannabis Dispensary At 8500 Torbram Rd #59, Brampton. Visit
-              PLANETS 59 For Premium Flower, Edibles, Vapes &amp; More.
-              Open: Open Daily: 10:00 AM - 01:00 AM.
+              Your local cannabis dispensary at 8500 Torbram Rd #59, Brampton. Visit
+              PLANETS 59 for flower, edibles, vapes, pre-rolls, cigarettes, and menu resources.
+              Open Daily: 10:00 AM - 01:00 AM.
             </p>
             <div className={styles.buttons}>
-              <a
-                href="tel:+14163007806"
-                className={styles.btnPrimary}
-              >
-                Call Now
-              </a>
+              <Link href="/resources" className={styles.btnPrimary}>Open Resources</Link>
             </div>
           </div>
 
-          {/* Column 2 — Contact Info */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
@@ -37,7 +28,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Phone:</span>
-              <span><a href="tel:+14163007806" style={{color: "inherit"}}>(416) 300-7806</a></span>
+              <span>(416) 300-7806</span>
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
@@ -45,7 +36,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3 — Quick Links */}
           <div className={styles.col}>
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
@@ -58,15 +48,14 @@ export default function Footer() {
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/vapes">Vape Pens</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/blog/planets-59-cannabis-local-visit-guide-2026">Local Visit Guide</Link>
+              <Link href="/resources">Resources</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/delivery">Delivery (Coming Soon)</Link>
-              <Link href="/games">Games Arcade</Link>
-              <Link href="/info/york-weed-dispensary">Brampton Dispensary</Link>
-              <Link href="/info/cheap-weed-york">Cheap Weed Brampton</Link>
-              <Link href="/info/native-cigarettes-york">Native Cigarettes</Link>
-              <Link href="/info/weed-store-near-mississauga">Weed Store Near Mississauga</Link>
+              <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
+              <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
+              <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link>
+              <Link href="/info/weed-store-near-mississauga">Mississauga Visit Notes</Link>
+              <Link href="/info/dispensary-near-me-brampton">Dispensary Near Me Brampton</Link>
               <Link href="/weed-dispensary-brampton/">PLANETS 59 Weed Dispensary in Brampton</Link>
               <Link href="/contact">Contact Us</Link>
             </nav>
@@ -74,10 +63,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>
-            © {new Date().getFullYear()} PLANETS 59. Must be 19+ to
-            enter. Please consume responsibly.
-          </p>
+          <p>(c) {new Date().getFullYear()} PLANETS 59. Must be 19+ to enter. Please consume responsibly.</p>
         </div>
       </div>
     </footer>

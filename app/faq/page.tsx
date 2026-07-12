@@ -26,12 +26,12 @@ const FAQ_CATEGORIES = [
   {
     title: "🌿 Products & Menu",
     faqs: [
-      { q: "What products do you carry?", a: "We carry over 200 strains of cannabis flower across 5 quality tiers (Exotic, Premium, AAA+, AA, Budget), plus edibles (gummies, chocolates, baked goods), vape pens, disposable vapes, concentrates (shatter, wax, hash, diamonds, live resin), pre-rolled joints, native cigarettes, and accessories." },
+      { q: "What products do you carry?", a: "We list cannabis flower tiers plus edibles, vape pens, disposable vapes, concentrates, pre-rolls, Native cigarettes, accessories, and resources. Use the current menu for products and availability." },
       { q: "Do you have a live menu?", a: "Yes! Our online menu at planets59.com updates in real time with current stock, prices, THC levels, and availability. You can check what's in stock before you visit." },
       { q: "What are your flower tiers?", a: "Exotic ($10-$12/g, THC 35-39%) — ultra-rare top-shelf genetics. Premium ($7-$10/g, THC 32-34%) — connoisseur-grade. AAA+ ($5-$6/g, THC 30-32%) — heavy hitters, our most popular tier. AA ($4/g, THC 27-29%) — quality daily drivers. Budget ($3/g, THC 24-27%) — reliable value flower." },
       { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our live menu for current availability." },
       { q: "Do you sell vapes?", a: "Yes — both disposable vapes and refillable vape pens. We carry both nicotine vapes and THC vapes from top brands." },
-      { q: "Do you sell native cigarettes?", a: "Yes! We carry one of the widest selections of native cigarettes in downtown Brampton, including premium and value brands in multiple varieties." },
+      { q: "Do you sell native cigarettes?", a: "The current cigarette menu lists Native smoke brands including Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights, with $25/carton pricing where listed. Confirm current options before visiting." },
     ],
   },
   {
@@ -113,7 +113,7 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Call us at <strong>(416) 300-7806</strong> or visit us at 8500 Torbram Rd #59, Brampton.
+              Use the current menu for live product details, or visit us at 8500 Torbram Rd #59, Brampton during listed hours.
             </p>
           </div>
         </div>

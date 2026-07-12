@@ -10,6 +10,7 @@
   color: #f8fafc;
   font-family: 'Outfit', system-ui, sans-serif;
   overflow-x: hidden;
+  padding-top: 92px;
   padding-bottom: 60px;
 }
 
@@ -17,7 +18,7 @@
 .hero {
   position: relative;
   width: 100%;
-  padding: 40px 24px 80px;
+  padding: 32px 24px 74px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,21 +30,23 @@
 .welcomeBannerSection {
   width: 100%;
   overflow: hidden;
-  margin-top: 92px;
   background-color: #020617;
 }
 
 .welcomeBannerContainer {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 24px 24px 0;
+  padding: 28px 24px 0;
 }
 
 .welcomeBannerImg {
   width: 100%;
-  height: auto;
+  height: clamp(180px, 18vw, 250px);
+  object-fit: cover;
+  object-position: center top;
   display: block;
-  border-radius: var(--radius-lg, 16px);
+  border-radius: 14px;
+  border: 1px solid rgba(57, 255, 20, 0.28);
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
 }
 
@@ -83,17 +86,26 @@
   position: relative;
   z-index: 3;
   width: 100%;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(560px, 1.22fr);
+  align-items: stretch;
+  gap: 34px;
+  text-align: left;
 }
 
 /* Branding block */
 .brandBlock {
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: left;
+  margin-bottom: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(57, 255, 20, 0.14);
+  border-radius: 14px;
+  background: rgba(8, 13, 28, 0.7);
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.24);
   animation: fadeDown 0.8s ease;
 }
 
@@ -105,7 +117,7 @@
 }
 
 .brandTitle {
-  font-size: clamp(32px, 5.5vw, 62px);
+  font-size: clamp(42px, 5vw, 74px);
   font-weight: 900;
   color: white;
   line-height: 1.05;
@@ -115,7 +127,7 @@
 }
 
 .brandSub {
-  font-size: clamp(16px, 2.5vw, 22px);
+  font-size: clamp(18px, 2vw, 24px);
   color: #94a3b8;
   font-style: italic;
   font-weight: 600;
@@ -138,18 +150,18 @@
 /* Bento Mosaic Grid */
 .bentoGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 160px;
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 136px;
+  gap: 12px;
   width: 100%;
-  max-width: 960px;
-  margin-bottom: 30px;
+  max-width: none;
+  margin-bottom: 0;
   animation: fadeUp 0.8s ease 0.2s both;
 }
 
 .bentoTile {
   position: relative;
-  border-radius: 20px;
+  border-radius: 14px;
   overflow: hidden;
   text-decoration: none;
   color: #fff;
@@ -188,7 +200,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,14 +210,14 @@
 
 .bentoLabel {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 21px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
 .bentoExotic .bentoLabel {
-  font-size: 30px;
+  font-size: 21px;
 }
 
 .bentoPrice {
@@ -220,17 +232,21 @@
 
 /* Layout spans */
 .bentoExotic {
-  grid-column: span 2;
-  grid-row: span 2;
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .bentoPremium {
-  grid-row: span 2;
+  grid-row: auto;
 }
 
 .bentoEdibles {
-  grid-column: 1 / -1;
+  grid-column: auto;
   grid-row: span 1;
+}
+
+.bentoEdibles .bentoLabel {
+  font-size: 18px;
 }
 
 /* ── EXPLORE CATEGORIES ── */
@@ -376,6 +392,10 @@
 }
 
 @media (max-width: 600px) {
+  .main {
+    padding-top: 72px;
+  }
+
   .scrollItem {
     flex: 0 0 240px;
   }
@@ -837,6 +857,20 @@
 
 /* ── RESPONSIVE MEDIA QUERIES ── */
 @media (max-width: 1024px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .brandBlock {
+    text-align: center;
+  }
+
+  .welcomeBannerImg {
+    height: auto;
+  }
+
   .categoriesGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -932,3 +966,44 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+/* Store identity and resources */
+.identitySection {
+  padding: 72px 0;
+  background: linear-gradient(180deg, #07071f, #0a1324);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(251, 191, 36, 0.16);
+}
+
+.identityGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.identityIntro,
+.identityCard {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.58);
+  color: #f8fafc;
+}
+
+.identityIntro { padding: 28px; border-left: 4px solid #38bdf8; }
+.identityCard { padding: 22px; display: grid; gap: 10px; }
+.identityTag { margin: 0 0 10px; color: #fbbf24; font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; }
+.identityTitle { margin: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.08; letter-spacing: 0; }
+.identityText,
+.identityCard p { margin: 0; color: #cbd5e1; line-height: 1.7; }
+.identityCard span { color: #ffffff; font-weight: 900; font-size: 16px; }
+.resourceBand { padding: 58px 0; background: #0b1020; }
+.resourceBandInner { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px; align-items: center; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; padding: 28px; background: rgba(255,255,255,0.04); }
+.resourceBand h2 { margin: 0 0 10px; color: #fff; font-size: clamp(24px, 4vw, 36px); letter-spacing: 0; }
+.resourceBand p { margin: 0; color: #cbd5e1; line-height: 1.7; }
+.resourceActions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.resourceActions a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 16px; border-radius: 8px; color: #07111f; background: #fbbf24; font-weight: 900; text-decoration: none; }
+.resourceActions a + a { color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid #38bdf8; }
+@media (max-width: 980px) { .identityGrid, .resourceBandInner { grid-template-columns: 1fr; } .resourceActions { justify-content: flex-start; } }
+@media (max-width: 560px) { .identitySection, .resourceBand { padding: 42px 0; } .identityIntro, .identityCard, .resourceBandInner { padding: 20px; } .resourceActions a { width: 100%; } }

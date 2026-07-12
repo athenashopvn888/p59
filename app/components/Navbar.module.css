@@ -4,162 +4,302 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.92);
-  backdrop-filter: blur(20px) saturate(1.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.98), rgba(2, 8, 18, 0.96));
+  backdrop-filter: blur(18px) saturate(1.4);
+  border-bottom: 1px solid rgba(57, 255, 20, 0.22);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
 }
 
-/* ── Top bar: logo + open now ── */
 .topBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  gap: 16px;
+  width: min(100% - 32px, 1440px);
+  min-height: 48px;
   margin: 0 auto;
-  padding: 0 20px;
-  height: 52px;
 }
 
 .logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  min-width: 0;
   gap: 10px;
   text-decoration: none;
 }
-.logoImg {
-  width: 52px;
-  height: 52px;
-  border-radius: 6px;
+
+.logoMark {
+  width: 32px;
+  height: 32px;
   object-fit: contain;
-}
-.brand {
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 900;
-  color: white;
-  letter-spacing: 0.02em;
-}
-.fire {
-  display: inline-block;
-  margin: 0 2px;
-  animation: fireFlicker 2s ease-in-out infinite;
-}
-@keyframes fireFlicker {
-  0%, 100% { opacity: 1; filter: brightness(1); }
-  50% { opacity: 0.92; filter: brightness(1.1); }
+  border-radius: 4px;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid rgba(57, 255, 20, 0.22);
 }
 
-.open {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #34d399;
-  background: rgba(52, 211, 153, 0.1);
-  border: 1px solid rgba(52, 211, 153, 0.25);
-  padding: 5px 12px;
-  border-radius: 100px;
+.brandStack {
+  display: grid;
+  min-width: 0;
+  line-height: 1;
+}
+
+.brandName {
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #34d399;
-  box-shadow: 0 0 6px #34d399;
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+
+.brandMeta {
+  margin-top: 3px;
+  color: rgba(185, 246, 202, 0.72);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .topBarRight {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.gamesBtn {
+.topBarRight::-webkit-scrollbar {
+  display: none;
+}
+
+.resourcesBtn,
+.open {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 11px;
-  font-weight: 700;
+  justify-content: center;
+  min-height: 30px;
+  border-radius: 4px;
+  padding: 0 11px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #fbbf24;
-  background: rgba(251, 191, 36, 0.1);
-  border: 1px solid rgba(251, 191, 36, 0.3);
-  padding: 5px 14px;
-  border-radius: 100px;
   white-space: nowrap;
-  text-decoration: none;
-  transition: all 0.25s ease;
-}
-.gamesBtn:hover {
-  background: rgba(251, 191, 36, 0.2);
-  border-color: rgba(251, 191, 36, 0.5);
-  transform: scale(1.04);
-  box-shadow: 0 0 14px rgba(251, 191, 36, 0.2);
 }
 
-/* ── Horizontal scrollable link bar ── */
-.scrollBar {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+.resourcesBtn {
+  color: #07111f;
+  background: #fbbf24;
+  border: 1px solid #fbbf24;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resourcesBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 16px rgba(251, 191, 36, 0.24);
+}
+
+.open {
+  gap: 6px;
+  color: #39ff14;
+  background: rgba(57, 255, 20, 0.08);
+  border: 1px solid rgba(57, 255, 20, 0.24);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #39ff14;
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.85);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.42; }
+}
+
+.primaryTab {
+  display: grid;
+  gap: 2px;
+  flex: 0 0 auto;
+  min-width: 132px;
+  min-height: 36px;
+  padding: 6px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(57, 255, 20, 0.45);
+  border-radius: 4px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.primaryTab:hover {
+  transform: translateY(-1px);
+  background: rgba(57, 255, 20, 0.1);
+  border-color: rgba(57, 255, 20, 0.32);
+}
+
+.primaryTabActive {
+  color: #07110a;
+  background: linear-gradient(135deg, #39ff14, #b9f6ca);
+  border-color: rgba(57, 255, 20, 0.72);
+}
+
+.deliveryTab {
+  border-left-color: rgba(56, 189, 248, 0.55);
+}
+
+.primaryTab span {
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.primaryTab small {
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.primaryTabActive small {
+  color: rgba(7, 17, 10, 0.72);
+}
+
+.menuGrid {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.025);
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-}
-.scrollBar::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  scrollbar-width: none;
 }
 
-.scrollInner {
+.menuGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.menuScroller {
   display: flex;
-  gap: 4px;
-  padding: 8px 20px;
+  align-items: center;
+  gap: 5px;
   min-width: max-content;
-  max-width: 1440px;
+  width: min(100% - 32px, 1440px);
+  min-height: 34px;
   margin: 0 auto;
+  padding: 5px 0;
 }
 
-.pill {
+.trackLabel {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
-  padding: 6px 14px;
-  font-size: 12px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 100px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  flex-shrink: 0;
-}
-.pill:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-.pill:active {
-  transform: scale(0.96);
+  min-height: 24px;
+  padding: 0 8px;
+  color: #39ff14;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-/* ── Active nav pill — green highlight ── */
-.pillActive {
-  color: #fff;
-  background: rgba(45, 106, 79, 0.85);
-  border-color: #2D6A4F;
-  box-shadow: 0 0 12px rgba(45, 106, 79, 0.3);
+.trackDivider {
+  width: 1px;
+  height: 22px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.13);
 }
-.pillActive:hover {
-  background: rgba(45, 106, 79, 0.95);
-  border-color: #40916C;
+
+.trackLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25px;
+  padding: 0 9px;
+  color: rgba(255, 255, 255, 0.72);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.trackLink:hover,
+.trackLinkActive {
+  color: #ffffff;
+  background: rgba(57, 255, 20, 0.12);
+  border-color: rgba(57, 255, 20, 0.24);
+}
+
+@media (max-width: 900px) {
+  .topBar {
+    width: min(100% - 24px, 1440px);
+  }
+
+  .primaryTab {
+    min-width: 132px;
+  }
+
+  .menuScroller {
+    width: min(100% - 24px, 1440px);
+  }
+}
+
+@media (max-width: 560px) {
+  .topBar {
+    min-height: 42px;
+    gap: 10px;
+  }
+
+  .brandName {
+    font-size: 16px;
+  }
+
+  .brandMeta {
+    display: none;
+  }
+
+  .resourcesBtn {
+    display: none;
+  }
+
+  .open {
+    min-height: 26px;
+    padding: 0 9px;
+    font-size: 9px;
+  }
+
+  .primaryTab {
+    display: none;
+  }
+
+  .menuScroller {
+    min-height: 30px;
+    padding: 3px 0;
+  }
+
+  .trackLabel {
+    min-height: 22px;
+    padding: 0 6px;
+    font-size: 9px;
+  }
+
+  .trackLink {
+    min-height: 23px;
+    padding: 0 8px;
+    font-size: 10px;
+  }
 }

@@ -2,6 +2,8 @@
 import Link from "next/link";
 import styles from "./GBPLandingPage.module.css";
 import { gbpLocation } from "../lib/gbp-location";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 // Dictionary mapping category names to their respective paths
 const categoryLinks: { [key: string]: string } = {
@@ -76,7 +78,9 @@ export function GBPLandingPage() {
   }
 
   return (
-    <div className={styles.container}>
+    <>
+      <Navbar />
+      <main className={styles.container}>
       {/* Schema Injection */}
       <script
         type="application/ld+json"
@@ -85,8 +89,11 @@ export function GBPLandingPage() {
 
       {/* Hero Header */}
       <header className={styles.hero}>
+        <img src="/storeFavicon.webp" alt="" className={styles.heroLogo} />
+        <p className={styles.eyebrow}>Torbram #59 Brampton menu stop</p>
         <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
         <p className={styles.heroTagline}>Serving {gbpLocation.city} & Nearby Neighborhoods</p>
+        <p className={styles.heroAddress}>{gbpLocation.address}</p>
       </header>
 
       {/* Call to Actions */}
@@ -94,9 +101,9 @@ export function GBPLandingPage() {
         <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
           View Menu
         </a>
-        <a href={`tel:${gbpLocation.phoneIntl}`} className={`${styles.btn} ${styles.btnSecondary}`}>
-          Call Store
-        </a>
+        <Link href="/resources" className={`${styles.btn} ${styles.btnSecondary}`}>
+          Open Resources
+        </Link>
       </div>
 
       {/* Intro Section */}
@@ -133,7 +140,7 @@ export function GBPLandingPage() {
         </p>
         <p className={styles.infoText}>
           For a fuller local overview, read the{" "}
-          <Link href="/blog/planets-59-cannabis-brampton-store-guide">Planets 59 Brampton guide</Link>.
+          <Link href="/resources">Resources</Link>.
         </p>
       </section>
 
@@ -152,7 +159,7 @@ export function GBPLandingPage() {
             </div>
             <div className={styles.napItem}>
               <span className={styles.napLabel}>Phone</span>
-              <span><a href={`tel:${gbpLocation.phoneIntl}`} style={{ color: "inherit" }}>{gbpLocation.phone}</a></span>
+              <span>{gbpLocation.phone}</span>
             </div>
             <div className={styles.napItem}>
               <span className={styles.napLabel}>Website</span>
@@ -267,6 +274,8 @@ export function GBPLandingPage() {
           )}
         </div>
       </section>
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }

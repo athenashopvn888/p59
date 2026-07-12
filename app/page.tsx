@@ -63,8 +63,8 @@ const EXPLORE_CATEGORIES = [
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp" },
   { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/06_Cigarettes.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
-  { name: "Games Arcade", slug: "games", banner: "/banners/10_Games.webp" },
-];
+  { name: "Resources", slug: "resources", banner: "/banners/01_welcome_to_planets59.webp" },
+]
 
 /* -- Local FAQs for Jane St -- */
 const LOCAL_FAQS = [
@@ -78,7 +78,7 @@ const LOCAL_FAQS = [
   },
   {
     q: "Where is PLANETS 59 located?",
-    a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Visit us in person or call us at (416) 300-7806. Free evening street parking is available.",
+    a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use the current menu and visit in person during listed hours. Free evening street parking is available.",
   },
   {
     q: "What is the cheapest weed at PLANETS 59?",
@@ -228,7 +228,7 @@ export default function HomePage() {
           <div className={styles.brandBlock}>
             <img src="/storeFavicon.webp" alt="PLANETS 59 Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>PLANETS 59</h1>
-            <p className={styles.brandSub}>Premium Cannabis Dispensary</p>
+            <p className={styles.brandSub}>Torbram #59 Brampton Menu Stop</p>
             <div className={styles.brandBadge}>Open Daily: 10:00 AM - 01:00 AM</div>
           </div>
 
@@ -256,12 +256,38 @@ export default function HomePage() {
       </section>
 
       {/* -- EXPLORE CATEGORIES -- */}
+      <section className={styles.identitySection} aria-label="PLANETS 59 local identity">
+        <div className={styles.container}>
+          <div className={styles.identityGrid}>
+            <div className={styles.identityIntro}>
+              <p className={styles.identityTag}>Torbram #59, open late</p>
+              <h2 className={styles.identityTitle}>A Brampton menu stop with its own late-night rhythm.</h2>
+              <p className={styles.identityText}>
+                PLANETS 59 now leans into Torbram and Steeles: clear flower tiers, a sharper category grid, and resources that answer shopping questions without arcade noise.
+              </p>
+            </div>
+            <div className={styles.identityCard}>
+              <span>8500 Torbram Rd #59</span>
+              <p>Local signals stay tied to the Brampton address, listed hours, NAP details, and store page.</p>
+            </div>
+            <div className={styles.identityCard}>
+              <span>Late menu scan</span>
+              <p>Open daily from 10:00 AM to 01:00 AM, with browsing built around quick lane choices.</p>
+            </div>
+            <div className={styles.identityCard}>
+              <span>Resources instead</span>
+              <p>The public nav now points shoppers to guides for flower, value, pre-rolls, and Native smokes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.categoriesSection} id="menu">
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              From custom disposable vapes and concentrates to accessories and cigarettes.
+              Pick the lane that matches the visit, then use the current menu and resources before heading over.
             </p>
           </div>
 
@@ -294,7 +320,7 @@ export default function HomePage() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Featured Strains</h2>
             <p className={styles.sectionSubtitle}>
-              Staff picks and top sellers dynamically updated from our real-time stock sheet.
+              A quick look at flower options from the store menu. Open the item page for current details before choosing.
             </p>
           </div>
 
@@ -312,21 +338,37 @@ export default function HomePage() {
       <section className={styles.seoSection}>
         <div className={styles.container}>
           <div className={styles.seoPanel}>
-            <h2 className={styles.seoPanelTitle}>Torbram Rd & Steeles Ave E's Premier Cannabis Dispensary - Open Daily: 10:00 AM - 01:00 AM</h2>
+            <h2 className={styles.seoPanelTitle}>Torbram #59 Menu Planning, Open Late</h2>
             <p className={styles.seoPanelText}>
-              Welcome to <strong>PLANETS 59</strong>, Brampton's premier cannabis destination at 8500 Torbram Rd #59. We carry an electrifying selection of top-shelf strains - from ultra-rare exotics to solid everyday budget picks.
+              PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 near Steeles Ave E. The redesign keeps those local signals intact while making the shopping path cleaner.
             </p>
             <p className={styles.seoPanelText}>
-              We are open Open Daily: 10:00 AM - 01:00 AM - PLANETS 59 is here to serve you. Our live menu is constantly refreshed with the freshest drops, premium prerolls, artisan edibles, and everything in between. Whether you're winding down or stocking up for the weekend, our knowledgeable staff can help during listed store hours.
+              Start with the lane that matches the visit: Exotic, Premium, AAA+, AA, Budget, pre-rolls, edibles, vapes, concentrates, accessories, cigarettes, or Resources.
             </p>
             <p className={styles.seoPanelText}>
-              Searching for a cannabis dispensary in Brampton or the surrounding area? PLANETS 59 is your go-to destination for premium flower, potent prerolls, and artisan edibles. Our six-tier pricing system means quality cannabis at every budget level - starting from just $3/g.
+              Menus can change, so use the current category pages and staff for product names, prices, and availability. Resources give shoppers the method without pretending every detail is frozen in place.
             </p>
           </div>
         </div>
       </section>
 
       {/* -- CLIENT-SIDE GOOGLE REVIEWS SHOWCASE -- */}
+      <section className={styles.resourceBand} aria-label="PLANETS 59 resources">
+        <div className={styles.container}>
+          <div className={styles.resourceBandInner}>
+            <div>
+              <p className={styles.identityTag}>Resource Centre</p>
+              <h2>Guides for the Torbram menu lanes.</h2>
+              <p>Resources now cover flower tiers, value shopping, pre-rolls, and Native smokes brand notes without pulling shoppers away from the store path.</p>
+            </div>
+            <div className={styles.resourceActions}>
+              <Link href="/resources">Open Resources</Link>
+              <Link href="/resources/native-smokes">Native Smokes</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className={styles.reviewsSection}>
         <div className={styles.container}>
           <div className={styles.reviewsHeader}>
