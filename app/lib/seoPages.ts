@@ -22,7 +22,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "sections": [
       {
         "heading": "Shop PLANETS 59 With A Plan",
-        "body": "PLANETS 59 helps adult shoppers compare the menu without turning the visit into a maze. Start with the store page, then choose the category that matches the visit: flower, pre-rolls, edibles, vapes, concentrates, accessories, or cigarettes where listed."
+        "body": "PLANETS 59 helps adult shoppers compare the menu without overcomplicating the visit. Start with the store page, then choose the category that matches the visit: flower, pre-rolls, edibles, vapes, concentrates, accessories, or cigarettes where listed."
       },
       {
         "heading": "Local Menu Notes For Torbram and Steeles / Brampton",
@@ -66,7 +66,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "heading": "Know When To Move Up",
-        "body": "If Budget or AA does not fit the visit, compare AAA+, Premium, or Exotic flower next. A better tier decision starts with the lane, not random scrolling."
+        "body": "If Budget or AA does not fit the visit, compare AAA+, Premium, or Exotic flower next. A better tier choice starts with the category, then the current product details."
       }
     ],
     "faqs": [
@@ -134,7 +134,7 @@ export const SEO_PAGES: SeoPageData[] = [
         "body": "Open the PLANETS 59 store page first. Confirm directions, listed hours, and the menu path before visiting."
       },
       {
-        "heading": "Choose The Product Lane",
+        "heading": "Choose The Product Category",
         "body": "Flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and accessories all shop differently. Pick the category first, then compare current product details."
       },
       {

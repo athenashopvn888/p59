@@ -287,7 +287,7 @@ export default function HomePage() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Explore Categories</h2>
             <p className={styles.sectionSubtitle}>
-              Pick the lane that matches the visit, then use the current menu and resources before heading over.
+              Choose the category that matches the visit, then use the current menu and resources before heading over.
             </p>
           </div>
 
@@ -358,7 +358,7 @@ export default function HomePage() {
           <div className={styles.resourceBandInner}>
             <div>
               <p className={styles.identityTag}>Resource Centre</p>
-              <h2>Guides for the Torbram menu lanes.</h2>
+              <h2>Guides for the Torbram menu categories.</h2>
               <p>Resources now cover flower tiers, value shopping, pre-rolls, and Native smokes brand notes without pulling shoppers away from the store path.</p>
             </div>
             <div className={styles.resourceActions}>
