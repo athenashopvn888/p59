@@ -28,7 +28,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "seoTitle": "PLANETS 59 Resources | Menu and Shopping Guides",
     "description": "Resource guides for shopping the PLANETS 59 menu in Brampton, including flower, value, pre-rolls, cigarettes, and current-menu checks.",
     "eyebrow": "Resource Centre",
-    "intro": "Use this resource centre to shop PLANETS 59 with less noise. Pick the product lane, compare what matters, then use the current menu or staff for details that can change.",
+    "intro": "Use this resource centre to shop PLANETS 59 with less noise. Choose the product category, compare what matters, then use the current menu or staff for details that can change.",
     "cards": [
       {
         "title": "Menu Guide",
@@ -62,13 +62,13 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "body": "Flower, pre-rolls, edibles, THC vapes, concentrates, accessories, and cigarettes should not all be compared the same way. Start with the category that matches the visit, then compare the current listings inside that lane.",
         "bullets": [
           "Use the store page for address, directions, and listed hours.",
-          "Use category pages to compare the current menu lane.",
+          "Use category pages to compare the current menu category.",
           "Ask staff when one current detail matters."
         ]
       },
       {
         "heading": "Local Notes For Torbram and Steeles / Brampton",
-        "body": "PLANETS 59 serves adult shoppers around Torbram and Steeles / Brampton. This resource section keeps the visit simple: right store, right menu lane, right next step."
+        "body": "PLANETS 59 serves adult shoppers around Torbram and Steeles / Brampton. This resource section keeps the visit simple: right store, right category, right next step."
       }
     ]
   },
@@ -98,7 +98,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     ],
     "sections": [
       {
-        "heading": "Pick The Lane First",
+        "heading": "Choose The Category First",
         "body": "If you want flower, start with flower. If you want pre-rolls, stay in pre-rolls. If the visit is about edibles, vapes, concentrates, or accessories, open that section and compare there first."
       },
       {
