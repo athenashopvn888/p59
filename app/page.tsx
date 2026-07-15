@@ -361,7 +361,7 @@ export default function HomePage() {
               Start with the lane that matches the visit: Exotic, Premium, AAA+, AA, Budget, pre-rolls, edibles, vapes, concentrates, accessories, cigarettes, or Resources.
             </p>
             <p className={styles.seoPanelText}>
-              Menus can change, so use the current category pages and staff for product names, prices, and availability. Resources give shoppers the method without pretending every detail is frozen in place.
+              Use the current category pages and staff for listed product names, prices, and package details. Resources give shoppers a practical way to compare menu sections.
             </p>
           </div>
         </div>

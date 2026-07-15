@@ -103,7 +103,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         "heading": "Check What Is Current",
-        "body": "Use this guide for the shopping method, then use the current menu and staff for details that change. Product names, prices, and availability can move."
+        "body": "Use this guide for the shopping method, then use the current menu and staff for details that change. Product names, prices, and listings can move."
       }
     ]
   },
@@ -267,7 +267,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         "heading": "$25 Carton Notes",
-        "body": "Where the menu lists $25 carton-style Native cigarettes, this resource points shoppers to the cigarette category first. Prices and availability can change, so confirm the current listing or ask staff."
+        "body": "Where the menu lists $25 carton-style Native cigarettes, this resource points shoppers to the cigarette category first. Prices and listings can change, so confirm the current listing or ask staff."
       },
       {
         "heading": "Keep The Visit Simple",

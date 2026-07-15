@@ -44,7 +44,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         "heading": "Use Current Menu Details",
-        "body": "The homepage shows Premium flower in the $7-$10/g lane. Confirm current names, prices, formats, and availability on the menu or with staff."
+        "body": "The homepage shows Premium flower in the $7-$10/g lane. Confirm current names, prices, formats, and listings on the menu or with staff."
       }
     ],
     "faqs": [
@@ -54,7 +54,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         "q": "Can menu details change?",
-        "a": "Yes. Product names, prices, and availability can move."
+        "a": "Yes. Product names, prices, and listings can move."
       }
     ]
   },

@@ -162,7 +162,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     name: "Edibles", slug: "edibles", color: "#f97316", icon: "🍬",
     seoTitle: "Cannabis Edibles Brampton — Gummies, Chocolates & Drinks",
     seoIntro: "Browse edible listings at PLANETS 59 in Brampton. Compare product names, package details, listed details, and current menu information before choosing.",
-    seoDescription: "Use the edibles category to compare current edible listings at PLANETS 59. Product names, package details, prices, and availability can change, so use the current menu or ask staff before visiting.",
+    seoDescription: "Use the edibles category to compare current edible listings at PLANETS 59. Product names, package details, prices, and listings can change, so use the current menu or ask staff before visiting.",
     faqs: [
       { q: "What cannabis edibles do you carry?", a: "Use the current menu to compare edible names, package details, prices, and listing details." },
       { q: "Where can I find item details?", a: "Check the current menu and product package for item-specific details." },
@@ -225,11 +225,11 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   "MAGIC & OTHERS": {
     name: "Magic Stuff", slug: "magic", color: "#64748b", icon: "*",
     seoTitle: "Magic Stuff - Specialty Items",
-    seoIntro: "Browse current menu for available specialty products. Availability may vary by store.",
-    seoDescription: "Current specialty items are listed when they are carried on the menu. Product availability may vary by store and by day. Check the current menu for current selection.",
+    seoIntro: "Browse current menu for listed specialty products. Listings may vary by store.",
+    seoDescription: "Current specialty items are listed when they are carried on the menu. Product listings may vary by store and by day. Check the current menu for current selection.",
     faqs: [
-      { q: "What specialty items are available?", a: "Selection varies by store and by day. Check the current menu for available specialty products." },
-      { q: "Does availability vary by location?", a: "Yes. Specialty item availability may vary by store, so please check the current menu for this location." },
+      { q: "What specialty items are listed?", a: "Selection varies by store and by day. Check the current menu for listed specialty products." },
+      { q: "Do listings vary by location?", a: "Yes. Specialty item listings may vary by store, so please check the current menu for this location." },
     ],
   },
   CIGARETTES: {

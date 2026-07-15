@@ -30,7 +30,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "heading": "What To Check Before Visiting",
-        "body": "Confirm the store page, directions, listed hours, and menu category first. For current products, prices, or availability, use the menu or ask staff."
+        "body": "Confirm the store page, directions, listed hours, and menu category first. For current products, prices, or listings, use the menu or ask staff."
       }
     ],
     "faqs": [
@@ -80,7 +80,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "Where can shoppers confirm current prices?",
-        "a": "Use the current menu or ask staff. A guide should not pretend prices and availability never move."
+        "a": "Use the current menu or ask staff. A guide should not pretend prices and listings never move."
       }
     ]
   },
@@ -112,7 +112,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "Are $25 carton listings always current?",
-        "a": "No. This page points shoppers toward current menu listings where $25 carton-style options are shown. Confirm current price and availability before choosing."
+        "a": "No. This page points shoppers toward current menu listings where $25 carton-style options are shown. Confirm current price and listings before choosing."
       },
       {
         "q": "Where should shoppers start?",
@@ -176,7 +176,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "heading": "Check Current Details",
-        "body": "For product names, prices, and availability, use the current menu or ask staff. This page is for orientation and visit planning."
+        "body": "For product names, prices, and listings, use the current menu or ask staff. This page is for orientation and visit planning."
       }
     ],
     "faqs": [
