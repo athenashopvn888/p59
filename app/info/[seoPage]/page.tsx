@@ -28,7 +28,7 @@ export async function generateMetadata({
     title: page.title,
     description: page.metaDescription,
     alternates: {
-      canonical: `https://planets59.com/info/${slug}`,
+      canonical: `https://www.planets59.com/info/${slug}`,
     },
   };
 }

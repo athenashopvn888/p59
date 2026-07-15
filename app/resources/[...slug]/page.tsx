@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: ResourceRouteProps): Promise<
   const page = getResourcePage(routeSlug(slug));
   if (!page) return {};
   return {
-    title: page.seoTitle,
+    title: { absolute: page.seoTitle },
     description: page.description,
-    alternates: { canonical: "https://planets59.com/resources/" + page.slug },
+    alternates: { canonical: "https://www.planets59.com/resources/" + page.slug },
   };
 }
 

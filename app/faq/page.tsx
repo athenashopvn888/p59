@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Frequently asked questions about PLANETS 59 in Brampton. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
   alternates: {
-    canonical: "https://planets59.com/faq",
+    canonical: "https://www.planets59.com/faq",
   },
 };
 
@@ -27,10 +27,10 @@ const FAQ_CATEGORIES = [
     title: "🌿 Products & Menu",
     faqs: [
       { q: "What products do you carry?", a: "We list cannabis flower tiers plus edibles, vape pens, disposable vapes, concentrates, pre-rolls, Native cigarettes, accessories, and resources. Use the current menu for products and availability." },
-      { q: "Do you have a live menu?", a: "Yes! Our online menu at planets59.com updates in real time with current stock, prices, THC levels, and availability. You can check what's in stock before you visit." },
-      { q: "What are your flower tiers?", a: "Exotic ($10-$12/g, THC 35-39%) — ultra-rare top-shelf genetics. Premium ($7-$10/g, THC 32-34%) — connoisseur-grade. AAA+ ($5-$6/g, THC 30-32%) — heavy hitters, our most popular tier. AA ($4/g, THC 27-29%) — quality daily drivers. Budget ($3/g, THC 24-27%) — reliable value flower." },
-      { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our live menu for current availability." },
-      { q: "Do you sell vapes?", a: "Yes — both disposable vapes and refillable vape pens. We carry both nicotine vapes and THC vapes from top brands." },
+      { q: "Do you have a current menu?", a: "Yes. Our online menu at planets59.com lists current menu items and prices. Check it before visiting because the selection can change." },
+      { q: "What are your flower tiers?", a: "The menu groups flower into Exotic, Premium, AAA+, AA, and Budget tiers. Each tier page shows its current prices and menu items." },
+      { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our current menu for current availability." },
+      { q: "Do you sell vapes?", a: "The menu includes categories for disposable vapes, refillable vape pens, nicotine vapes, and THC vapes. Check the current listings before visiting." },
       { q: "Do you sell native cigarettes?", a: "The current cigarette menu lists Native smoke brands including Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights, with $25/carton pricing where listed. Confirm current options before visiting." },
     ],
   },
@@ -39,7 +39,7 @@ const FAQ_CATEGORIES = [
     faqs: [
       { q: "What is the cheapest weed you sell?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. These are the most competitive prices you'll find in Brampton." },
       { q: "What bundle pricing do you offer?", a: "Flower bundle pricing includes a 3g total option — the 3g total is shown clearly before purchase. Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing, with 6g total pricing." },
-      { q: "Do you have ounce deals?", a: "Yes! Budget ounces from $40, AA ounces from $90, AAA+ ounces from $100. All with freshness and quality guaranteed." },
+      { q: "Do you have ounce options?", a: "The menu lists ounce options and prices when offered. Check the relevant flower tier for current details." },
       { q: "How does bundle pricing work?", a: "The 3g bundle pricing applies to every tier automatically. The 6g bundle pricing applies to Exotic, Premium, and AAA+ tiers. These are our standard everyday bundle offers." },
       { q: "How does the tier pricing work?", a: "Each flower strain is graded into one of five quality tiers. The tier determines the per-gram price. This transparent system means you always know exactly what you're paying — no confusing markups or inconsistent pricing." },
     ],
@@ -48,7 +48,7 @@ const FAQ_CATEGORIES = [
     title: "🛒 Shopping & Experience",
     faqs: [
       { q: "Do I need an appointment?", a: "No! PLANETS 59 is walk-in only. Just show up anytime — we are open daily from 10:00 AM to 01:00 AM." },
-      { q: "Can I order online?", a: "Currently, PLANETS 59 is an in-store shopping experience only. You can browse our live menu online to see what's in stock before visiting." },
+      { q: "Can I order online?", a: "Currently, PLANETS 59 is an in-store shopping experience only. You can browse the current menu online before visiting." },
       { q: "Do you offer delivery?", a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service." },
       { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
       { q: "Can your staff help me choose a strain?", a: "Absolutely! Our knowledgeable budtenders are here to help. Whether you're a first-time buyer or a seasoned connoisseur, we can recommend strains based on your preferences, desired effects, and budget." },

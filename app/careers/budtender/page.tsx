@@ -6,9 +6,9 @@ import BudtenderApplicationForm from "./BudtenderApplicationForm";
 import styles from "./budtender.module.css";
 
 export const metadata: Metadata = {
-  title: "Budtender And Manager Application | PLANETS 59",
+  title: { absolute: "Budtender And Manager Application | PLANETS 59" },
   description: "Apply online for budtender or manager opportunities at PLANETS 59 on Torbram Rd in Brampton.",
-  alternates: { canonical: "https://planets59.com/careers/budtender" },
+  alternates: { canonical: "https://www.planets59.com/careers/budtender" },
 };
 
 export default function BudtenderCareersPage() {

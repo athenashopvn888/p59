@@ -144,7 +144,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "sections": [
       {
         "heading": "Compare Tier, Then Details",
-        "body": "Open the tier, then compare the current product name, format, weight, posted price, and item notes. That gives shoppers a clean decision path."
+        "body": "Open the tier, then compare the current product name, format, weight, posted price, and listing details. That gives shoppers a clean decision path."
       },
       {
         "heading": "Value Does Not Need Guesswork",
@@ -209,7 +209,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "sections": [
       {
         "heading": "Compare Format First",
-        "body": "Check whether the listing is a single, pack, infused option, or another format shown on the menu. Then compare posted notes and price before choosing."
+        "body": "Check whether the listing is a single, pack, infused option, or another format shown on the menu. Then compare listed details and price before choosing."
       },
       {
         "heading": "Keep It Separate",
@@ -244,7 +244,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "sections": [
       {
         "heading": "Brands Listed On The Menu",
-        "body": "The cigarette menu currently lists Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights. Each listed carton is shown at $25/carton in the current menu data. Confirm current options before choosing.",
+        "body": "The cigarette menu currently lists Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights. Each listed carton is shown at $25/carton in the current menu. Confirm current options before choosing.",
         "bullets": [
           "Rolled Gold Full",
           "Rolled Gold Lights",
@@ -281,7 +281,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "seoTitle": "PLANETS 59 Native Cigarettes Guide | Brands and Carton Notes",
     "description": "A shopper-friendly Native cigarettes guide for PLANETS 59, including brand names shown on the menu and $25 carton notes where listed.",
     "eyebrow": "Native Cigarettes Guide",
-    "intro": "If Native cigarettes are part of the stop, start with the cigarette category and compare the current listings. PLANETS 59 currently lists Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights at $25/carton in the cigarette menu data.",
+    "intro": "If Native cigarettes are part of the stop, start with the cigarette category and compare the current listings. PLANETS 59 currently lists Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights at $25/carton in the cigarette menu.",
     "cards": [
       {
         "title": "Cigarette Menu",
@@ -302,7 +302,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "sections": [
       {
         "heading": "Compare The Brand Names",
-        "body": "Look for the brand name first, then compare posted price and any item notes. Current menu brands include Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights.",
+        "body": "Look for the brand name first, then compare posted price and any listing details. Current menu brands include Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights.",
         "bullets": [
           "Rolled Gold Full",
           "Rolled Gold Lights",

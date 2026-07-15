@@ -8,7 +8,7 @@ export interface TierSeoData {
 export const TIER_SEO: Record<string, TierSeoData> = {
   "EXOTIC": {
     "seoTitle": "Exotic Cannabis Flower Brampton | PLANETS 59",
-    "seoIntro": "Use the Exotic flower lane at PLANETS 59 to compare higher-shelf listings by current product name, format, weight, posted price, and item notes.",
+    "seoIntro": "Use the Exotic flower lane at PLANETS 59 to compare higher-shelf listings by current product name, format, weight, posted price, and listing details.",
     "sections": [
       {
         "heading": "Start With The Exotic Lane",
@@ -26,7 +26,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     "faqs": [
       {
         "q": "How should shoppers compare Exotic flower?",
-        "a": "Open the Exotic tier and compare current product name, format, weight, price, and item notes."
+        "a": "Open the Exotic tier and compare current product name, format, weight, price, and listing details."
       },
       {
         "q": "Are Exotic prices always the same?",
@@ -88,7 +88,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     "sections": [
       {
         "heading": "AA Is A Value Lane",
-        "body": "AA flower gives value-minded shoppers a clean place to start before moving into other tiers. Compare the current item notes and price before choosing."
+        "body": "AA flower gives value-minded shoppers a clean place to start before moving into other tiers. Compare the current listing details and price before choosing."
       },
       {
         "heading": "Confirm The Current Listing",
@@ -112,7 +112,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
     "sections": [
       {
         "heading": "Start With Budget",
-        "body": "Budget flower is the cleanest first stop for shoppers focused on low spend. Compare the current product name, format, size, and item notes."
+        "body": "Budget flower is the cleanest first stop for shoppers focused on low spend. Compare the current product name, format, size, and listing details."
       },
       {
         "heading": "Check Current Value Details",

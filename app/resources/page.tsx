@@ -3,9 +3,9 @@ import ResourceView from "./ResourceView";
 import { RESOURCE_HOME } from "./resourceData";
 
 export const metadata: Metadata = {
-  title: RESOURCE_HOME.seoTitle,
+  title: { absolute: RESOURCE_HOME.seoTitle },
   description: RESOURCE_HOME.description,
-  alternates: { canonical: "https://planets59.com/resources" },
+  alternates: { canonical: "https://www.planets59.com/resources" },
 };
 
 export default function ResourcesPage() {

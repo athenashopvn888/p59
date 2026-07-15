@@ -40,7 +40,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "What should I check before visiting PLANETS 59?",
-        "a": "Start with the store page, then use the current menu to compare product names, formats, prices, and item notes."
+        "a": "Start with the store page, then use the current menu to compare product names, formats, prices, and listing details."
       },
       {
         "q": "Does PLANETS 59 carry flower and pre-rolls?",
@@ -62,7 +62,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "heading": "Compare The Current Menu",
-        "body": "Look at product name, format, weight, posted price, and item notes. Menus change, so use this page for the shopping method and the current menu or staff for current details."
+        "body": "Look at product name, format, weight, posted price, and listing details. Menus change, so use this page for the shopping method and the current menu or staff for current details."
       },
       {
         "heading": "Know When To Move Up",
@@ -76,7 +76,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "Does affordable weed mean guessing?",
-        "a": "No. Compare the category, product name, format, size, posted price, and item notes. Ask staff if anything is unclear."
+        "a": "No. Compare the category, product name, format, size, posted price, and listing details. Ask staff if anything is unclear."
       },
       {
         "q": "Where can shoppers confirm current prices?",
@@ -111,7 +111,7 @@ export const SEO_PAGES: SeoPageData[] = [
         "a": "The current cigarette menu lists Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights. Confirm current options before visiting."
       },
       {
-        "q": "Are $25 cartons guaranteed?",
+        "q": "Are $25 carton listings always current?",
         "a": "No. This page points shoppers toward current menu listings where $25 carton-style options are shown. Confirm current price and availability before choosing."
       },
       {
@@ -168,7 +168,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "sections": [
       {
         "heading": "Make The Search Useful",
-        "body": "A near-me search should get you to the right store page, not a wall of generic copy. PLANETS 59 gives shoppers a clear path to the store page, menu categories, and resources."
+        "body": "PLANETS 59 gives nearby Brampton shoppers a clear path to the store page, menu categories, and visit-planning resources."
       },
       {
         "heading": "Compare Categories Naturally",

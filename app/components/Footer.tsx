@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>(c) {new Date().getFullYear()} PLANETS 59. Must be 19+ to enter. Please consume responsibly.</p>
+          <p>(c) {new Date().getFullYear()} PLANETS 59. Must be 19+ to enter. Please follow applicable laws and product labels.</p>
         </div>
       </div>
     </footer>

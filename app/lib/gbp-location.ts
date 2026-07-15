@@ -1,7 +1,6 @@
-// Auto-generated Google Business Profile Local SEO Location Configuration
 export const gbpLocation = {
   storeName: "PLANETS 59",
-  domain: "planets59.com",
+  domain: "www.planets59.com",
   city: "Brampton",
   province: "ON",
   country: "CA",

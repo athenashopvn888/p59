@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Visit PLANETS 59 at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. We are open daily from 10:00 AM to 01:00 AM. Walk-ins welcome.",
   alternates: {
-    canonical: "https://planets59.com/contact",
+    canonical: "https://www.planets59.com/contact",
   },
   openGraph: {
     title: "Contact PLANETS 59 — Brampton Dispensary",
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>
-                  Current item notes
+                  Current listing details
                 </div>
                 <div className={styles.featureItem}>
                   <span className={styles.featureCheck}>✓</span>

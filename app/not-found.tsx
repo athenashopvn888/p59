@@ -38,7 +38,7 @@ export default function NotFound() {
             lineHeight: 1.6,
           }}
         >
-          This page doesn&apos;t exist — but our shelves are fully stocked.
+          This page doesn&apos;t exist, but the current menu is still available.
           Use the menu or resources to get back to PLANETS 59.
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
