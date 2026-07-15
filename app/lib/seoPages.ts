@@ -36,7 +36,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "faqs": [
       {
         "q": "Is PLANETS 59 a cannabis dispensary in Brampton?",
-        "a": "Yes. PLANETS 59 serves shoppers looking for a cannabis dispensary in Brampton. Use the store page for directions, listed hours, and menu paths."
+        "a": "Yes. PLANETS 59 serves shoppers looking for a cannabis dispensary in Brampton. Use the store page for directions and listed hours, then check the current menu for product details."
       },
       {
         "q": "What should I check before visiting PLANETS 59?",
@@ -44,7 +44,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "Does PLANETS 59 carry flower and pre-rolls?",
-        "a": "The site has menu paths for flower tiers and pre-rolls. Check the current menu or ask staff for current details."
+        "a": "Flower tiers and pre-rolls are listed on the current menu. Check the menu or ask staff for current details."
       }
     ]
   },
@@ -116,7 +116,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "Where should shoppers start?",
-        "a": "Open the cigarette category, then use the store page for directions, listed hours, and menu paths."
+        "a": "Open the cigarette category, then use the store page for directions and listed hours."
       }
     ]
   },
@@ -131,7 +131,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "sections": [
       {
         "heading": "Confirm The Right Store Page",
-        "body": "Open the PLANETS 59 store page first. Confirm directions, listed hours, and the menu path before visiting."
+        "body": "Open the PLANETS 59 store page first. Confirm directions, listed hours, and current menu details before visiting."
       },
       {
         "heading": "Choose The Product Category",
@@ -153,7 +153,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "q": "What categories can shoppers compare?",
-        "a": "Use the menu paths for flower, pre-rolls, edibles, vapes, concentrates, accessories, and cigarettes where listed."
+        "a": "Browse flower, pre-rolls, edibles, vapes, concentrates, accessories, and cigarettes where listed, then confirm current details on the menu."
       }
     ]
   },

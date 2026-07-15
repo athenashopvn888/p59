@@ -217,6 +217,21 @@ export default function HomePage() {
         </section>
       )}
 
+      <section className={styles.hiringBannerSection} aria-label="PLANETS 59 hiring">
+        <div className={styles.hiringBanner}>
+          <div className={styles.hiringBannerCopy}>
+            <span className={styles.hiringBannerLabel}>Now Hiring</span>
+            <h2>Budtenders / Managers Wanted At PLANETS 59</h2>
+            <p>
+              Torbram #59 needs reliable people with clean customer energy, steady availability, and the confidence to learn the menu. Online applications only. If we think you may be a good fit, we will contact you.
+            </p>
+          </div>
+          <Link href="/careers/budtender" className={styles.hiringBannerButton}>
+            Apply Online
+          </Link>
+        </div>
+      </section>
+
       {/* -- BENTO MOSAIC HERO -- */}
       <section className={styles.hero}>
         <div className={styles.heroBg} />
@@ -268,7 +283,7 @@ export default function HomePage() {
             </div>
             <div className={styles.identityCard}>
               <span>8500 Torbram Rd #59</span>
-              <p>Local signals stay tied to the Brampton address, listed hours, NAP details, and store page.</p>
+              <p>Store information stays tied to the Brampton address, listed hours, contact details, and store page.</p>
             </div>
             <div className={styles.identityCard}>
               <span>Late menu scan</span>

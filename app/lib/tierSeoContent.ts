@@ -20,7 +20,7 @@ export const TIER_SEO: Record<string, TierSeoData> = {
       },
       {
         "heading": "Torbram Visit Notes",
-        "body": "PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton. Use the store page for address, hours, directions, and menu paths."
+        "body": "PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton. Use the store page for address, hours, directions, and current menu categories."
       }
     ],
     "faqs": [

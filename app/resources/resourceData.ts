@@ -68,7 +68,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       },
       {
         "heading": "Local Notes For Torbram and Steeles / Brampton",
-        "body": "PLANETS 59 serves adult shoppers around Torbram and Steeles / Brampton. This resource section keeps the visit simple: right store, right category, right next step."
+        "body": "PLANETS 59 serves adult shoppers around Torbram and Steeles / Brampton. This resource section keeps the visit simple: confirm the store, choose a category, and check current details."
       }
     ]
   },
@@ -158,7 +158,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "seoTitle": "PLANETS 59 Value Guide | Cheap Weed and Budget Weed",
     "description": "A practical value guide for comparing cheap weed, budget weed, affordable weed, and menu categories at PLANETS 59.",
     "eyebrow": "Value Guide",
-    "intro": "Good value shopping is not just chasing the lowest number. It is choosing the right category, checking the current details, and knowing when Budget, AA, or another lane makes more sense.",
+    "intro": "Good value shopping is not just chasing the lowest number. It is choosing a useful category, checking the current details, and knowing when Budget, AA, or another tier makes more sense.",
     "cards": [
       {
         "title": "Budget Flower",
@@ -238,7 +238,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         "title": "Store Page",
         "href": "/weed-dispensary-brampton",
-        "text": "Use the store page for directions, menu paths, and listed hours."
+        "text": "Use the store page for directions and listed hours, then check the current menu for products."
       }
     ],
     "sections": [
@@ -296,7 +296,7 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         "title": "Store Page",
         "href": "/weed-dispensary-brampton",
-        "text": "Use the store page for directions, menu paths, and listed hours."
+        "text": "Use the store page for directions and listed hours, then check the current menu for products."
       }
     ],
     "sections": [

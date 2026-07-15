@@ -24,6 +24,7 @@ const CATEGORY_LINKS = [
 ];
 
 const GUIDE_LINKS = [
+  { href: "/careers/budtender", label: "Hiring" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -62,6 +63,7 @@ export default function Navbar() {
             <small>Soon</small>
           </Link>
           <Link href="/resources" className={styles.resourcesBtn}>Resources</Link>
+          <Link href="/careers/budtender" className={styles.resourcesBtn}>Hiring</Link>
           <span className={styles.open}>
             <span className={styles.dot}></span>
             Open Now
