@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
@@ -32,9 +33,14 @@ const GUIDE_LINKS = [
 
 export default function Navbar() {
   const pathname = usePathname();
+  const menuGridRef = useRef<HTMLDivElement>(null);
+  const [canAdvance, setCanAdvance] = useState(false);
   const menuLinks = [...FLOWER_LINKS, ...CATEGORY_LINKS];
   const isStoreMenuActive = menuLinks.some((link) => pathname === link.href);
   const isDeliveryActive = pathname === "/delivery";
+  const updateScrollState = useCallback(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; setCanAdvance(menuGrid.scrollWidth - menuGrid.clientWidth - menuGrid.scrollLeft > 2); }, []);
+  useEffect(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; updateScrollState(); menuGrid.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(menuGrid); if (menuGrid.firstElementChild) resizeObserver.observe(menuGrid.firstElementChild); return () => { menuGrid.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
+  const advanceMenuGrid = () => { const menuGrid = menuGridRef.current; if (!menuGrid) return; const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; menuGrid.scrollBy({ left: Math.max(180, menuGrid.clientWidth * 0.75), behavior: reduceMotion ? "auto" : "smooth" }); };
 
   return (
     <nav className={styles.navbar} id="main-nav">
@@ -71,8 +77,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={styles.menuGrid} aria-label="Store menu categories">
-        <div className={styles.menuScroller}>
+      <div className={styles.menuShell}>
+        <div ref={menuGridRef} id="store-menu-scrollbar" className={styles.menuGrid} aria-label="Store menu categories">
+          <div className={styles.menuScroller}>
           <span className={styles.trackLabel}>Flower</span>
           {FLOWER_LINKS.map((link) => (
             <Link
@@ -105,7 +112,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          </div>
         </div>
+        {canAdvance && <button type="button" className={styles.menuAdvance} aria-label="Show more store menu categories" aria-controls="store-menu-scrollbar" onClick={advanceMenuGrid}><span aria-hidden="true">›</span></button>}
       </div>
     </nav>
   );
