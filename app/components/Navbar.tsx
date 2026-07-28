@@ -66,7 +66,7 @@ export default function Navbar() {
             className={`${styles.primaryTab} ${styles.deliveryTab} ${isDeliveryActive ? styles.primaryTabActive : ""}`}
           >
             <span>Delivery Menu</span>
-            <small>Soon</small>
+            <small>Live</small>
           </Link>
           <Link href="/resources" className={styles.resourcesBtn}>Resources</Link>
           <Link href="/careers/budtender" className={styles.resourcesBtn}>Hiring</Link>
