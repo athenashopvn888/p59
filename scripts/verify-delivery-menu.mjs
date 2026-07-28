@@ -7,8 +7,12 @@ const css = await readFile(new URL("../app/delivery/delivery.css", import.meta.u
 const drawer = await readFile(new URL("../app/delivery/ProductDetailsDrawer.tsx", import.meta.url), "utf8");
 const chat = await readFile(new URL("../app/delivery/P59WebChat.tsx", import.meta.url), "utf8");
 const page = await readFile(new URL("../app/delivery/page.tsx", import.meta.url), "utf8");
+const home = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
 const navbar = await readFile(new URL("../app/components/Navbar.tsx", import.meta.url), "utf8");
 const footer = await readFile(new URL("../app/components/Footer.tsx", import.meta.url), "utf8");
+const banner = await readFile(new URL("../app/components/DeliveryBanner.tsx", import.meta.url), "utf8");
+const bannerCss = await readFile(new URL("../app/components/DeliveryBanner.module.css", import.meta.url), "utf8");
+const bannerAsset = await readFile(new URL("../public/delivery/p59-delivery-banner.webp", import.meta.url));
 const faq = await readFile(new URL("../app/faq/page.tsx", import.meta.url), "utf8");
 const nextConfig = await readFile(new URL("../next.config.ts", import.meta.url), "utf8");
 const products = menu.products;
@@ -33,6 +37,11 @@ assert(component.includes('id="how-to-order" tabIndex={-1}') && component.includ
 assert(component.includes('href="/" aria-label="PLANETS 59 home"'));
 assert(chat.includes('"Close chat" : "LIVE ORDER"') && chat.includes('storeId: "P59"'));
 assert(chat.includes("New customer ID verification") && chat.includes("/api/web-chat/id-review"));
+assert(home.includes("<DeliveryBanner />") && component.includes("<DeliveryBanner />"));
+assert(banner.includes('href="/delivery"') && banner.includes("p59-delivery-banner.webp"));
+assert(banner.includes("width={1774}") && banner.includes("height={887}") && banner.includes("sizes="));
+assert(bannerCss.includes("object-fit: contain") && bannerCss.includes(":focus-visible"));
+assert(bannerAsset.length === 352742);
 assert(css.includes("@keyframes p59-live-order-ring") && css.includes("overflow-x: clip"));
 assert(page.includes("hoursAvailable") && page.includes('opens: "10:00"') && page.includes('closes: "22:00"'));
 assert(navbar.includes("<small>Live</small>"));

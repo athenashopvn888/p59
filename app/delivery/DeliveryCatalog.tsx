@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import menu from "./delivery-menu.json";
 import ProductDetailsDrawer from "./ProductDetailsDrawer";
+import DeliveryBanner from "../components/DeliveryBanner";
 
 type PriceOption = { key: string; label: string; price: number };
 type Offer = { kind: "prime_time" | "multi_ounce"; quantity?: number; price?: number; weight?: string; bonus?: string; perUnitPrice?: number; totalPrice?: number; label: string };
@@ -88,6 +89,7 @@ export default function Catalog() {
         <Link className="p59Brand" href="/" aria-label="PLANETS 59 home"><span>P59</span><strong>PLANETS 59<small>Delivery menu</small></strong></Link>
         <nav><a href="#delivery-menu">Menu</a><a href="#how-to-order">How to order</a></nav>
       </header>
+      <DeliveryBanner />
       <section className="p59TermsBanner" aria-labelledby="p59-delivery-terms"><div><p>PLANETS 59 DELIVERY DETAILS</p><h2 id="p59-delivery-terms"><span>$60 PRODUCT MINIMUM</span><span>$10 DELIVERY FEE</span><span>DELIVERY HOURS 10:00 a.m.–10:00 p.m.</span></h2></div><a href="#how-to-order">Read the ordering steps</a></section>
 
       <section className="hero" id="top">
