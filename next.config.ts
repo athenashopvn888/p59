@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "planets59.com" },
       { protocol: "https", hostname: "kennedyloudcannabis.com" },
       { protocol: "https", hostname: "stclaircannabis.com" },
+      { protocol: "https", hostname: "milestone-1-demo.vercel.app" },
     ],
   },
   async redirects() {

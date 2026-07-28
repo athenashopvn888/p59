@@ -1,14 +1,65 @@
 import type { Metadata } from "next";
-import DeliveryContent from "./DeliveryContent";
+import DeliveryCatalog from "./DeliveryCatalog";
+import P59WebChat from "./P59WebChat";
+import menu from "./delivery-menu.json";
 
 export const metadata: Metadata = {
-  title: "Delivery Coming Soon — PLANETS 59 | Brampton",
-  description: "Get notified when PLANETS 59 launches same-day weed delivery across Brampton and surrounding areas.",
+  title: { absolute: "Cannabis Delivery Brampton | PLANETS 59" },
+  description: "Browse the PLANETS 59 flower delivery menu in Brampton and connect with the store dispatcher through LIVE ORDER, daily from 10:00 a.m. to 10:00 p.m.",
   alternates: {
-    canonical: "https://planets59.com/delivery",
+    canonical: "https://www.planets59.com/delivery",
   },
 };
 
 export default function DeliveryPage() {
-  return <DeliveryContent />;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      name: "PLANETS 59 Brampton Delivery Menu",
+      url: "https://www.planets59.com/delivery",
+      mainEntity: {
+        "@type": "ItemList",
+        numberOfItems: menu.products.length,
+        itemListElement: menu.products.map((product, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: product.name,
+        })),
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "PLANETS 59 Cannabis Delivery",
+      serviceType: "Cannabis delivery",
+      url: "https://www.planets59.com/delivery",
+      areaServed: { "@type": "City", name: "Brampton" },
+      hoursAvailable: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "22:00",
+      },
+      offers: {
+        "@type": "Offer",
+        name: "PLANETS 59 delivery fee",
+        price: "10.00",
+        priceCurrency: "CAD",
+        eligibleTransactionVolume: {
+          "@type": "PriceSpecification",
+          name: "Product minimum",
+          minPrice: "60.00",
+          priceCurrency: "CAD",
+        },
+      },
+    },
+  ];
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
+      <DeliveryCatalog />
+      <P59WebChat />
+    </>
+  );
 }

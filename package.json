@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test:staff-photo": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/staff-photo.test.ts"
+    "test:staff-photo": "node --experimental-strip-types --experimental-specifier-resolution=node --test tests/staff-photo.test.ts",
+    "test:web-chat": "node --test tests/web-chat-intake.test.mjs",
+    "verify:delivery": "node scripts/verify-delivery-menu.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.6.1",

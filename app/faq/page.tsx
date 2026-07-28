@@ -48,11 +48,11 @@ const FAQ_CATEGORIES = [
     title: "🛒 Shopping & Experience",
     faqs: [
       { q: "Do I need an appointment?", a: "No! PLANETS 59 is walk-in only. Just show up anytime — we are open daily from 10:00 AM to 01:00 AM." },
-      { q: "Can I order online?", a: "Currently, PLANETS 59 is an in-store shopping experience only. You can browse the current menu online before visiting." },
-      { q: "Do you offer delivery?", a: "Delivery is coming soon! Visit our delivery page to sign up for email notifications when we launch our delivery service." },
+      { q: "Can I order online?", a: "Use the delivery menu to browse, then select LIVE ORDER to connect with the PLANETS 59 dispatcher. The dispatcher confirms availability and next steps." },
+      { q: "Do you offer delivery?", a: "Yes. The PLANETS 59 delivery menu is available daily from 10:00 a.m. to 10:00 p.m. with a $60 product minimum and a $10 delivery fee." },
       { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
       { q: "Can staff help me compare menu items?", a: "Yes. Staff can help you compare current categories, formats, package details, and listed prices." },
-      { q: "Is there a minimum purchase?", a: "No minimum purchase required. You can buy as little as 1 gram." },
+      { q: "Is there a minimum purchase?", a: "The delivery menu has a $60 product minimum. In-store purchases follow the current posted store terms." },
     ],
   },
 ];
