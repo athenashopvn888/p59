@@ -36,7 +36,9 @@ export default function Navbar() {
   const menuGridRef = useRef<HTMLDivElement>(null);
   const [canAdvance, setCanAdvance] = useState(false);
   const menuLinks = [...FLOWER_LINKS, ...CATEGORY_LINKS];
-  const isStoreMenuActive = menuLinks.some((link) => pathname === link.href);
+  const isStoreMenuActive =
+    menuLinks.some((link) => pathname === link.href) ||
+    pathname.startsWith("/item/");
   const isDeliveryActive = pathname === "/delivery";
   const updateScrollState = useCallback(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; setCanAdvance(menuGrid.scrollWidth - menuGrid.clientWidth - menuGrid.scrollLeft > 2); }, []);
   useEffect(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; updateScrollState(); menuGrid.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(menuGrid); if (menuGrid.firstElementChild) resizeObserver.observe(menuGrid.firstElementChild); return () => { menuGrid.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
@@ -53,17 +55,19 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <div className={styles.topBarRight}>
+        <div className={styles.topBarRight} aria-label="Choose a menu">
           <Link
             href="/exotic"
             className={`${styles.primaryTab} ${isStoreMenuActive ? styles.primaryTabActive : ""}`}
+            aria-current={isStoreMenuActive ? "page" : undefined}
           >
             <span>Store Menu</span>
             <small>Browse</small>
           </Link>
           <Link
             href="/delivery"
-            className={`${styles.primaryTab} ${styles.deliveryTab} ${isDeliveryActive ? styles.primaryTabActive : ""}`}
+            className={`${styles.primaryTab} ${styles.deliveryTab} ${isDeliveryActive ? styles.deliveryTabActive : ""}`}
+            aria-current={isDeliveryActive ? "page" : undefined}
           >
             <span>Delivery Menu</span>
             <small>Live</small>
