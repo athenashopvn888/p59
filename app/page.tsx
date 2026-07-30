@@ -236,6 +236,14 @@ export default function HomePage() {
             <h1 className={styles.brandTitle}>PLANETS 59</h1>
             <p className={styles.brandSub}>Torbram #59 Brampton Menu Stop</p>
             <div className={styles.brandBadge}>Open Daily: 10:00 AM - 01:00 AM</div>
+            <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">
+              <h2 id="home-delivery-title">NEW DELIVERY AVAILABLE</h2>
+              <p>PLANETS 59 delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the PLANETS 59 flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
+            </aside>
+            <div className={styles.homeMenuActions} aria-label="Choose a PLANETS 59 menu">
+              <Link href="/exotic" className={styles.homeMenuCta}>STORE MENU</Link>
+              <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>DELIVERY MENU</Link>
+            </div>
           </div>
 
           {/* Bento Grid */}
