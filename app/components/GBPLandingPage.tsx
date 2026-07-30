@@ -95,14 +95,14 @@ export function GBPLandingPage() {
         <p className={styles.heroAddress}>{gbpLocation.address}</p>
       </header>
 
-      {/* Call to Actions */}
+      <aside className={styles.deliveryNotice} aria-labelledby="landing-delivery-title">
+        <h2 id="landing-delivery-title">NEW DELIVERY AVAILABLE</h2>
+        <p>PLANETS 59 delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the PLANETS 59 flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
+      </aside>
+
       <div className={styles.btnRow}>
-        <a href={gbpLocation.menuUrl} className={`${styles.btn} ${styles.btnPrimary}`}>
-          View Menu
-        </a>
-        <Link href="/resources" className={`${styles.btn} ${styles.btnSecondary}`}>
-          Open Resources
-        </Link>
+        <Link href="/exotic" className={`${styles.btn} ${styles.btnPrimary}`}>STORE MENU</Link>
+        <Link href="/delivery" className={`${styles.btn} ${styles.btnSecondary}`}>DELIVERY MENU</Link>
       </div>
 
       {/* Intro Section */}
