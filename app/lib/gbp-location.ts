@@ -8,8 +8,8 @@ export const gbpLocation = {
   address: "8500 Torbram Rd #59, Brampton, ON L6T 5C6",
   streetAddress: "8500 Torbram Rd #59",
   postalCode: "L6T 5C6",
-  phone: "(416) 300-7806",
-  phoneIntl: "+14163007806",
+  phone: "+1 (289) 536-7493",
+  phoneIntl: "+12895367493",
   neighborhood: "Brampton",
   nearbyAreas: ["Brampton", "Torbram Road", "Steeles Avenue East", "Bramalea", "Peel Region", "Brampton Transit"],
   products: [
