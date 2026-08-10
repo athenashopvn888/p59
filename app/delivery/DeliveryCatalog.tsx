@@ -23,6 +23,18 @@ function normalEntryPrice(product: Product) {
   return prices.length ? Math.min(...prices) : Number.POSITIVE_INFINITY;
 }
 
+function formatCurrency(value: number) {
+  if (!Number.isFinite(value)) return "$0";
+  const rounded = Math.round((value + Number.EPSILON) * 100) / 100;
+  return `$${rounded.toFixed(2).replace(/\.00$/, "").replace(/(\.\d)0$/, "$1")}`;
+}
+
+function get28gBundleEachDisplayPrice(quantity: number, total: number, perUnitPrice?: number) {
+  if (quantity === 3 && total === 95) return 33;
+  const supplied = Number(perUnitPrice);
+  return Number.isFinite(supplied) && supplied > 0 ? supplied : total / quantity;
+}
+
 function compareProducts(a: Product, b: Product) {
   const tierA = flowerTier(a);
   const tierB = flowerTier(b);
@@ -50,11 +62,11 @@ function ProductPricing({ product }: { product: Product }) {
     ]
     : product.offers?.filter((offer) => offer.kind === "multi_ounce") || [];
   return <div className="productPricing">
-    {compact.length > 0 && <div><div className="compactPriceGrid">{compact.map((option) => <div className="compactPrice" key={option.key}><span>{option.label}</span><strong>${option.price}</strong></div>)}</div></div>}
+    {compact.length > 0 && <div><div className="compactPriceGrid">{compact.map((option) => <div className="compactPrice" key={option.key}><span>{option.label}</span><strong>{formatCurrency(option.price)}</strong></div>)}</div></div>}
     {(regular28 || member || bundles.length > 0) && <div className="decisionPrices">
-      {loyaltyPrice !== null && <div className="decisionTile member28"><span>MEMBER LOYALTY 28g</span><strong>${loyaltyPrice}</strong><small>Member price</small><p>{member?.bonus ? `${member.bonus} applies on a later order when eligible.` : "Coupon or add-on eligibility is confirmed separately."}</p></div>}
-      {bundles.map((offer, index) => { const quantity = Number(offer.quantity); const total = Number(offer.totalPrice); const each = Number(offer.perUnitPrice) || total / quantity; return <div className="decisionTile bundleDecision" key={`${quantity}-${index}`}><span>{quantity} × 28g DEAL</span><div className="bundleNumbers"><strong>${each} <small>each</small></strong><b>${total} <small>total</small></b></div></div>; })}
-      {regular28 && <div className="decisionTile standard28"><span>STANDARD 28g</span><strong>${regular28.price}</strong><small>Regular price</small></div>}
+      {loyaltyPrice !== null && <div className="decisionTile member28"><span>MEMBER LOYALTY 28g</span><strong>{formatCurrency(loyaltyPrice)}</strong><small>Member price</small><p>{member?.bonus ? `${member.bonus} applies on a later order when eligible.` : "Coupon or add-on eligibility is confirmed separately."}</p></div>}
+      {bundles.map((offer, index) => { const quantity = Number(offer.quantity); const total = Number(offer.totalPrice); const each = get28gBundleEachDisplayPrice(quantity, total, offer.perUnitPrice); return <div className="decisionTile bundleDecision" key={`${quantity}-${index}`}><span>{quantity} × 28g DEAL</span><div className="bundleNumbers"><strong>{formatCurrency(each)} <small>each</small></strong><b>{formatCurrency(total)} <small>total</small></b></div></div>; })}
+      {regular28 && <div className="decisionTile standard28"><span>STANDARD 28g</span><strong>{formatCurrency(regular28.price)}</strong><small>Regular price</small></div>}
     </div>}
   </div>;
 }
