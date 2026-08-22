@@ -63,7 +63,7 @@ const EXPLORE_CATEGORIES = [
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/04_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp" },
-  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/06_Cigarettes.webp" },
+  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/native-cigarette-offer-20260822.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
   { name: "Resources", slug: "resources", banner: "/banners/01_welcome_to_planets59.webp" },
 ]
