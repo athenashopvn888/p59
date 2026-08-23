@@ -128,7 +128,7 @@ export default async function ItemsCategoryPage({
           <div className={styles.visitCta}>
             <h3 className={styles.visitTitle}>Visit PLANETS 59</h3>
             <p className={styles.visitText}>
-              8500 Torbram Rd #59, Brampton, ON L6T 5C6 · Open Daily: 10:00 AM - 01:00 AM
+              8500 Torbram Rd #59, Brampton, ON L6T 5C6 · Open 24 Hours
             </p>
           </div>
         </div>

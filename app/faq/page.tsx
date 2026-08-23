@@ -17,7 +17,7 @@ const FAQ_CATEGORIES = [
     title: "📍 Location & Hours",
     faqs: [
       { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. We're easily accessible by TTC bus routes and close to major highways like the 401." },
-      { q: "What are your hours?", a: "We are open daily from 10:00 AM to 01:00 AM. Walk in anytime — no appointment needed." },
+      { q: "What are your hours?", a: "We are open 24 hours daily. Walk in anytime — no appointment needed." },
       { q: "Is there parking nearby?", a: "Yes. Free street parking is listed nearby on surrounding streets in the evenings. We're also easily accessible by local transit." },
       { q: "How far are you from Mississauga?", a: "We're just 5 minutes from the highways and central transit routes. We are centrally located and easy to reach." },
       { q: "What's the best way to get to PLANETS 59?", a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is listed on surrounding streets." },
@@ -47,7 +47,7 @@ const FAQ_CATEGORIES = [
   {
     title: "🛒 Shopping & Experience",
     faqs: [
-      { q: "Do I need an appointment?", a: "No! PLANETS 59 is walk-in only. Just show up anytime — we are open daily from 10:00 AM to 01:00 AM." },
+      { q: "Do I need an appointment?", a: "No! PLANETS 59 is walk-in only. Just show up anytime — we are open 24 hours daily." },
       { q: "Can I order online?", a: "Use the delivery menu to browse, then select LIVE ORDER to connect with the PLANETS 59 dispatcher. The dispatcher confirms availability and next steps." },
       { q: "Do you offer delivery?", a: "Yes. The PLANETS 59 delivery menu is available daily from 10:00 a.m. to 10:00 p.m. with a $60 product minimum and a $10 delivery fee." },
       { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },

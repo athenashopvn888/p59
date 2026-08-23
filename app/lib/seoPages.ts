@@ -14,7 +14,7 @@ export const SEO_PAGES: SeoPageData[] = [
   {
     "slug": "brampton-weed-dispensary",
     "title": "PLANETS 59 Weed Dispensary in Brampton",
-    "metaDescription": "PLANETS 59 is a weed dispensary in Brampton with flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and shopper resources. Open Daily: 10:00 AM - 01:00 AM.",
+    "metaDescription": "PLANETS 59 is a weed dispensary in Brampton with flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and shopper resources. Open 24 hours daily.",
     "h1": "PLANETS 59 Weed Dispensary in Brampton",
     "icon": "*",
     "heroTagline": "Menu shopping around Torbram and Steeles / Brampton",

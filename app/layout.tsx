@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | PLANETS 59",
   },
   description:
-    "PLANETS 59 is a Brampton cannabis dispensary on Torbram Rd with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open Daily: 10:00 AM - 01:00 AM.",
+    "PLANETS 59 is a Brampton cannabis dispensary on Torbram Rd with adult 19+ store info and category browsing for flower, pre-rolls, vapes, edibles, concentrates, and accessories. Open 24 hours daily.",
   keywords: [
     "cannabis dispensary Brampton",
     "weed store Brampton",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "PLANETS 59",
     title: "PLANETS 59 — Premium Brampton Cannabis Dispensary",
     description:
-      "PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 with flower tiers, menu categories, and shopper resources. Open Daily: 10:00 AM - 01:00 AM.",
+      "PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 with flower tiers, menu categories, and shopper resources. Open 24 hours daily.",
     images: [
       {
         url: "https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "PLANETS 59 — Brampton's Uplifting Dispensary",
-    description: "Brampton cannabis menu categories, resources, and store info for PLANETS 59 at 8500 Torbram Rd #59. Open Daily: 10:00 AM - 01:00 AM.",
+    description: "Brampton cannabis menu categories, resources, and store info for PLANETS 59 at 8500 Torbram Rd #59. Open 24 hours daily.",
     images: ["https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -76,7 +76,7 @@ const jsonLd = {
   additionalType: "https://schema.org/Store",
   "@id": "https://www.planets59.com",
   name: "PLANETS 59",
-  description: "Cannabis dispensary at 8500 Torbram Rd #59 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open Daily: 10:00 AM - 01:00 AM.",
+  description: "Cannabis dispensary at 8500 Torbram Rd #59 in Brampton, ON. Shop exotic, premium, AAA+, AA, and budget flower tiers plus edibles, prerolls, and vapes. Open 24 hours daily.",
   url: "https://www.planets59.com",
   telephone: "+12895367493",
   image: "https://www.planets59.com/wp-content/uploads/2026/04/7Clmh.jpg",
@@ -106,8 +106,8 @@ const jsonLd = {
       "Saturday",
       "Sunday"
     ],
-    "opens": "10:00",
-    "closes": "01:00"
+    "opens": "00:00",
+    "closes": "23:59"
   }
 ],
   areaServed: {

@@ -27,7 +27,7 @@ export const gbpLocation = {
   mapEmbedUrl: "https://www.google.com/maps?q=8500%20Torbram%20Rd%20%2359%2C%20Brampton%2C%20ON%20L6T%205C6&output=embed",
   latitude: "43.7258",
   longitude: "-79.6953",
-  hours: ["Open Daily: 10:00 AM - 01:00 AM"],
+  hours: ["Open 24 Hours"],
   seoTitle: "PLANETS 59 | Weed Dispensary in Brampton",
   metaDescription: "PLANETS 59 is a local weed dispensary in Brampton offering flower, pre-rolls, edibles, vapes, concentrates, CBD, and service for adults 19+.",
   localLandmarks: ["Torbram Road", "Steeles Avenue East", "Tor Valley Shopping Centre"],
