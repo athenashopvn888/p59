@@ -11,7 +11,7 @@ export default function Footer() {
             <p className={styles.desc}>
               Your local cannabis dispensary at 8500 Torbram Rd #59, Brampton. Visit
               PLANETS 59 for flower, edibles, vapes, pre-rolls, cigarettes, and menu resources.
-              Open Daily: 10:00 AM - 01:00 AM.
+              Open 24 Hours.
             </p>
             <div className={styles.buttons}>
               <Link href="/resources" className={styles.btnPrimary}>Open Resources</Link>
@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Hours:</span>
-              <span className={styles.highlight}>Open Daily: 10:00 AM - 01:00 AM</span>
+              <span className={styles.highlight}>Open 24 Hours</span>
             </div>
           </div>
 

@@ -673,7 +673,7 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
 const TICKER_SLIDES = [
   "🔥 PLANETS 59 — 8500 Torbram Rd #59, Brampton",
   "Menu Lanes & Resources",
-  "Open Daily: 10:00 AM - 01:00 AM",
+  "Open 24 Hours",
   "ALL SALES ARE FINAL",
   "🎮 Read Resources at planets59.com/resources",
 ];

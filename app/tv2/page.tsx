@@ -136,7 +136,7 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 const TICKER_SLIDES = [
   "🔥 PLANETS 59 — 8500 Torbram Rd #59, Brampton",
   "Menu Lanes & Resources",
-  "Open Daily: 10:00 AM - 01:00 AM",
+  "Open 24 Hours",
   "Pre-Rolls · Edibles · Vapes · Concentrates",
   "ALL SALES ARE FINAL",
   "🎮 Read Resources at planets59.com/resources",

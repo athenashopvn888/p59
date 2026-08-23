@@ -72,7 +72,7 @@ const EXPLORE_CATEGORIES = [
 const LOCAL_FAQS = [
   {
     q: "What are the hours for PLANETS 59?",
-    a: "PLANETS 59 at 8500 Torbram Rd #59, Brampton is open daily from 10:00 AM to 01:00 AM. Walk in anytime - no appointment needed.",
+    a: "PLANETS 59 at 8500 Torbram Rd #59, Brampton is open 24 hours daily. Walk in anytime - no appointment needed.",
   },
   {
     q: "What cannabis products do you carry?",
@@ -235,7 +235,7 @@ export default function HomePage() {
             <img src="/storeFavicon.webp" alt="PLANETS 59 Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>PLANETS 59</h1>
             <p className={styles.brandSub}>Torbram #59 Brampton Menu Stop</p>
-            <div className={styles.brandBadge}>Open Daily: 10:00 AM - 01:00 AM</div>
+            <div className={styles.brandBadge}>Open 24 Hours</div>
             <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">
               <h2 id="home-delivery-title">NEW DELIVERY AVAILABLE</h2>
               <p>PLANETS 59 delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the PLANETS 59 flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
@@ -274,8 +274,8 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.identityGrid}>
             <div className={styles.identityIntro}>
-              <p className={styles.identityTag}>Torbram #59, open late</p>
-              <h2 className={styles.identityTitle}>A Brampton menu stop with its own late-night rhythm.</h2>
+              <p className={styles.identityTag}>Torbram #59, open 24 hours</p>
+              <h2 className={styles.identityTitle}>A Brampton menu stop open around the clock.</h2>
               <p className={styles.identityText}>
                 PLANETS 59 now leans into Torbram and Steeles: clear flower tiers, a sharper category grid, and resources that answer shopping questions without arcade noise.
               </p>
@@ -285,8 +285,8 @@ export default function HomePage() {
               <p>Store information stays tied to the Brampton address, listed hours, contact details, and store page.</p>
             </div>
             <div className={styles.identityCard}>
-              <span>Late menu scan</span>
-              <p>Open daily from 10:00 AM to 01:00 AM, with browsing built around quick lane choices.</p>
+              <span>24-hour store</span>
+              <p>Open 24 hours daily, with browsing built around quick lane choices.</p>
             </div>
             <div className={styles.identityCard}>
               <span>Resources instead</span>
@@ -352,7 +352,7 @@ export default function HomePage() {
       <section className={styles.seoSection}>
         <div className={styles.container}>
           <div className={styles.seoPanel}>
-            <h2 className={styles.seoPanelTitle}>Torbram #59 Menu Planning, Open Late</h2>
+            <h2 className={styles.seoPanelTitle}>Torbram #59 Menu Planning, Open 24 Hours</h2>
             <p className={styles.seoPanelText}>
               PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 near Steeles Ave E. The redesign keeps those local signals intact while making the shopping path cleaner.
             </p>
@@ -473,7 +473,7 @@ export default function HomePage() {
               <p className={styles.storeCardText}>
                 Open 7 Days a Week
                 <br />
-                <span className={styles.storeHighlight}>Open Daily: 10:00 AM - 01:00 AM</span>
+                <span className={styles.storeHighlight}>Open 24 Hours</span>
               </p>
             </div>
             <div className={styles.storeCard}>
