@@ -54,6 +54,7 @@ export default function Footer() {
               <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
               <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link>
+              <Link href="/info/nicotine-vapes-brampton">Nicotine Vapes Brampton</Link>
               <Link href="/info/weed-store-near-mississauga">Mississauga Visit Notes</Link>
               <Link href="/info/dispensary-near-me-brampton">Dispensary Near Me Brampton</Link>
               <Link href="/weed-dispensary-brampton/">PLANETS 59 Weed Dispensary in Brampton</Link>
