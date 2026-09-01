@@ -1,12 +1,12 @@
 import { Metadata } from "next";
-import { GBPLandingPage } from "@/app/components/GBPLandingPage";
-import { gbpLocation } from "@/app/lib/gbp-location";
+import { WeedOwnerPage } from "@/app/components/WeedOwnerPage";
 
 export const metadata: Metadata = {
-  title: gbpLocation.seoTitle,
-  description: gbpLocation.metaDescription,
+  title: { absolute: "Weed Dispensary in Brampton | PLANETS 59" },
+  description:
+    "PLANETS 59 is open 24 hours at 8500 Torbram Rd Unit 59 in Brampton. Adults 19+ can explore flower, edibles and vape categories.",
   alternates: {
-    canonical: `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    canonical: "https://www.planets59.com/weed-dispensary-brampton/",
   },
   robots: {
     index: true,
@@ -15,5 +15,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <GBPLandingPage />;
+  return <WeedOwnerPage />;
 }
