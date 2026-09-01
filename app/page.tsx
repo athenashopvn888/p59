@@ -455,6 +455,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className={styles.weedDiscovery} aria-labelledby="weed-discovery-heading">
+        <div className={styles.container}>
+          <h2 id="weed-discovery-heading">Explore Weed &amp; Cannabis at PLANETS 59</h2>
+          <p>PLANETS 59 is open 24 hours at 8500 Torbram Rd Unit 59 in Brampton. Adults 19+ can choose a more specific starting point based on the cannabis format they want to explore.</p>
+          <div className={styles.weedDiscoveryLinks}>
+            <Link href="/budget">Budget Flower</Link><Link href="/exotic">Exotic Flower</Link><Link href="/items/edibles">Edibles</Link><Link href="/items/vape-disposables">Disposable Vapes</Link>
+          </div>
+          <Link href="/weed-dispensary-brampton/" className={styles.storeInfoLink}>Brampton Store Information</Link>
+        </div>
+      </section>
+
       {/* -- STORE LOCATION GRID -- */}
       <section className={styles.storeSection} id="contact">
         <div className={styles.container}>
