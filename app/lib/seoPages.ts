@@ -39,43 +39,6 @@ export interface SeoPageData {
 
 export const SEO_PAGES: SeoPageData[] = [
   {
-    "slug": "brampton-weed-dispensary",
-    "title": "PLANETS 59 Weed Dispensary in Brampton",
-    "metaDescription": "PLANETS 59 is a weed dispensary in Brampton with flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and shopper resources. Open 24 hours daily.",
-    "h1": "PLANETS 59 Weed Dispensary in Brampton",
-    "icon": "*",
-    "heroTagline": "Menu shopping around Torbram and Steeles / Brampton",
-    "banner": "/banners/01_welcome_to_planets59.webp",
-    "sections": [
-      {
-        "heading": "Shop PLANETS 59 With A Plan",
-        "body": "PLANETS 59 helps adult shoppers compare the menu without overcomplicating the visit. Start with the store page, then choose the category that matches the visit: flower, pre-rolls, edibles, vapes, concentrates, accessories, or cigarettes where listed."
-      },
-      {
-        "heading": "Local Menu Notes For Torbram and Steeles / Brampton",
-        "body": "PLANETS 59 is anchored at 8500 Torbram Rd #59. Use this page to confirm the store path, then use current category pages and staff for details that change."
-      },
-      {
-        "heading": "What To Check Before Visiting",
-        "body": "Confirm the store page, directions, listed hours, and menu category first. For current products, prices, or listings, use the menu or ask staff."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Is PLANETS 59 a cannabis dispensary in Brampton?",
-        "a": "Yes. PLANETS 59 serves shoppers looking for a cannabis dispensary in Brampton. Use the store page for directions and listed hours, then check the current menu for product details."
-      },
-      {
-        "q": "What should I check before visiting PLANETS 59?",
-        "a": "Start with the store page, then use the current menu to compare product names, formats, prices, and listing details."
-      },
-      {
-        "q": "Does PLANETS 59 carry flower and pre-rolls?",
-        "a": "Flower tiers and pre-rolls are listed on the current menu. Check the menu or ask staff for current details."
-      }
-    ]
-  },
-  {
     "slug": "cheap-weed-brampton",
     "title": "PLANETS 59 Cheap Weed and Budget Weed Guide",
     "metaDescription": "A value-minded PLANETS 59 guide for cheap weed, budget weed, affordable weed, and flower tier shopping in Brampton.",
@@ -84,30 +47,30 @@ export const SEO_PAGES: SeoPageData[] = [
     "heroTagline": "Value shopping with current menu checks",
     "sections": [
       {
-        "heading": "Start With Budget And AA",
-        "body": "If cheap weed or affordable weed is the mission, start with the Budget and AA flower lanes before jumping around the rest of the menu. That keeps the comparison clean."
+        "heading": "Start With Budget Weed And AA Weed",
+        "body": "If value-minded flower shopping is the mission, start with Budget Weed and AA Weed before exploring the rest of the menu."
       },
       {
         "heading": "Compare The Current Menu",
-        "body": "Look at product name, format, weight, posted price, and listing details. Menus change, so use this page for the shopping method and the current menu or staff for current details."
+        "body": "Look at the product name, format and information presented while browsing. Ask PLANETS 59 staff when one detail matters to your visit."
       },
       {
         "heading": "Know When To Move Up",
-        "body": "If Budget or AA does not fit the visit, compare AAA+, Premium, or Exotic flower next. A better tier choice starts with the category, then the current product details."
+        "body": "If Budget Weed or AA Weed does not fit the visit, explore AAA+ Weed, Premium Weed or Exotic Weed next."
       }
     ],
     "faqs": [
       {
         "q": "Where should value shoppers start at PLANETS 59?",
-        "a": "Start with Budget and AA flower, then compare current menu details before choosing."
+        "a": "Start with Budget Weed and AA Weed, then explore the product information presented with each flower collection."
       },
       {
         "q": "Does affordable weed mean guessing?",
-        "a": "No. Compare the category, product name, format, size, posted price, and listing details. Ask staff if anything is unclear."
+        "a": "No. Compare the collection, product name, format and other information presented while browsing. Ask staff if anything is unclear."
       },
       {
-        "q": "Where can shoppers confirm current prices?",
-        "a": "Use the current menu or ask staff. A guide should not pretend prices and listings never move."
+        "q": "Where can shoppers ask about one product?",
+        "a": "Ask PLANETS 59 staff when one product detail is important to your visit."
       }
     ]
   },

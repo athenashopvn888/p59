@@ -2,26 +2,26 @@ import Link from "next/link";
 import styles from "./WeedOwnerPage.module.css";
 
 const discovery = [
-  ["Budget Flower", "Explore the verified Budget section.", "/budget"],
-  ["Exotic Flower", "Explore the verified Exotic section.", "/exotic"],
-  ["Edibles", "Explore the verified Edibles category.", "/items/edibles"],
-  ["Disposable Vapes", "Explore the verified vape-disposables category.", "/items/vape-disposables"],
+  ["Budget Weed", "Explore the PLANETS 59 Budget Weed collection.", "/budget-weed"],
+  ["Exotic Weed", "Explore the PLANETS 59 Exotic Weed collection.", "/exotic-weed"],
+  ["Edibles", "Explore the PLANETS 59 Edibles category.", "/items/edibles"],
+  ["THC Vape", "Explore the PLANETS 59 THC Vape category.", "/items/vape-disposables"],
   ["PLANETS 59 Resources", "Explore cannabis shopping information.", "/resources"],
 ] as const;
 const faqs = [
   ["Where is PLANETS 59?", "PLANETS 59 is located at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6."],
   ["Is PLANETS 59 open 24 hours?", "Yes. PLANETS 59 is open 24 hours a day, seven days a week."],
-  ["What cannabis categories can I explore?", "The verified routes on this page include Budget flower, Exotic flower, Edibles and Disposable Vapes."],
+  ["What cannabis categories can I explore?", "Start with Budget Weed, Exotic Weed, Edibles or the separate THC Vape category, then explore the rest of the PLANETS 59 menu."],
   ["What is the difference between weed and cannabis?", "Weed is common conversational terminology. Cannabis is the broader term."],
   ["What are bud and flower?", "Bud is a common informal word for cannabis flower. Flower is the category term for dried cannabis flower."],
-  ["Does Budget mean a current deal?", "No. Budget is a verified browsing category. It does not by itself establish a current sale, discount, promotion or specific price."],
+  ["Does Budget Weed mean a current deal?", "No. Budget Weed is a flower collection. It does not by itself establish a current sale, discount, promotion or specific price."],
   ["Does PLANETS 59 have a specific product called Planet Weed?", "PLANETS 59 is the store brand. A phrase containing planet and weed does not by itself establish a specific product or strain. Call +1 289-536-7493 for a particular item."],
   ["How can I ask about one specific item?", "Call +1 289-536-7493."],
   ["Do I need to be 19+?", "Yes."],
 ] as const;
 
 export function WeedOwnerPage() {
-  const schema = { "@context": "https://schema.org", "@type": "Store", name: "PLANETS 59", url: "https://www.planets59.com/weed-dispensary-brampton/", telephone: "+12895367493", address: { "@type": "PostalAddress", streetAddress: "8500 Torbram Rd Unit 59", addressLocality: "Brampton", addressRegion: "ON", postalCode: "L6T 5C6", addressCountry: "CA" }, openingHours: "Mo-Su 00:00-24:00" };
+  const schema = { "@context": "https://schema.org", "@type": "Store", name: "PLANETS 59", url: "https://www.planets59.com/weed-dispensary-brampton", telephone: "+12895367493", address: { "@type": "PostalAddress", streetAddress: "8500 Torbram Rd Unit 59", addressLocality: "Brampton", addressRegion: "ON", postalCode: "L6T 5C6", addressCountry: "CA" }, openingHours: "Mo-Su 00:00-24:00" };
   return <main className={styles.page}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <header className={styles.hero}>

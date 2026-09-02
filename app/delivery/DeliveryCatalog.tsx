@@ -98,15 +98,15 @@ export default function Catalog() {
   return (
     <main className="main">
       <header className="p59Header">
-        <Link className="p59Brand" href="/" aria-label="PLANETS 59 home"><span>P59</span><strong>PLANETS 59<small>Delivery menu</small></strong></Link>
+        <Link className="p59Brand" href="/" aria-label="PLANETS 59 home"><span>P59</span><strong>PLANETS 59<small>Weed Delivery menu</small></strong></Link>
         <nav><a href="#delivery-menu">Menu</a><a href="#how-to-order">How to order</a></nav>
       </header>
       <DeliveryBanner />
-      <section className="p59TermsBanner" aria-labelledby="p59-delivery-terms"><div><p>PLANETS 59 DELIVERY DETAILS</p><h2 id="p59-delivery-terms"><span>$60 PRODUCT MINIMUM</span><span>$10 DELIVERY FEE</span><span>DELIVERY HOURS 10:00 a.m.–10:00 p.m.</span></h2></div><a href="#how-to-order">Read the ordering steps</a></section>
+      <section className="p59TermsBanner" aria-labelledby="p59-delivery-terms"><div><p>PLANETS 59 WEED DELIVERY DETAILS</p><h2 id="p59-delivery-terms"><span>$60 PRODUCT MINIMUM</span><span>$10 DELIVERY FEE</span><span>DELIVERY HOURS 10:00 a.m.–10:00 p.m.</span></h2></div><a href="#how-to-order">Read the ordering steps</a></section>
 
       <section className="hero" id="top">
         <div className="heroOrbit" aria-hidden="true" />
-        <div className="heroCopy"><p className="eyebrow">PLANETS 59 DELIVERY</p><h1>PLANETS 59 Cannabis Delivery in Brampton</h1><p>Browse the current flower delivery menu, then use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p><div className="heroActions"><a href="#delivery-menu">Browse delivery menu</a><a href="#how-to-order">How delivery works</a></div></div>
+        <div className="heroCopy"><p className="eyebrow">PLANETS 59 WEED DELIVERY</p><h1>PLANETS 59 Weed Delivery in Brampton</h1><p>Browse the flower delivery menu, then use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p><div className="heroActions"><a href="#delivery-menu">Explore Weed Delivery</a><a href="#how-to-order">How delivery works</a></div></div>
         <div className="launchCard"><span>HOW TO ORDER</span><strong>LIVE ORDER</strong><p>{products.length} flower products are ready to browse.</p><small>The dispatcher confirms availability and delivery details.</small></div>
       </section>
 

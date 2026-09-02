@@ -13,36 +13,36 @@ import Papa from "papaparse";
 /* -- Bento Mosaic Config -- */
 const BENTO_TIERS = [
   {
-    name: "EXOTICS",
-    slug: "exotic",
+    name: "EXOTIC WEED",
+    slug: "exotic-weed",
     price: "$10-$12/g",
     banner: "/banners/exotics_banner.webp",
     className: styles.bentoExotic,
   },
   {
-    name: "PREMIUM",
-    slug: "premium",
+    name: "PREMIUM WEED",
+    slug: "premium-weed",
     price: "$7-$10/g",
     banner: "/banners/premium_banner.webp",
     className: styles.bentoPremium,
   },
   {
-    name: "AAA+",
-    slug: "aaa",
+    name: "AAA+ WEED",
+    slug: "aaa-weed",
     price: "$5-$6/g",
     banner: "/banners/aaa_plus_banner.webp",
     className: styles.bentoTile,
   },
   {
-    name: "AA",
-    slug: "aa",
+    name: "AA WEED",
+    slug: "aa-weed",
     price: "$4/g",
     banner: "/banners/aa_banner.webp",
     className: styles.bentoTile,
   },
   {
-    name: "BUDGET",
-    slug: "budget",
+    name: "BUDGET WEED",
+    slug: "budget-weed",
     price: "$3/g",
     banner: "/banners/budget_banner.webp",
     className: styles.bentoTile,
@@ -58,8 +58,8 @@ const BENTO_TIERS = [
 
 /* -- Explore Categories Config (New Banners) -- */
 const EXPLORE_CATEGORIES = [
-  { name: "Vape Pens", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp" },
-  { name: "Nic Vape", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp" },
+  { name: "Nicotine Vape", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp" },
+  { name: "THC Vape", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/04_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp" },
@@ -76,15 +76,15 @@ const LOCAL_FAQS = [
   },
   {
     q: "What cannabis products do you carry?",
-    a: "We carry five tiers of premium flower: Exotic ($10-$12/g), Premium ($7-$10/g), AAA+ ($5-$6/g), AA ($4/g), and Budget ($3/g), plus a wide variety of edibles, prerolls, vapes, and concentrates.",
+    a: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed, plus separate categories for edibles, pre-rolls, Nicotine Vape, THC Vape and concentrates.",
   },
   {
     q: "Where is PLANETS 59 located?",
-    a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use the current menu and visit in person during listed hours. Free evening street parking is available.",
+    a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use the current menu and visit in person during listed hours. Check current local parking signs and restrictions before your visit.",
   },
   {
-    q: "What is the cheapest weed at PLANETS 59?",
-    a: "Our budget flower starts at just $3/g. We also offer AA daily drivers from $4/g and AAA+ heavy hitters from $5-$6/g. View our budget menu for our latest deals.",
+    q: "Where can value-minded flower shoppers start?",
+    a: "Start with Budget Weed, then explore AA Weed or another PLANETS 59 flower collection. Product information is presented as you browse.",
   },
 ];
 
@@ -237,12 +237,12 @@ export default function HomePage() {
             <p className={styles.brandSub}>Torbram #59 Brampton Menu Stop</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
             <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">
-              <h2 id="home-delivery-title">NEW DELIVERY AVAILABLE</h2>
-              <p>PLANETS 59 delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the PLANETS 59 flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
+              <h2 id="home-delivery-title">PLANETS 59 WEED DELIVERY</h2>
+              <p>PLANETS 59 Weed Delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
             </aside>
             <div className={styles.homeMenuActions} aria-label="Choose a PLANETS 59 menu">
-              <Link href="/exotic" className={styles.homeMenuCta}>STORE MENU</Link>
-              <Link href="/delivery" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>DELIVERY MENU</Link>
+              <Link href="/exotic-weed" className={styles.homeMenuCta}>EXPLORE EXOTIC WEED</Link>
+              <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>EXPLORE WEED DELIVERY</Link>
             </div>
           </div>
 
@@ -277,7 +277,7 @@ export default function HomePage() {
               <p className={styles.identityTag}>Torbram #59, open 24 hours</p>
               <h2 className={styles.identityTitle}>A Brampton menu stop open around the clock.</h2>
               <p className={styles.identityText}>
-                PLANETS 59 now leans into Torbram and Steeles: clear flower tiers, a sharper category grid, and resources that answer shopping questions without arcade noise.
+                Explore PLANETS 59 through distinct flower collections, cannabis categories and shopper guides tied to the Torbram and Steeles store.
               </p>
             </div>
             <div className={styles.identityCard}>
@@ -289,8 +289,8 @@ export default function HomePage() {
               <p>Open 24 hours daily, with browsing built around quick lane choices.</p>
             </div>
             <div className={styles.identityCard}>
-              <span>Resources instead</span>
-              <p>The public nav now points shoppers to guides for flower, value, pre-rolls, and Native smokes.</p>
+              <span>Shopper guides</span>
+              <p>Choose a Weed collection or cannabis category that interests you, then use the PLANETS 59 guides for more context.</p>
             </div>
           </div>
         </div>
@@ -354,10 +354,10 @@ export default function HomePage() {
           <div className={styles.seoPanel}>
             <h2 className={styles.seoPanelTitle}>Torbram #59 Menu Planning, Open 24 Hours</h2>
             <p className={styles.seoPanelText}>
-              PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 near Steeles Ave E. The redesign keeps those local signals intact while making the shopping path cleaner.
+              PLANETS 59 is a Brampton cannabis dispensary at 8500 Torbram Rd #59 near Steeles Ave E. Start with the store information, then choose the collection that fits your visit.
             </p>
             <p className={styles.seoPanelText}>
-              Start with the lane that matches the visit: Exotic, Premium, AAA+, AA, Budget, pre-rolls, edibles, vapes, concentrates, accessories, cigarettes, or Resources.
+              Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, Budget Weed, pre-rolls, edibles, Nicotine Vape, THC Vape, concentrates, accessories, cigarettes or Resources.
             </p>
             <p className={styles.seoPanelText}>
               Use the current category pages and staff for listed product names, prices, and package details. Resources give shoppers a practical way to compare menu sections.
@@ -372,8 +372,8 @@ export default function HomePage() {
           <div className={styles.resourceBandInner}>
             <div>
               <p className={styles.identityTag}>Resource Centre</p>
-              <h2>Guides for the Torbram menu categories.</h2>
-              <p>Resources now cover flower tiers, value shopping, pre-rolls, and Native smokes brand notes without pulling shoppers away from the store path.</p>
+              <h2>Guides for PLANETS 59 shoppers.</h2>
+              <p>Explore Weed flower collections, value-minded shopping, pre-rolls and Native smokes with practical category-by-category guidance.</p>
             </div>
             <div className={styles.resourceActions}>
               <Link href="/resources">Open Resources</Link>
@@ -460,9 +460,9 @@ export default function HomePage() {
           <h2 id="weed-discovery-heading">Explore Weed &amp; Cannabis at PLANETS 59</h2>
           <p>PLANETS 59 is open 24 hours at 8500 Torbram Rd Unit 59 in Brampton. Adults 19+ can choose a more specific starting point based on the cannabis format they want to explore.</p>
           <div className={styles.weedDiscoveryLinks}>
-            <Link href="/budget">Budget Flower</Link><Link href="/exotic">Exotic Flower</Link><Link href="/items/edibles">Edibles</Link><Link href="/items/vape-disposables">Disposable Vapes</Link>
+            <Link href="/budget-weed">Budget Weed</Link><Link href="/exotic-weed">Exotic Weed</Link><Link href="/items/edibles">Edibles</Link><Link href="/items/vape-disposables">THC Vape</Link>
           </div>
-          <Link href="/weed-dispensary-brampton/" className={styles.storeInfoLink}>Brampton Store Information</Link>
+          <Link href="/weed-dispensary-brampton" className={styles.storeInfoLink}>Explore PLANETS 59 Weed in Brampton</Link>
         </div>
       </section>
 

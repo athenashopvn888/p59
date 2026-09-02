@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "PLANETS 59 is open 24 hours at 8500 Torbram Rd Unit 59 in Brampton. Adults 19+ can explore flower, edibles and vape categories.",
   alternates: {
-    canonical: "https://www.planets59.com/weed-dispensary-brampton/",
+    canonical: "https://www.planets59.com/weed-dispensary-brampton",
   },
   robots: {
     index: true,

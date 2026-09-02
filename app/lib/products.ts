@@ -93,8 +93,8 @@ export const TIER_CONFIG: Record<
   }
 > = {
   EXOTIC: {
-    name: "Exotic",
-    slug: "exotic",
+    name: "Exotic Weed",
+    slug: "exotic-weed",
     color: "#f59e0b",
     icon: "\uD83D\uDD25",
     tagline: "Explore the current Exotic flower menu",
@@ -104,8 +104,8 @@ export const TIER_CONFIG: Record<
     deal6g: { label: "6g bundle", total: "6G", price: 60 },
   },
   PREMIUM: {
-    name: "Premium",
-    slug: "premium",
+    name: "Premium Weed",
+    slug: "premium-weed",
     color: "#a78bfa",
     icon: "\uD83D\uDC8E",
     tagline: "Explore the current Premium flower menu",
@@ -115,8 +115,8 @@ export const TIER_CONFIG: Record<
     deal6g: { label: "6g bundle", total: "6G", price: 45 },
   },
   "AAA+": {
-    name: "AAA+",
-    slug: "aaa",
+    name: "AAA+ Weed",
+    slug: "aaa-weed",
     color: "#22d3ee",
     icon: "\u26A1",
     tagline: "Explore the current AAA+ flower menu",
@@ -126,8 +126,8 @@ export const TIER_CONFIG: Record<
     deal6g: { label: "6g bundle", total: "6G", price: 30 },
   },
   AA: {
-    name: "AA",
-    slug: "aa",
+    name: "AA Weed",
+    slug: "aa-weed",
     color: "#34d399",
     icon: "\u2726",
     tagline: "Explore the current AA flower menu",
@@ -137,8 +137,8 @@ export const TIER_CONFIG: Record<
     deal6g: null,
   },
   BUDGET: {
-    name: "Budget",
-    slug: "budget",
+    name: "Budget Weed",
+    slug: "budget-weed",
     color: "#94a3b8",
     icon: "\uD83D\uDCB0",
     tagline: "Shreds & value OZs \u00B7 From $40/oz",
@@ -171,24 +171,24 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   },
   "VAPE PENS": {
     banner: "/banners/01_Vape_Pens.webp",
-    name: "THC Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
-    seoTitle: "Vape Pens Brampton — THC & Nicotine Cartridges",
-    seoIntro: "Compare vape listings at PLANETS 59 in Brampton by product name, format, listed details, and current menu details.",
-    seoDescription: "Vape shoppers should use the current menu first, then ask staff if a cartridge, disposable, battery, or format detail needs a current answer. PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton.",
+    name: "Nicotine Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
+    seoTitle: "Nicotine Vapes Brampton",
+    seoIntro: "Explore PLANETS 59 nicotine vape products in a category kept separate from THC Vape products. Nicotine products are for adults 19+ and contain nicotine, which is addictive.",
+    seoDescription: "Compare the nicotine vape products listed in this PLANETS 59 category. Check the current product information while browsing. Adults 19+. Nicotine is addictive.",
     faqs: [
-      { q: "What vape formats may be listed?", a: "The category may include 510-thread THC cartridges, nicotine vape pods, disposable vapes, and compatible batteries. Check the current menu." },
-      { q: "Do you list vape batteries?", a: "The menu may list 510-thread batteries and pod systems. Check the current category for details." },
+      { q: "Is this the nicotine vape category?", a: "Yes. This category is kept separate from PLANETS 59 THC Vape products." },
+      { q: "Where are THC Vape products?", a: "Use the separate THC Vape category for cannabis vape products." },
     ],
   },
   "VAPE DISPOSABLE": {
     banner: "/banners/02_Vape_Disposable.webp",
-    name: "Nic Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
-    seoTitle: "Disposable Vapes Brampton — THC Disposable Pens",
-    seoIntro: "Use the disposable vape category at PLANETS 59 for current product names, formats, and menu details.",
-    seoDescription: "Disposable vape listings are easiest to compare inside their own category. Check the current menu and ask staff if a detail matters before choosing.",
+    name: "THC Vape", slug: "vape-disposables", color: "#a78bfa", icon: "💨",
+    seoTitle: "THC Vape Products in Brampton",
+    seoIntro: "Use the THC Vape category at PLANETS 59 for cannabis vape product listings kept separate from Nicotine Vape products.",
+    seoDescription: "Compare the THC Vape products listed in this PLANETS 59 category. Check the current product information while browsing.",
     faqs: [
-      { q: "How long does a disposable vape last?", a: "Most disposable THC vapes contain 0.5g-1g of distillate and last between 100-300 puffs depending on usage." },
-      { q: "Are disposable vapes rechargeable?", a: "Most are designed for single use, but some models include a USB-C charging port to ensure you can use the full cartridge." },
+      { q: "Is this the THC Vape category?", a: "Yes. This category is kept separate from PLANETS 59 Nicotine Vape products." },
+      { q: "Where are nicotine vape products?", a: "Use the separate Nicotine Vape category for nicotine products. Adults 19+. Nicotine is addictive." },
     ],
   },
   CONCENTRATES: {

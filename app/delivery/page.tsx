@@ -4,10 +4,10 @@ import P59WebChat from "./P59WebChat";
 import menu from "./delivery-menu.json";
 
 export const metadata: Metadata = {
-  title: { absolute: "Cannabis Delivery Brampton | PLANETS 59" },
+  title: { absolute: "Weed Delivery Brampton | PLANETS 59" },
   description: "Browse the PLANETS 59 flower delivery menu in Brampton and connect with the store dispatcher through LIVE ORDER, daily from 10:00 a.m. to 10:00 p.m.",
   alternates: {
-    canonical: "https://www.planets59.com/delivery",
+    canonical: "https://www.planets59.com/weed-delivery-brampton",
   },
 };
 
@@ -16,8 +16,8 @@ export default function DeliveryPage() {
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: "PLANETS 59 Brampton Delivery Menu",
-      url: "https://www.planets59.com/delivery",
+      name: "PLANETS 59 Weed Delivery Menu in Brampton",
+      url: "https://www.planets59.com/weed-delivery-brampton",
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: menu.products.length,
@@ -31,9 +31,9 @@ export default function DeliveryPage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "PLANETS 59 Cannabis Delivery",
-      serviceType: "Cannabis delivery",
-      url: "https://www.planets59.com/delivery",
+      name: "PLANETS 59 Weed Delivery",
+      serviceType: "Weed delivery",
+      url: "https://www.planets59.com/weed-delivery-brampton",
       areaServed: { "@type": "City", name: "Brampton" },
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
