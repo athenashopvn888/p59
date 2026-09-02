@@ -166,7 +166,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
     faqs: [
       { q: "What cannabis edibles do you carry?", a: "Use the current menu to compare edible names, package details, prices, and listing details." },
       { q: "Where can I find item details?", a: "Check the current menu and product package for item-specific details." },
-      { q: "Can I buy edibles at PLANETS 59?", a: "Yes! Visit us at 8500 Torbram Rd #59, Brampton. We're open 24 hours daily with a full edibles selection in store." },
+      { q: "Can I buy edibles at PLANETS 59?", a: "Check the current Edibles menu for the product information presented while you browse." },
     ],
   },
   "VAPE PENS": {
@@ -295,3 +295,4 @@ export function formatPrice(p: PricePoint | null): string {
   if (p.sale !== null) return `$${p.sale}`;
   return `$${p.regular}`;
 }
+
