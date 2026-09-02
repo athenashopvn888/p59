@@ -36,13 +36,13 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "text": "Pick the category first, then compare the details that matter."
       },
       {
-        "title": "Flower Guide",
-        "href": "/resources/flower-guide",
-        "text": "Compare Exotic, Premium, AAA+, AA, and Budget in plain language."
+        "title": "Weed Flower Guide",
+        "href": "/resources/weed-flower-guide",
+        "text": "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in plain language."
       },
       {
-        "title": "Value Guide",
-        "href": "/resources/value-guide",
+        "title": "Weed Value Guide",
+        "href": "/resources/weed-value-guide",
         "text": "A practical path for cheap weed, budget weed, and affordable flower."
       },
       {
@@ -81,13 +81,13 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "intro": "The fastest way through a menu is to choose the product type before comparing products. That keeps the visit focused whether you want flower, pre-rolls, edibles, vapes, concentrates, or cigarettes.",
     "cards": [
       {
-        "title": "Flower Guide",
-        "href": "/resources/flower-guide",
+        "title": "Weed Flower Guide",
+        "href": "/resources/weed-flower-guide",
         "text": "Compare flower tiers without mixing in other categories."
       },
       {
-        "title": "Value Guide",
-        "href": "/resources/value-guide",
+        "title": "Weed Value Guide",
+        "href": "/resources/weed-value-guide",
         "text": "Start with the right value lane before scrolling everywhere."
       },
       {
@@ -108,66 +108,66 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     ]
   },
   {
-    "slug": "flower-guide",
-    "title": "PLANETS 59 Flower Guide",
-    "seoTitle": "PLANETS 59 Flower Guide | Exotic, Premium, Budget",
-    "description": "Compare exotic flower, premium flower, budget weed, cheap weed, and affordable weed at PLANETS 59.",
-    "eyebrow": "Flower Guide",
-    "intro": "Flower gets easier when you compare one tier at a time. Exotic and Premium sit in different lanes from AAA+, AA, and Budget, so start with the lane that matches the visit.",
+    "slug": "weed-flower-guide",
+    "title": "PLANETS 59 Weed Flower Guide",
+    "seoTitle": "PLANETS 59 Weed Flower Guide | Brampton",
+    "description": "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed at PLANETS 59 in Brampton.",
+    "eyebrow": "Weed Flower Guide",
+    "intro": "Weed flower gets easier to explore when you compare one collection at a time. Exotic Weed and Premium Weed sit in different collections from AAA+ Weed, AA Weed and Budget Weed.",
     "cards": [
       {
-        "title": "Exotic Flower",
-        "href": "/exotic",
-        "text": "Start here for the higher shelf flower lane."
+        "title": "Exotic Weed",
+        "href": "/exotic-weed",
+        "text": "Explore the PLANETS 59 Exotic Weed collection."
       },
       {
-        "title": "Premium Flower",
-        "href": "/premium",
-        "text": "A strong lane for shoppers comparing quality and value."
+        "title": "Premium Weed",
+        "href": "/premium-weed",
+        "text": "Explore the PLANETS 59 Premium Weed collection."
       },
       {
-        "title": "AAA+ Flower",
-        "href": "/aaa",
-        "text": "A clear middle lane for flower comparison."
+        "title": "AAA+ Weed",
+        "href": "/aaa-weed",
+        "text": "Explore the PLANETS 59 AAA+ Weed collection."
       },
       {
-        "title": "AA Flower",
-        "href": "/aa",
-        "text": "A straight value-minded flower lane."
+        "title": "AA Weed",
+        "href": "/aa-weed",
+        "text": "Explore the PLANETS 59 AA Weed collection."
       },
       {
-        "title": "Budget Flower",
-        "href": "/budget",
-        "text": "Start here when cheap weed or affordable weed is the goal."
+        "title": "Budget Weed",
+        "href": "/budget-weed",
+        "text": "Explore the PLANETS 59 Budget Weed collection."
       }
     ],
     "sections": [
       {
         "heading": "Compare Tier, Then Details",
-        "body": "Open the tier, then compare the current product name, format, weight, posted price, and listing details. That gives shoppers a clean decision path."
+        "body": "Open one Weed flower collection, then compare the product name, format and information presented with each listing."
       },
       {
         "heading": "Value Does Not Need Guesswork",
-        "body": "Budget and AA are the right first stops for low-spend flower shopping. If the details are thin or the choice feels close, ask staff before choosing."
+        "body": "Budget Weed and AA Weed are two value-minded flower collections. If a product choice feels close, ask PLANETS 59 staff before choosing."
       }
     ]
   },
   {
-    "slug": "value-guide",
-    "title": "PLANETS 59 Value Guide",
-    "seoTitle": "PLANETS 59 Value Guide | Cheap Weed and Budget Weed",
+    "slug": "weed-value-guide",
+    "title": "PLANETS 59 Weed Value Guide",
+    "seoTitle": "PLANETS 59 Weed Value Guide | Budget Weed in Brampton",
     "description": "A practical value guide for comparing cheap weed, budget weed, affordable weed, and menu categories at PLANETS 59.",
-    "eyebrow": "Value Guide",
-    "intro": "Good value shopping is not just chasing the lowest number. It is choosing a useful category, checking the current details, and knowing when Budget, AA, or another tier makes more sense.",
+    "eyebrow": "Weed Value Guide",
+    "intro": "Value-minded Weed shopping starts by choosing a useful flower collection and knowing when Budget Weed, AA Weed or another collection makes more sense.",
     "cards": [
       {
-        "title": "Budget Flower",
-        "href": "/budget",
+        "title": "Budget Weed",
+        "href": "/budget-weed",
         "text": "The first stop for cheap weed and affordable weed comparisons."
       },
       {
-        "title": "AA Flower",
-        "href": "/aa",
+        "title": "AA Weed",
+        "href": "/aa-weed",
         "text": "A simple value lane for flower shoppers."
       },
       {
@@ -179,11 +179,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "sections": [
       {
         "heading": "Start With Budget And AA",
-        "body": "If low spend is the point, start in Budget and AA before jumping across the rest of the menu. That keeps the comparison honest and quick."
+        "body": "If value-minded flower shopping is the point, start with Budget Weed and AA Weed before exploring the rest of the menu."
       },
       {
         "heading": "Read The Menu Notes",
-        "body": "Compare product name, format, size, and posted price. If one detail is unclear, use staff for the answer instead of guessing from old copy."
+        "body": "Compare the product name, format and information presented while browsing. If one detail is unclear, ask PLANETS 59 staff."
       }
     ]
   },

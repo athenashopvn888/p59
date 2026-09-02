@@ -6,17 +6,17 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 
 const FLOWER_LINKS = [
-  { href: "/exotic", label: "Exotic" },
-  { href: "/premium", label: "Premium" },
-  { href: "/aaa", label: "AAA+" },
-  { href: "/aa", label: "AA" },
-  { href: "/budget", label: "Budget" },
+  { href: "/exotic-weed", label: "Exotic Weed" },
+  { href: "/premium-weed", label: "Premium Weed" },
+  { href: "/aaa-weed", label: "AAA+ Weed" },
+  { href: "/aa-weed", label: "AA Weed" },
+  { href: "/budget-weed", label: "Budget Weed" },
 ];
 
 const CATEGORY_LINKS = [
   { href: "/items/edibles", label: "Edibles" },
   { href: "/items/prerolls", label: "Pre-Rolls" },
-  { href: "/items/vapes", label: "Nic Vape" },
+  { href: "/items/vapes", label: "Nicotine Vape" },
   { href: "/items/vape-disposables", label: "THC Vape" },
   { href: "/items/concentrates", label: "Concentrates" },
   { href: "/items/magic", label: "Magic Stuff" },
@@ -39,7 +39,7 @@ export default function Navbar() {
   const isStoreMenuActive =
     menuLinks.some((link) => pathname === link.href) ||
     pathname.startsWith("/item/");
-  const isDeliveryActive = pathname === "/delivery";
+  const isDeliveryActive = pathname === "/weed-delivery-brampton";
   const updateScrollState = useCallback(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; setCanAdvance(menuGrid.scrollWidth - menuGrid.clientWidth - menuGrid.scrollLeft > 2); }, []);
   useEffect(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; updateScrollState(); menuGrid.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(menuGrid); if (menuGrid.firstElementChild) resizeObserver.observe(menuGrid.firstElementChild); return () => { menuGrid.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
   const advanceMenuGrid = () => { const menuGrid = menuGridRef.current; if (!menuGrid) return; const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; menuGrid.scrollBy({ left: Math.max(180, menuGrid.clientWidth * 0.75), behavior: reduceMotion ? "auto" : "smooth" }); };
@@ -57,7 +57,7 @@ export default function Navbar() {
 
         <div className={styles.topBarRight} aria-label="Choose a menu">
           <Link
-            href="/exotic"
+            href="/exotic-weed"
             className={`${styles.primaryTab} ${isStoreMenuActive ? styles.primaryTabActive : ""}`}
             aria-current={isStoreMenuActive ? "page" : undefined}
           >
@@ -65,11 +65,11 @@ export default function Navbar() {
             <small>Browse</small>
           </Link>
           <Link
-            href="/delivery"
+            href="/weed-delivery-brampton"
             className={`${styles.primaryTab} ${styles.deliveryTab} ${isDeliveryActive ? styles.deliveryTabActive : ""}`}
             aria-current={isDeliveryActive ? "page" : undefined}
           >
-            <span>Delivery Menu</span>
+            <span>Weed Delivery</span>
             <small>Live</small>
           </Link>
           <Link href="/resources" className={styles.resourcesBtn}>Resources</Link>

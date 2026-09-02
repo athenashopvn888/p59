@@ -96,13 +96,13 @@ export function GBPLandingPage() {
       </header>
 
       <aside className={styles.deliveryNotice} aria-labelledby="landing-delivery-title">
-        <h2 id="landing-delivery-title">NEW DELIVERY AVAILABLE</h2>
-        <p>PLANETS 59 delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the PLANETS 59 flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
+        <h2 id="landing-delivery-title">PLANETS 59 WEED DELIVERY</h2>
+        <p>PLANETS 59 Weed Delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
       </aside>
 
       <div className={styles.btnRow}>
-        <Link href="/exotic" className={`${styles.btn} ${styles.btnPrimary}`}>STORE MENU</Link>
-        <Link href="/delivery" className={`${styles.btn} ${styles.btnSecondary}`}>DELIVERY MENU</Link>
+        <Link href="/exotic-weed" className={`${styles.btn} ${styles.btnPrimary}`}>EXPLORE EXOTIC WEED</Link>
+        <Link href="/weed-delivery-brampton" className={`${styles.btn} ${styles.btnSecondary}`}>EXPLORE WEED DELIVERY</Link>
       </div>
 
       {/* Intro Section */}

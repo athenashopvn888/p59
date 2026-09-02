@@ -123,7 +123,7 @@ export default async function SeoLandingPage({
 
           {/* Tier Grid */}
           {heroPreview?.theme !== "nicotine" && <div className={styles.section}>
-            <h2 className={styles.sectionTitle}>Our Cannabis Menu — Five Tiers of Quality</h2>
+            <h2 className={styles.sectionTitle}>Five PLANETS 59 Weed Flower Collections</h2>
             <div className={styles.tierGrid}>
               {tiers.map((tier) => (
                 <Link

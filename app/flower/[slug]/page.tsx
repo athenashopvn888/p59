@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!flower) return {};
 
   const tierName = TIER_CONFIG[flower.tier]?.name || flower.tier;
-  const strainData = getStrainData(flower.name, flower.type, flower.tier, flower.thc);
+  const strainData = getStrainData(flower.name, flower.type, tierName, flower.thc);
 
   return {
     title: `${flower.name} | ${tierName} ${flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid"} | THC ${flower.thc} | PLANETS 59 Brampton`,
@@ -51,12 +51,13 @@ function cleanSku(value: string) {
 }
 
 function getJsonLd(flower: FlowerProduct) {
+  const tierName = TIER_CONFIG[flower.tier]?.name || flower.tier;
   const lowestPrice = [flower.price3g, flower.price5g, flower.price14g, flower.price28g]
     .filter((p): p is PricePoint => p !== null)
     .map((p) => p.sale ?? p.regular)
     .sort((a, b) => a - b)[0];
 
-  const strainData = getStrainData(flower.name, flower.type, flower.tier, flower.thc);
+  const strainData = getStrainData(flower.name, flower.type, tierName, flower.thc);
 
   const offers: any = {
     "@type": "Offer",
@@ -90,7 +91,7 @@ function getJsonLd(flower: FlowerProduct) {
 /* -- Breadcrumb JSON-LD -- */
 function getBreadcrumbJsonLd(flower: FlowerProduct) {
   const tierConfig = TIER_CONFIG[flower.tier];
-  const tierSlug = tierConfig?.slug || "exotic";
+  const tierSlug = tierConfig?.slug || "exotic-weed";
   const tierName = tierConfig?.name || flower.tier;
   return {
     "@context": "https://schema.org",
@@ -135,7 +136,7 @@ export default async function FlowerPage({
   const tierColor = tierConfig?.color || "#94a3b8";
   const tierName = tierConfig?.name || flower.tier;
   const typeName = flower.type === "indica" ? "Indica" : flower.type === "sativa" ? "Sativa" : "Hybrid";
-  const strainData = getStrainData(flower.name, flower.type, flower.tier, flower.thc);
+  const strainData = getStrainData(flower.name, flower.type, tierName, flower.thc);
   const isTopTier = TOP_TIERS.includes(flower.tier);
 
   // Weight label for 5g column depends on tier
@@ -181,7 +182,7 @@ export default async function FlowerPage({
           <nav className={styles.breadcrumb}>
             <Link href="/">Home</Link>
             <span>/</span>
-            <Link href={`/${tierConfig?.slug || "exotic"}`}>{tierName}</Link>
+            <Link href={`/${tierConfig?.slug || "exotic-weed"}`}>{tierName}</Link>
             <span>/</span>
             <span className={styles.breadcrumbCurrent}>{flower.name}</span>
           </nav>

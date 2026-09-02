@@ -40,24 +40,23 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Quick Links</h3>
             <nav className={styles.links}>
               <Link href="/">Home</Link>
-              <Link href="/exotic">Exotic Flower</Link>
-              <Link href="/premium">Premium Flower</Link>
-              <Link href="/aaa">AAA+ Flower</Link>
-              <Link href="/aa">AA Flower</Link>
-              <Link href="/budget">Budget Flower</Link>
+              <Link href="/exotic-weed">Exotic Weed</Link>
+              <Link href="/premium-weed">Premium Weed</Link>
+              <Link href="/aaa-weed">AAA+ Weed</Link>
+              <Link href="/aa-weed">AA Weed</Link>
+              <Link href="/budget-weed">Budget Weed</Link>
               <Link href="/items/edibles">Edibles</Link>
               <Link href="/items/cigarettes">Cigarettes</Link>
-              <Link href="/items/vapes">Vape Pens</Link>
+              <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/resources">Resources</Link>
               <Link href="/faq">FAQ</Link>
-              <Link href="/delivery">Delivery Menu</Link>
-              <Link href="/info/brampton-weed-dispensary">Brampton Dispensary</Link>
+              <Link href="/weed-delivery-brampton">Weed Delivery</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>
               <Link href="/info/native-cigarettes-brampton">Native Cigarettes Brampton</Link>
               <Link href="/info/nicotine-vapes-brampton">Nicotine Vapes Brampton</Link>
               <Link href="/info/weed-store-near-mississauga">Mississauga Visit Notes</Link>
               <Link href="/info/dispensary-near-me-brampton">Dispensary Near Me Brampton</Link>
-              <Link href="/weed-dispensary-brampton/">PLANETS 59 Weed Dispensary in Brampton</Link>
+              <Link href="/weed-dispensary-brampton">PLANETS 59 Weed Dispensary in Brampton</Link>
               <Link href="/contact">Contact Us</Link>
             </nav>
           </div>
