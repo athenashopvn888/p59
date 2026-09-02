@@ -15,6 +15,8 @@ const deliveryPage = read("app/delivery/page.tsx");
 const resources = read("app/resources/resourceData.ts");
 const seoPages = read("app/lib/seoPages.ts");
 const sitemap = read("app/sitemap.ts");
+const faq = read("app/faq/page.tsx");
+const layout = read("app/layout.tsx");
 
 const tiers = [
   ["exotic", "exotic-weed", "Exotic Weed"],
@@ -75,7 +77,15 @@ test("supporting Weed resources are sole self-canonical owners", () => {
 });
 
 test("evergreen public copy omits reversed tiers and known workflow debt", () => {
-  const publicCopy = [home, tierCopy, resources].join("\n");
+  const publicCopy = [home, tierCopy, resources, faq, tierPage, layout, products].join("\n");
+  const cleanupCopy = [faq, tierPage, layout].join("\n");
   assert.doesNotMatch(publicCopy, /\bWeed (?:Exotic|Premium|AAA\+?|AA|Budget)\b/i);
   assert.doesNotMatch(publicCopy, /The redesign keeps|The public nav now points|Free evening street parking is available/i);
+  assert.doesNotMatch(cleanupCopy, /TTC bus routes|highways like the 401|5 minutes from the highways|most competitive prices|Listed prices start|priceRange:|\$25\/carton|Brampton(?:&apos;|')s premium dispensary/i);
+  assert.doesNotMatch(products, /full edibles selection in store/i);
+  assert.match(faq, /Exotic Weed, Premium Weed, AAA\+ Weed, AA Weed, and Budget Weed/);
+  assert.match(faq, /PLANETS 59 Weed Delivery page/);
+  assert.match(tierPage, /Explore the \$\{tierInfo\.config\.name\} & Cannabis Flower collection/);
+  assert.doesNotMatch(layout, /priceRange:/);
 });
+

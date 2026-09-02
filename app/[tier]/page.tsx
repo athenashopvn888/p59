@@ -38,7 +38,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title: `${tierInfo.config.name} | PLANETS 59`,
-      description: `Browse the current ${tierInfo.config.name.toLowerCase()} flower menu. Listed prices start from $${tierInfo.config.unitPrice}/g.`,
+      description: `Explore the ${tierInfo.config.name} & Cannabis Flower collection from PLANETS 59 in Brampton.`,
     },
   };
 }
@@ -213,3 +213,4 @@ export default async function TierPage({
     </main>
   );
 }
+

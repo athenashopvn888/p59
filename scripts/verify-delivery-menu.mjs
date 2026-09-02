@@ -46,7 +46,8 @@ assert(css.includes("@keyframes p59-live-order-ring") && css.includes("overflow-
 assert(page.includes("hoursAvailable") && page.includes('opens: "10:00"') && page.includes('closes: "22:00"'));
 assert(navbar.includes("<small>Live</small>"));
 assert(footer.includes('<Link href="/weed-delivery-brampton">Weed Delivery</Link>'));
-assert(faq.includes("The PLANETS 59 delivery menu is available daily"));
+assert(faq.includes("Use the PLANETS 59 Weed Delivery page and LIVE ORDER"));
+assert(faq.includes("Check the Weed Delivery page and LIVE ORDER for the current terms"));
 assert(component.includes("compactPriceGrid") && component.includes("compact.map"));
 assert(component.includes("Member Loyalty Savings"));
 assert(component.includes("STANDARD 28g") && component.includes("MEMBER LOYALTY 28g") && component.includes("× 28g DEAL"));
@@ -65,3 +66,4 @@ assert.equal(premium376.offers.find((offer) => offer.kind === "prime_time").pric
 for (const product of products.filter((item) => ["Budget", "SHREDS"].includes(item.tier))) assert(!product.offers.some((offer) => offer.kind === "prime_time"));
 assert(!JSON.stringify(products).includes('"provenance"'));
 console.log("[verify] P59 63-product fallback math and mobile decision hierarchy verified.");
+

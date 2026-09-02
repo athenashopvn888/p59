@@ -6,7 +6,7 @@ import styles from "./faq.module.css";
 export const metadata: Metadata = {
   title: "FAQ — PLANETS 59 | Brampton Dispensary Questions",
   description:
-    "Frequently asked questions about PLANETS 59 in Brampton. Hours, location, products, pricing, bundle offers, and everything you need to know before visiting.",
+    "Frequently asked questions about PLANETS 59 in Brampton, including store information, current menu categories and Weed Delivery.",
   alternates: {
     canonical: "https://www.planets59.com/faq",
   },
@@ -16,43 +16,43 @@ const FAQ_CATEGORIES = [
   {
     title: "📍 Location & Hours",
     faqs: [
-      { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. We're easily accessible by TTC bus routes and close to major highways like the 401." },
+      { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use your preferred maps or transit service for current directions and travel information." },
       { q: "What are your hours?", a: "We are open 24 hours daily. Walk in anytime — no appointment needed." },
-      { q: "Is there parking nearby?", a: "Yes. Free street parking is listed nearby on surrounding streets in the evenings. We're also easily accessible by local transit." },
-      { q: "How far are you from Mississauga?", a: "We're just 5 minutes from the highways and central transit routes. We are centrally located and easy to reach." },
-      { q: "What's the best way to get to PLANETS 59?", a: "We're easily accessible by car, bus, or foot. We are easily accessible by car, local transit, or bus routes. Free parking is listed on surrounding streets." },
+      { q: "Is there parking nearby?", a: "Check current local parking signs and restrictions before your visit." },
+      { q: "How can I plan a visit?", a: "Use your preferred maps or transit service for current directions and travel information." },
+      { q: "What's the best way to get to PLANETS 59?", a: "Use your preferred maps or transit service for current directions and travel information." },
     ],
   },
   {
     title: "🌿 Products & Menu",
     faqs: [
-      { q: "What products do you carry?", a: "We list cannabis flower tiers plus edibles, vape pens, disposable vapes, concentrates, pre-rolls, Native cigarettes, accessories, and resources. Use the current menu for products and listings." },
-      { q: "Do you have a current menu?", a: "Yes. Our online menu at planets59.com lists current menu items and prices. Check it before visiting because the selection can change." },
-      { q: "What are your flower tiers?", a: "The menu groups flower into Exotic, Premium, AAA+, AA, and Budget tiers. Each tier page shows its current prices and menu items." },
-      { q: "Do you sell edibles?", a: "Yes! We carry a variety of edibles including gummies, chocolates, baked goods, and more. THC content varies. Check our current menu for current listings." },
-      { q: "Do you sell vapes?", a: "The menu includes categories for disposable vapes, refillable vape pens, nicotine vapes, and THC vapes. Check the current listings before visiting." },
-      { q: "Do you sell native cigarettes?", a: "The current cigarette menu lists Native smoke brands including Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights, with $25/carton pricing where listed. Confirm current options before visiting." },
+      { q: "What products are shown on the menu?", a: "Use the current menu to browse the categories and product information presented by PLANETS 59." },
+      { q: "Do you have a current menu?", a: "Use the online menu at planets59.com for the product information presented while you browse." },
+      { q: "What are your flower tiers?", a: "The menu groups flower into Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed tiers. Use each tier page for the current menu information presented there." },
+      { q: "Where can I browse edibles?", a: "Check the current Edibles menu for the product information presented while you browse." },
+      { q: "Where can I browse vapes?", a: "Use the separate Nicotine Vape and THC Vape categories for the product information presented in each menu." },
+      { q: "Where can I find Native smoke information?", a: "Explore the Native Smokes section for the information currently presented there." },
     ],
   },
   {
-    title: "💰 Pricing & Bundle Offers",
+    title: "Menu Information",
     faqs: [
-      { q: "What is the cheapest weed you sell?", a: "Our Budget tier starts at $3/g with value ounces from $40. Our AA tier is $4/g. These are the most competitive prices you'll find in Brampton." },
-      { q: "What bundle pricing do you offer?", a: "Flower bundle pricing includes a 3g total option — the 3g total is shown clearly before purchase. Our Exotic, Premium, and AAA+ tiers also offer 6g bundle pricing, with 6g total pricing." },
-      { q: "Do you have ounce options?", a: "The menu lists ounce options and prices when offered. Check the relevant flower tier for current details." },
-      { q: "How does bundle pricing work?", a: "The 3g bundle pricing applies to every tier automatically. The 6g bundle pricing applies to Exotic, Premium, and AAA+ tiers. These are our standard everyday bundle offers." },
-      { q: "How does the tier pricing work?", a: "Each flower strain is graded into one of five quality tiers. The tier determines the per-gram price. This transparent system means you always know exactly what you're paying — no confusing markups or inconsistent pricing." },
+      { q: "Where can I find current product information?", a: "Use the current menu and the relevant category page for the information presented while you browse." },
+      { q: "Where can I compare flower tiers?", a: "Use the Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed pages to compare the current menu information presented for each tier." },
+      { q: "Where can I find current flower information?", a: "Check the relevant flower tier page for the current menu information presented there." },
+      { q: "Can menu information change?", a: "Use the current menu when browsing because product information can change." },
+      { q: "How are the flower tiers organized?", a: "Flower is organized into Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed categories." },
     ],
   },
   {
     title: "🛒 Shopping & Experience",
     faqs: [
       { q: "Do I need an appointment?", a: "No! PLANETS 59 is walk-in only. Just show up anytime — we are open 24 hours daily." },
-      { q: "Can I order online?", a: "Use the delivery menu to browse, then select LIVE ORDER to connect with the PLANETS 59 dispatcher. The dispatcher confirms availability and next steps." },
-      { q: "Do you offer delivery?", a: "Yes. The PLANETS 59 delivery menu is available daily from 10:00 a.m. to 10:00 p.m. with a $60 product minimum and a $10 delivery fee." },
-      { q: "What payment methods do you accept?", a: "We accept cash and debit. No credit cards at this time." },
+      { q: "Can I order online?", a: "Use the Weed Delivery menu to browse, then select LIVE ORDER to connect with the PLANETS 59 dispatcher. The dispatcher confirms availability and next steps." },
+      { q: "Do you offer Weed Delivery?", a: "Use the PLANETS 59 Weed Delivery page and LIVE ORDER for the current information presented while you browse." },
+      { q: "What payment methods do you accept?", a: "Check the current checkout or in-store information for available payment options." },
       { q: "Can staff help me compare menu items?", a: "Yes. Staff can help you compare current categories, formats, package details, and listed prices." },
-      { q: "Is there a minimum purchase?", a: "The delivery menu has a $60 product minimum. In-store purchases follow the current posted store terms." },
+      { q: "Where can I find current Weed Delivery terms?", a: "Check the Weed Delivery page and LIVE ORDER for the current terms presented there." },
     ],
   },
 ];
@@ -95,7 +95,7 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about PLANETS 59 — Brampton&apos;s premium dispensary at 8500 Torbram Rd #59 in Brampton.
+            Everything you need to know about PLANETS 59 at 8500 Torbram Rd #59 in Brampton.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
@@ -122,3 +122,4 @@ export default function FAQPage() {
     </>
   );
 }
+
