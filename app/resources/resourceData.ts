@@ -7,6 +7,7 @@ export interface ResourceCard {
 export interface ResourceSection {
   heading: string;
   body: string;
+  extraParagraphs?: string[];
   bullets?: string[];
 }
 
@@ -19,6 +20,7 @@ export interface ResourcePage {
   intro: string;
   cards: ResourceCard[];
   sections: ResourceSection[];
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 export const RESOURCE_PAGES: ResourcePage[] = [
@@ -39,6 +41,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "title": "Weed Flower Guide",
         "href": "/resources/weed-flower-guide",
         "text": "Compare Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed in plain language."
+      },
+      {
+        "title": "Cannabis vs Weed Dispensary Guide",
+        "href": "/resources/cannabis-dispensary-vs-weed-dispensary",
+        "text": "Understand how common dispensary and cannabis store wording connects to local search intent."
       },
       {
         "title": "Weed Value Guide",
@@ -69,6 +76,55 @@ export const RESOURCE_PAGES: ResourcePage[] = [
       {
         "heading": "Local Notes For Torbram and Steeles / Brampton",
         "body": "PLANETS 59 serves adult shoppers around Torbram and Steeles / Brampton. This resource section keeps the visit simple: confirm the store, choose a category, and check current details."
+      }
+    ]
+  },
+  {
+    "slug": "cannabis-dispensary-vs-weed-dispensary",
+    "title": "Cannabis Dispensary or Weed Dispensary — Which Term Should You Use?",
+    "seoTitle": "Cannabis vs Weed Dispensary Guide | Planets 59",
+    "description": "Learn the difference between cannabis dispensary, weed dispensary and cannabis store terminology, plus how near-me searches relate in Brampton.",
+    "eyebrow": "Local Dispensary Guide",
+    "intro": "A search for a nearby dispensary can begin in several ways. “Cannabis dispensary near me,” “weed dispensary near me,” “cannabis store near me,” and “dispensary near me” are separate queries, yet they can express closely related local intent. This guide explains how the terminology fits together.",
+    "cards": [
+      {
+        "title": "Plan a Visit to Planets 59",
+        "href": "/weed-dispensary-brampton",
+        "text": "Use the established local dispensary page for store and visit information."
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Formal Language vs. Everyday Language",
+        "body": "“Cannabis” is the language most often used in formal business and regulatory contexts. “Weed” is common everyday language. “Dispensary” tells the searcher what kind of place they are trying to find.",
+        "extraParagraphs": [
+          "That is why a customer can move between cannabis, weed, store and dispensary wording without necessarily changing the underlying objective."
+        ]
+      },
+      {
+        "heading": "Local Context for Brampton",
+        "body": "Planets 59 is the business entity this site represents in Brampton. The new article is an authority/support page, not a replacement location page.",
+        "extraParagraphs": [
+          "Keep the current local dispensary page as the canonical visit-intent asset and add a natural internal link from this guide to that page."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is cannabis the same word as weed?",
+        "answer": "They overlap in everyday use, but cannabis is the formal term while weed is more conversational."
+      },
+      {
+        "question": "What does dispensary mean in this context?",
+        "answer": "It identifies the local business type a searcher is trying to find."
+      },
+      {
+        "question": "Can one page support several related searches?",
+        "answer": "Yes. A useful page can naturally explain the connected terminology without repeating every phrase unnaturally."
+      },
+      {
+        "question": "What is the role of the local store page?",
+        "answer": "It remains the main page for location and visit intent, while this guide provides supporting topical context."
       }
     ]
   },
@@ -341,3 +397,4 @@ export function getResourcePage(slug: string) {
   const cleanSlug = slug.replace(/^\/+|\/+$/g, "");
   return RESOURCE_PAGES.find((page) => page.slug === cleanSlug);
 }
+
