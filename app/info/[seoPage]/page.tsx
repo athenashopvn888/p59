@@ -46,6 +46,31 @@ export default async function SeoLandingPage({
 
   const tiers = Object.values(TIER_CONFIG);
   const heroPreview = page.heroPreview;
+  const isMississaugaVisitorPage = slug === "weed-store-near-mississauga";
+  const visitorSchema = isMississaugaVisitorPage ? [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.planets59.com/info/weed-store-near-mississauga/#webpage",
+      url: "https://www.planets59.com/info/weed-store-near-mississauga",
+      name: page.title,
+      description: page.metaDescription,
+      about: { "@id": "https://www.planets59.com/#store" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://www.planets59.com/" },
+        { "@type": "ListItem", position: 2, name: "Visiting from Mississauga", item: "https://www.planets59.com/info/weed-store-near-mississauga" },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: page.faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })),
+    },
+  ] : null;
 
   // Check if banner file exists in the public folder
   const bannerExists = page.banner
@@ -54,6 +79,7 @@ export default async function SeoLandingPage({
 
   return (
     <main className={styles.main}>
+      {visitorSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(visitorSchema).replace(/</g, "\\u003c") }} />}
       <Navbar />
 
       {/* Banner Image */}
@@ -120,6 +146,7 @@ export default async function SeoLandingPage({
               <p className={styles.sectionBody}>{s.body}</p>
             </div>
           ))}
+          {isMississaugaVisitorPage && <div className={styles.visitBtns}><Link href="/weed-dispensary-brampton">Brampton Store Details</Link><Link href="/weed-delivery-brampton">Brampton Delivery</Link></div>}
 
           {/* Tier Grid */}
           {heroPreview?.theme !== "nicotine" && <div className={styles.section}>

@@ -37,7 +37,8 @@ const nextConfig: NextConfig = {
       { source: "/info/york-weed-dispensary", destination: "/weed-dispensary-brampton", permanent: true },
       { source: "/info/cheap-weed-york", destination: "/info/cheap-weed-brampton", permanent: true },
       { source: "/info/native-cigarettes-york", destination: "/info/native-cigarettes-brampton", permanent: true },
-      { source: "/info/dispensary-near-me-york", destination: "/info/dispensary-near-me-brampton", permanent: true },
+      { source: "/info/dispensary-near-me-brampton", destination: "/weed-dispensary-brampton", permanent: true },
+      { source: "/info/dispensary-near-me-york", destination: "/weed-dispensary-brampton", permanent: true },
     ];
   },
 };

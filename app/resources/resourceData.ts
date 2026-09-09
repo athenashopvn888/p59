@@ -33,6 +33,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     "intro": "Use this resource centre to shop PLANETS 59 with less noise. Choose the product category, compare what matters, then use the current menu or staff for details that can change.",
     "cards": [
       {
+        "title": "Brampton Store Details",
+        "href": "/weed-dispensary-brampton",
+        "text": "Find the PLANETS 59 Brampton address, storefront hours, delivery hours and visit information."
+      },
+      {
         "title": "Menu Guide",
         "href": "/resources/menu-guide",
         "text": "Pick the category first, then compare the details that matter."

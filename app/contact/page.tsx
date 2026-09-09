@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./contact.module.css";
@@ -100,6 +101,7 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
+            <p>See the full <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link> page for store and visit details.</p>
           </div>
         </div>
       </section>
