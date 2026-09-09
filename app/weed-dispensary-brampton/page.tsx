@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { WeedOwnerPage } from "@/app/components/WeedOwnerPage";
+import { DeliveryCoverage } from "@/app/components/DeliveryCoverage";
 
 export const metadata: Metadata = {
   title: { absolute: "24-Hour Cannabis Dispensary in Brampton | PLANETS 59" },
@@ -15,5 +16,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <WeedOwnerPage />;
+  return <><WeedOwnerPage /><DeliveryCoverage /></>;
 }
