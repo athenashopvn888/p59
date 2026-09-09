@@ -118,75 +118,39 @@ export const SEO_PAGES: SeoPageData[] = [
   },
   {
     "slug": "weed-store-near-mississauga",
-    "title": "Weed Store Near Mississauga | PLANETS 59",
-    "metaDescription": "Looking for a weed store near Mississauga? Use PLANETS 59 in Brampton for store-page checks, menu categories, and visit planning before making the trip.",
-    "h1": "Weed Store Near Mississauga",
+    "title": "Visiting PLANETS 59 From Mississauga | Brampton Store",
+    "absoluteTitle": true,
+    "metaDescription": "Coming from Mississauga? PLANETS 59 is at 8500 Torbram Rd #59 in Brampton, near Steeles Ave E. The Brampton storefront is open 24 hours daily.",
+    "h1": "Visiting PLANETS 59 From Mississauga",
     "icon": ">",
-    "heroTagline": "Mississauga-to-Brampton visit notes",
+    "heroTagline": "Coming from Mississauga? This PLANETS 59 location is in Brampton, not Mississauga.",
     "banner": "/banners/01_welcome_to_planets59.webp",
     "sections": [
       {
-        "heading": "Confirm The Right Store Page",
-        "body": "Open the PLANETS 59 store page first. Confirm directions, listed hours, and current menu details before visiting."
+        "heading": "PLANETS 59 Brampton Store",
+        "body": "PLANETS 59 is at 8500 Torbram Rd #59, Brampton, ON L6T 5C6, near Steeles Avenue East. The Brampton storefront is open 24 hours daily. Use the Brampton cannabis dispensary page for complete store and visit details."
       },
       {
-        "heading": "Choose The Product Category",
-        "body": "Flower, pre-rolls, edibles, vapes, concentrates, cigarettes, and accessories all shop differently. Pick the category first, then compare current product details."
+        "heading": "Planning the Trip From Mississauga",
+        "body": "Use your current map or transit service for up-to-date travel information before leaving. You can browse the current PLANETS 59 menu before planning the trip."
       },
       {
-        "heading": "Use Staff For The Close Call",
-        "body": "If one detail decides the visit, ask staff. That is the cleanest way to handle current product questions."
+        "heading": "Delivery Is Separate From Store Hours",
+        "body": "Brampton delivery runs from 10 a.m. to 10 p.m. Availability outside Brampton can vary with driver coverage; contact PLANETS 59 to confirm before relying on delivery."
       }
     ],
     "faqs": [
       {
-        "q": "What is the best first step?",
-        "a": "Open the PLANETS 59 store page, then use the current menu category that matches the visit."
+        "q": "Is PLANETS 59 located in Mississauga?",
+        "a": "No. PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton, near Steeles Avenue East."
       },
       {
-        "q": "Should shoppers rely on old blog prices?",
-        "a": "No. Use the current menu or staff for details that change."
+        "q": "Is the Brampton store open 24 hours?",
+        "a": "Yes. The PLANETS 59 storefront in Brampton is open 24 hours daily."
       },
       {
-        "q": "What categories can shoppers compare?",
-        "a": "Browse flower, pre-rolls, edibles, vapes, concentrates, accessories, and cigarettes where listed, then confirm current details on the menu."
-      }
-    ]
-  },
-  {
-    "slug": "dispensary-near-me-brampton",
-    "title": "Cannabis Dispensary Near Me in Brampton | PLANETS 59",
-    "metaDescription": "Use PLANETS 59 when searching for a cannabis dispensary near me in Brampton; compare menu categories and confirm current details before visiting.",
-    "h1": "Cannabis Dispensary Near Me in Brampton",
-    "icon": "o",
-    "heroTagline": "Store page first, menu category second",
-    "banner": "/banners/01_welcome_to_planets59.webp",
-    "sections": [
-      {
-        "heading": "Make The Search Useful",
-        "body": "PLANETS 59 gives nearby Brampton shoppers a clear path to the store page, menu categories, and visit-planning resources."
-      },
-      {
-        "heading": "Compare Categories Naturally",
-        "body": "Use normal shopping language: cannabis dispensary in Brampton, cheap weed, budget weed, premium flower, pre-rolls, edibles, vapes, and concentrates. The point is to help the shopper, not stuff a sentence."
-      },
-      {
-        "heading": "Check Current Details",
-        "body": "For product names, prices, and listings, use the current menu or ask staff. This page is for orientation and visit planning."
-      }
-    ],
-    "faqs": [
-      {
-        "q": "Is PLANETS 59 useful for a near-me cannabis search?",
-        "a": "Yes. Use the store page to confirm PLANETS 59, then open the menu category that matches your visit."
-      },
-      {
-        "q": "Can shoppers browse before visiting?",
-        "a": "Yes. Use the current menu and resources section before heading over."
-      },
-      {
-        "q": "What should shoppers avoid?",
-        "a": "Avoid guessing from old examples. Confirm current details with the menu or staff."
+        "q": "Does PLANETS 59 deliver to Mississauga?",
+        "a": "Published delivery information covers Brampton from 10 a.m. to 10 p.m. Availability outside Brampton may vary with driver coverage; contact PLANETS 59 to confirm."
       }
     ]
   },

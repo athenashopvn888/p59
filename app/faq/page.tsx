@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
@@ -115,6 +116,7 @@ export default function FAQPage() {
             <p className={styles.ctaText}>
               Use the current menu for live product details, or visit us at 8500 Torbram Rd #59, Brampton during listed hours.
             </p>
+            <p className={styles.ctaText}>See the <Link href="/weed-dispensary-brampton">PLANETS 59 Brampton store</Link> page for location, storefront hours and delivery-hour details.</p>
           </div>
         </div>
         <Footer />

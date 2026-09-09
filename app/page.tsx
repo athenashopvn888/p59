@@ -68,23 +68,22 @@ const EXPLORE_CATEGORIES = [
   { name: "Resources", slug: "resources", banner: "/banners/01_welcome_to_planets59.webp" },
 ]
 
-/* -- Local FAQs for Jane St -- */
 const LOCAL_FAQS = [
   {
-    q: "What are the hours for PLANETS 59?",
-    a: "PLANETS 59 at 8500 Torbram Rd #59, Brampton is open 24 hours daily. Walk in anytime - no appointment needed.",
-  },
-  {
-    q: "What cannabis products do you carry?",
-    a: "Explore Exotic Weed, Premium Weed, AAA+ Weed, AA Weed and Budget Weed, plus separate categories for edibles, pre-rolls, Nicotine Vape, THC Vape and concentrates.",
-  },
-  {
     q: "Where is PLANETS 59 located?",
-    a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use the current menu and visit in person during listed hours. Check current local parking signs and restrictions before your visit.",
+    a: "PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton, near Steeles Avenue East.",
   },
   {
-    q: "Where can value-minded flower shoppers start?",
-    a: "Start with Budget Weed, then explore AA Weed or another PLANETS 59 flower collection. Product information is presented as you browse.",
+    q: "What are the store hours?",
+    a: "The PLANETS 59 storefront is open 24 hours daily.",
+  },
+  {
+    q: "What are the delivery hours?",
+    a: "Brampton delivery runs from 10 a.m. to 10 p.m. Storefront hours and delivery hours are different.",
+  },
+  {
+    q: "Where can I find detailed Brampton store information?",
+    a: "Visit the PLANETS 59 Brampton cannabis dispensary page for the address, storefront hours, delivery hours and visit information.",
   },
 ];
 
@@ -187,8 +186,27 @@ export default function HomePage() {
     setFeaturedStrains(picked);
   }, []);
 
+  const homeSchema = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.planets59.com/#webpage",
+      url: "https://www.planets59.com/",
+      name: "PLANETS 59 | 24-Hour Cannabis Store in Brampton",
+      description: "PLANETS 59 is at 8500 Torbram Rd #59 in Brampton, near Steeles Ave E. Store open 24 hours daily; Brampton delivery runs 10 a.m.–10 p.m.",
+      about: { "@id": "https://www.planets59.com/#store" },
+      mainEntity: { "@id": "https://www.planets59.com/#store" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: LOCAL_FAQS.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })),
+    },
+  ];
+
   return (
     <main className={styles.main}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema).replace(/</g, "\\u003c") }} />
       {/* -- NAVBAR -- */}
       <Navbar />
 
@@ -234,7 +252,7 @@ export default function HomePage() {
           <div className={styles.brandBlock}>
             <img src="/storeFavicon.webp" alt="PLANETS 59 Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
             <h1 className={styles.brandTitle}>PLANETS 59</h1>
-            <p className={styles.brandSub}>Torbram #59 Brampton Menu Stop</p>
+            <p className={styles.brandSub}>Torbram Road, Brampton · Open 24 Hours</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
             <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">
               <h2 id="home-delivery-title">PLANETS 59 WEED DELIVERY</h2>
@@ -274,11 +292,12 @@ export default function HomePage() {
         <div className={styles.container}>
           <div className={styles.identityGrid}>
             <div className={styles.identityIntro}>
-              <p className={styles.identityTag}>Torbram #59, open 24 hours</p>
-              <h2 className={styles.identityTitle}>A Brampton menu stop open around the clock.</h2>
+              <p className={styles.identityTag}>Torbram Road &amp; Steeles Avenue East · Brampton</p>
+              <h2 className={styles.identityTitle}>Open 24 Hours on Torbram Road in Brampton</h2>
               <p className={styles.identityText}>
-                Explore PLANETS 59 through distinct flower collections, cannabis categories and shopper guides tied to the Torbram and Steeles store.
+                PLANETS 59 is located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6, near Steeles Avenue East. The storefront is open 24 hours daily. For address, store hours, contact information and visit details, see our Brampton cannabis dispensary page. Brampton delivery is a separate service and runs from 10 a.m. to 10 p.m. Storefront hours and delivery hours are different.
               </p>
+              <div className={styles.homeMenuActions}><Link href="/weed-dispensary-brampton" className={styles.homeMenuCta}>Brampton Store Details</Link><Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>Brampton Delivery</Link></div>
             </div>
             <div className={styles.identityCard}>
               <span>8500 Torbram Rd #59</span>
