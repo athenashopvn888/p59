@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
+import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import DeliveryBanner from "./components/DeliveryBanner";
@@ -206,6 +207,7 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
+      <FleetAnnouncementBanner />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema).replace(/</g, "\\u003c") }} />
       {/* -- NAVBAR -- */}
       <Navbar />
