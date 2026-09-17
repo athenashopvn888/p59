@@ -9,9 +9,9 @@ export default function Footer() {
           <div className={styles.col}>
             <div className={styles.brand}>PLANETS 59</div>
             <p className={styles.desc}>
-              Your local cannabis dispensary at 8500 Torbram Rd #59, Brampton. Visit
-              PLANETS 59 for flower, edibles, vapes, pre-rolls, cigarettes, and menu resources.
-              Open 24 Hours.
+              Walk-in cannabis at 8500 Torbram Rd Unit 59, Brampton, on the Torbram /
+              Airport Road corridor. Visit PLANETS 59 for flower, edibles, vapes, pre-rolls,
+              cigarettes, and menu resources. Open 24 Hours.
             </p>
             <div className={styles.buttons}>
               <Link href="/resources" className={styles.btnPrimary}>Open Resources</Link>
@@ -22,7 +22,7 @@ export default function Footer() {
             <h3 className={styles.colTitle}>Contact Info</h3>
             <div className={styles.infoBlock}>
               <span className={styles.infoLabel}>Address:</span>
-              <span>8500 Torbram Rd #59</span>
+              <span>8500 Torbram Rd Unit 59</span>
               <span>Brampton, ON L6T 5C6</span>
               <span>Canada</span>
             </div>
@@ -49,6 +49,7 @@ export default function Footer() {
               <Link href="/items/cigarettes">Cigarettes</Link>
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/resources">Resources</Link>
+              <Link href="/visit">Visit Unit 59</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-delivery-brampton">Weed Delivery</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>

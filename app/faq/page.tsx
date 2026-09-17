@@ -17,7 +17,7 @@ const FAQ_CATEGORIES = [
   {
     title: "📍 Location & Hours",
     faqs: [
-      { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. Use your preferred maps or transit service for current directions and travel information." },
+      { q: "Where is PLANETS 59 located?", a: "We are located at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, in the Torbram / Airport Road corridor. Use the Unit 59 visit guide plus your preferred maps or transit service for current directions." },
       { q: "What are your hours?", a: "We are open 24 hours daily. Walk in anytime — no appointment needed." },
       { q: "Is there parking nearby?", a: "Check current local parking signs and restrictions before your visit." },
       { q: "How can I plan a visit?", a: "Use your preferred maps or transit service for current directions and travel information." },
@@ -96,7 +96,7 @@ export default function FAQPage() {
         <div className={styles.content}>
           <h1 className={styles.pageTitle}>Frequently Asked Questions</h1>
           <p className={styles.pageSubtitle}>
-            Everything you need to know about PLANETS 59 at 8500 Torbram Rd #59 in Brampton.
+            Everything you need to know about PLANETS 59 at 8500 Torbram Rd Unit 59 in Brampton.
           </p>
 
           {FAQ_CATEGORIES.map((cat) => (
@@ -114,9 +114,9 @@ export default function FAQPage() {
           <div className={styles.ctaSection}>
             <h2 className={styles.ctaTitle}>Still have questions?</h2>
             <p className={styles.ctaText}>
-              Use the current menu for live product details, or visit us at 8500 Torbram Rd #59, Brampton during listed hours.
+              Use the current menu for live product details, or visit us at 8500 Torbram Rd Unit 59, Brampton during listed hours.
             </p>
-            <p className={styles.ctaText}>See the <Link href="/weed-dispensary-brampton">PLANETS 59 Brampton store</Link> page for location, storefront hours and delivery-hour details.</p>
+            <p className={styles.ctaText}>See the <Link href="/visit">Unit 59 visit guide</Link> and the <Link href="/weed-dispensary-brampton">PLANETS 59 Brampton store</Link> page for location, storefront hours and delivery-hour details.</p>
           </div>
         </div>
         <Footer />

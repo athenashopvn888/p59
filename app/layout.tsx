@@ -2,36 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
+import { cannabisStoreJsonLd, gbpLocation, jsonLdScript } from "./lib/gbp-location";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.planets59.com"),
   title: {
-    default: "PLANETS 59 | 24-Hour Cannabis Store in Brampton",
+    default: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
     template: "%s | PLANETS 59",
   },
-  description:
-    "PLANETS 59 is at 8500 Torbram Rd #59 in Brampton, near Steeles Ave E. Store open 24 hours daily; Brampton delivery runs 10 a.m.–10 p.m.",
+  description: gbpLocation.metaDescription,
   openGraph: {
     type: "website",
     locale: "en_CA",
     url: "https://www.planets59.com",
     siteName: "PLANETS 59",
-    title: "PLANETS 59 | 24-Hour Cannabis Store in Brampton",
-    description:
-      "PLANETS 59 is at 8500 Torbram Rd #59 in Brampton, near Steeles Ave E. Store open 24 hours daily; Brampton delivery runs 10 a.m.–10 p.m.",
+    title: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    description: gbpLocation.metaDescription,
     images: [
       {
         url: "https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg",
         width: 1200,
         height: 630,
-        alt: "PLANETS 59 — Premium Cannabis Dispensary Brampton",
+        alt: "PLANETS 59 — Torbram Unit 59 dispensary at 8500 Torbram Rd, Brampton",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PLANETS 59 — Brampton's Uplifting Dispensary",
-    description: "Brampton cannabis menu categories, resources, and store info for PLANETS 59 at 8500 Torbram Rd #59. Open 24 hours daily.",
+    title: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    description: gbpLocation.metaDescription,
     images: ["https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
   robots: {
@@ -53,55 +52,7 @@ export const metadata: Metadata = {
   },
 };
 
-/* ── JSON-LD Structured Data ── */
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "@id": "https://www.planets59.com/#store",
-  name: "PLANETS 59",
-  description: "PLANETS 59 is a cannabis store at 8500 Torbram Rd #59 in Brampton, Ontario.",
-  url: "https://www.planets59.com/",
-  telephone: "+12895367493",
-  image: "https://www.planets59.com/wp-content/uploads/2026/04/7Clmh.jpg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "8500 Torbram Rd #59",
-    addressLocality: "Brampton",
-    addressRegion: "ON",
-    postalCode: "L6T 5C6",
-    addressCountry: "CA",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 43.7231,
-    longitude: -79.69274,
-  },
-  openingHoursSpecification: [
-  {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  }
-],
-  areaServed: {
-    "@type": "City",
-    name: "Brampton",
-  },
-  sameAs: [
-    "https://www.google.com/maps/search/?api=1&query=PLANETS%2059&query_place_id=ChIJj4B2l5Y9K4gRorxT85ql9Sg",
-  ],
-  hasMap:
-    "https://www.google.com/maps/search/?api=1&query=PLANETS%2059&query_place_id=ChIJj4B2l5Y9K4gRorxT85ql9Sg",
-};
+const jsonLd = cannabisStoreJsonLd();
 
 export default function RootLayout({
   children,
@@ -112,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="geo.region" content="CA-ON" />
-        <meta name="geo.placename" content="Brampton" />
+        <meta name="geo.placename" content="Torbram / Airport Road, Brampton" />
         <meta name="geo.position" content="43.7231;-79.69274" />
         <meta name="ICBM" content="43.7231, -79.69274" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,7 +75,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+            __html: jsonLdScript(jsonLd),
           }}
         />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BF78FQ8EC"></script>
@@ -149,4 +100,3 @@ export default function RootLayout({
     </html>
   );
 }
-

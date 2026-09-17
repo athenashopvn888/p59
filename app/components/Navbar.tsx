@@ -25,6 +25,7 @@ const CATEGORY_LINKS = [
 ];
 
 const GUIDE_LINKS = [
+  { href: "/visit", label: "Visit" },
   { href: "/careers/budtender", label: "Hiring" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },

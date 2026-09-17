@@ -134,7 +134,7 @@ function ItemCard({ title, accent, items, hiIdx, preset }: {
 
 /* -- TICKER -- */
 const TICKER_SLIDES = [
-  "🔥 PLANETS 59 — 8500 Torbram Rd #59, Brampton",
+  "🔥 PLANETS 59 — 8500 Torbram Rd Unit 59, Brampton",
   "Menu Lanes & Resources",
   "Open 24 Hours",
   "Pre-Rolls · Edibles · Vapes · Concentrates",

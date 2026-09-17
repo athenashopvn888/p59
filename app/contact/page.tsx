@@ -5,16 +5,16 @@ import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us — PLANETS 59 | 8500 Torbram Rd #59, Brampton",
+  title: "Contact Us — PLANETS 59 | 8500 Torbram Rd Unit 59, Brampton",
   description:
-    "Visit PLANETS 59 at 8500 Torbram Rd #59, Brampton, ON L6T 5C6. We are open 24 hours daily. Walk-ins welcome.",
+    "Visit PLANETS 59 at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6. We are open 24 hours daily. Walk-ins welcome.",
   alternates: {
     canonical: "https://www.planets59.com/contact",
   },
   openGraph: {
     title: "Contact PLANETS 59 — Brampton Dispensary",
     description:
-      "8500 Torbram Rd #59, Brampton. We are open 24 hours daily. Store info, menu categories, and resources.",
+      "8500 Torbram Rd Unit 59, Brampton. We are open 24 hours daily. Store info, menu categories, and resources.",
   },
 };
 
@@ -40,11 +40,11 @@ export default function ContactPage() {
               <div className={styles.infoIcon}>📍</div>
               <h2 className={styles.infoTitle}>Location</h2>
               <p className={styles.infoText}>
-                8500 Torbram Rd #59
+                8500 Torbram Rd Unit 59
                 <br />
                 Brampton, ON L6T 5C6
                 <br />
-                <span className={styles.infoMuted}>Torbram Rd & Steeles Ave E</span>
+                <span className={styles.infoMuted}>Torbram / Airport Road · Unit 59</span>
               </p>
             </div>
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
-            <p>See the full <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link> page for store and visit details.</p>
+            <p>See the <Link href="/visit">Unit 59 visit guide</Link> for plaza wayfinding, or the <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link> page for store details.</p>
           </div>
         </div>
       </section>
