@@ -82,7 +82,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "icon": "#",
     "heroTagline": "$25 carton notes and brand names where listed",
     "heroPreview": {
-      "eyebrow": "PLANETS 59 · 8500 Torbram Rd #59, Brampton",
+      "eyebrow": "PLANETS 59 · 8500 Torbram Rd Unit 59, Brampton",
       "intro": "Cigarette category and visit information for Torbram Road",
       "products": NATIVE_HERO_PRODUCTS,
       "disclosure": NATIVE_HERO_DISCLOSURE
@@ -120,7 +120,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "slug": "weed-store-near-mississauga",
     "title": "Visiting PLANETS 59 From Mississauga | Brampton Store",
     "absoluteTitle": true,
-    "metaDescription": "Coming from Mississauga? PLANETS 59 is at 8500 Torbram Rd #59 in Brampton, near Steeles Ave E. The Brampton storefront is open 24 hours daily.",
+    "metaDescription": "Coming from Mississauga? PLANETS 59 is at 8500 Torbram Rd Unit 59 in Brampton, near Steeles Ave E. The Brampton storefront is open 24 hours daily.",
     "h1": "Visiting PLANETS 59 From Mississauga",
     "icon": ">",
     "heroTagline": "Coming from Mississauga? This PLANETS 59 location is in Brampton, not Mississauga.",
@@ -128,7 +128,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "sections": [
       {
         "heading": "PLANETS 59 Brampton Store",
-        "body": "PLANETS 59 is at 8500 Torbram Rd #59, Brampton, ON L6T 5C6, near Steeles Avenue East. The Brampton storefront is open 24 hours daily. Use the Brampton cannabis dispensary page for complete store and visit details."
+        "body": "PLANETS 59 is at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, near Steeles Avenue East. The Brampton storefront is open 24 hours daily. Use the Unit 59 visit guide and the Brampton cannabis dispensary page for complete store and visit details."
       },
       {
         "heading": "Planning the Trip From Mississauga",
@@ -142,7 +142,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "faqs": [
       {
         "q": "Is PLANETS 59 located in Mississauga?",
-        "a": "No. PLANETS 59 is located at 8500 Torbram Rd #59 in Brampton, near Steeles Avenue East."
+        "a": "No. PLANETS 59 is located at 8500 Torbram Rd Unit 59 in Brampton, near Steeles Avenue East."
       },
       {
         "q": "Is the Brampton store open 24 hours?",

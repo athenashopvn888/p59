@@ -48,9 +48,9 @@ export function GBPLandingPage() {
   // Generate schema.org markup dynamically
   const schemaMarkup: StoreSchemaMarkup = {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": "CannabisStore",
     "name": gbpLocation.storeName,
-    "url": `https://${gbpLocation.domain}/${gbpLocation.slug}/`,
+    "url": `https://${gbpLocation.domain}/`,
     "telephone": gbpLocation.phone,
     "address": {
       "@type": "PostalAddress",
@@ -89,7 +89,7 @@ export function GBPLandingPage() {
       {/* Hero Header */}
       <header className={styles.hero}>
         <img src="/storeFavicon.webp" alt="" className={styles.heroLogo} />
-        <p className={styles.eyebrow}>Torbram #59 Brampton menu stop</p>
+        <p className={styles.eyebrow}>Torbram Unit 59 · Brampton northeast</p>
         <h1 className={styles.h1}>{gbpLocation.storeName} — Weed Dispensary in {gbpLocation.city}</h1>
         <p className={styles.heroTagline}>Serving {gbpLocation.city} & Nearby Neighborhoods</p>
         <p className={styles.heroAddress}>{gbpLocation.address}</p>

@@ -671,7 +671,7 @@ function AddOnsCard({ items, hiIdx }: { items: Item[]; hiIdx: number }) {
    VERTICAL TICKER
    ============================================================ */
 const TICKER_SLIDES = [
-  "🔥 PLANETS 59 — 8500 Torbram Rd #59, Brampton",
+  "🔥 PLANETS 59 — 8500 Torbram Rd Unit 59, Brampton",
   "Menu Lanes & Resources",
   "Open 24 Hours",
   "ALL SALES ARE FINAL",
