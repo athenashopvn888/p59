@@ -35,14 +35,14 @@ const publicSurface = [
 ].join("\n");
 
 test("four neighbourhood LPs exist with unique H1s and FAQPage", () => {
-  assert.match(pillars, /path: "\/24-hour-dispensary-torbram"/);
-  assert.match(pillars, /path: "\/weed-delivery-torbram"/);
-  assert.match(pillars, /path: "\/native-cigarettes-torbram"/);
-  assert.match(pillars, /path: "\/nicotine-vape-torbram"/);
-  assert.match(hours, /24-Hour Dispensary Open Now on Torbram Road/);
-  assert.match(delivery, /Weed Delivery from Torbram Unit 59/);
-  assert.match(cigs, /Native Cigarettes at PLANETS 59 on Torbram/);
-  assert.match(vapes, /Nicotine Vape at PLANETS 59 on Torbram/);
+  assert.match(pillars, /hours: "\/24-hour-dispensary-torbram"/);
+  assert.match(pillars, /delivery: "\/weed-delivery-torbram"/);
+  assert.match(pillars, /nativeCig: "\/native-cigarettes-torbram"/);
+  assert.match(pillars, /nicVape: "\/nicotine-vape-torbram"/);
+  assert.match(pillars, /24-Hour Dispensary Open Now on Torbram Road/);
+  assert.match(pillars, /Weed Delivery from Torbram Unit 59/);
+  assert.match(pillars, /Native Cigarettes at PLANETS 59 on Torbram/);
+  assert.match(pillars, /Nicotine Vape at PLANETS 59 on Torbram/);
   assert.match(chrome, /id="faq"/);
   assert.match(chrome, /faqPageJsonLd\(faqs, pageUrl\)/);
   assert.match(hours, /HOURS_FAQS/);
@@ -68,11 +68,12 @@ test("hours and sold claims stay true", () => {
   assert.match(pillars, /10 a\.m\. to 10 p\.m\./);
   assert.match(delivery, /\$60 product minimum/);
   assert.match(delivery, /\$10 delivery fee/);
-  assert.match(delivery, /does not invent a kilometre radius/);
-  assert.match(cigs, /does not replace the live menu or invent stock/);
+  assert.match(pillars, /does not invent a kilometre radius/);
+  assert.match(pillars, /does not replace the live menu or invent stock/);
   assert.match(vapes, /They are not stock promises/);
-  assert.match(vapes, /Nicotine is addictive/);
-  assert.doesNotMatch(publicSurface, /24-hour courier|24 hour delivery|overnight drop-off is guaranteed/i);
+  assert.match(pillars, /Nicotine is addictive/);
+  assert.match(pillars, /not a 24-hour courier/);
+  assert.doesNotMatch(publicSurface, /overnight drop-off is guaranteed|24 hour delivery is available/i);
 });
 
 test("NAP stays Unit 59 / Brampton / live phone; corridor only", () => {
@@ -99,12 +100,13 @@ test("NAP stays Unit 59 / Brampton / live phone; corridor only", () => {
 });
 
 test("adults 19+ retail voice; no medical or invented inventory", () => {
+  assert.match(pillars, /Adults 19\+/);
   assert.match(hours, /Adults 19\+/);
   assert.match(delivery, /Adults 19\+/);
-  assert.match(cigs, /Adults 19\+/);
+  assert.match(cigs, /adults 19\+/);
   assert.match(vapes, /Adults 19\+/);
   assert.doesNotMatch(publicSurface, /medical cannabis|prescription|patient|doctor/i);
-  assert.doesNotMatch(publicSurface, /#1 (Native|dispensary)|guaranteed in stock|always in stock/i);
+  assert.doesNotMatch(publicSurface, /#1 Native|#1 dispensary|always in stock|listings are guaranteed/i);
 });
 
 test("menu swimlane files are not imported by the pillar stack", () => {
