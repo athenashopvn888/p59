@@ -90,7 +90,7 @@ export const SEO_PAGES: SeoPageData[] = [
     "sections": [
       {
         "heading": "Start With The Cigarette Category",
-        "body": "The cigarette menu currently lists Native smoke options at $25/carton, including Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights. Check the current menu or ask staff before making the trip."
+        "body": "The cigarette menu currently lists Native smoke options at $25/carton, including Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights. Use the Torbram Native cigarettes page for neighbourhood walk-in notes, then check the current menu or ask staff before making the trip."
       },
       {
         "heading": "Keep Cannabis And Smokes Separate",
@@ -199,7 +199,7 @@ export const SEO_PAGES: SeoPageData[] = [
       },
       {
         "heading": "Review the Current Brampton Category",
-        "body": "Before choosing, open /items/vapes and the individual product page for current supported details. This guide does not claim prices, stock or guaranteed availability."
+        "body": "Use the Torbram nicotine vape neighbourhood page for Unit 59 walk-in notes, then open /items/vapes and the individual product page for current supported details. This guide does not claim prices, stock or guaranteed availability."
       }
     ],
     "faqs": [

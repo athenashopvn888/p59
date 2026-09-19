@@ -900,6 +900,12 @@
   line-height: 1.6;
 }
 
+.homePillarHub {
+  width: min(100%, 720px);
+  margin: 22px auto 0;
+  text-align: left;
+}
+
 .weedDiscovery { padding: 52px 24px; background: linear-gradient(135deg, rgba(37, 99, 235, .18), rgba(2, 6, 23, .9)); border-block: 1px solid var(--border-subtle); }
 .weedDiscovery h2 { margin: 0 0 12px; font-family: var(--font-display); font-size: clamp(1.7rem, 4vw, 2.6rem); }
 .weedDiscovery p { max-width: 830px; color: #cbd5e1; line-height: 1.7; }

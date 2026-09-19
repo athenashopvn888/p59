@@ -10,6 +10,8 @@ import DeliveryBanner from "./components/DeliveryBanner";
 import FlowerCard from "./components/FlowerCard";
 import { allFlowers } from "./lib/products";
 import { gbpLocation, HOME_CORRIDOR_COPY, HOME_FAQS } from "./lib/gbp-location";
+import PillarHubCards from "./components/PillarHubCards";
+import { PILLAR_PATHS } from "./lib/pillarPages";
 import Papa from "papaparse";
 
 /* -- Bento Mosaic Config -- */
@@ -60,12 +62,12 @@ const BENTO_TIERS = [
 
 /* -- Explore Categories Config (New Banners) -- */
 const EXPLORE_CATEGORIES = [
-  { name: "Nicotine Vape", slug: "items/vapes", banner: "/banners/01_Vape_Pens.webp" },
+  { name: "Nicotine Vape", slug: "nicotine-vape-torbram", banner: "/banners/01_Vape_Pens.webp" },
   { name: "THC Vape", slug: "items/vape-disposables", banner: "/banners/02_Vape_Disposable.webp" },
   { name: "Concentrates", slug: "items/concentrates", banner: "/banners/03_Concentrates.webp" },
   { name: "Pre-Rolls", slug: "items/prerolls", banner: "/banners/04_Pre_Rolls.webp" },
   { name: "Accessories", slug: "items/add-ons", banner: "/banners/05_Accessories.webp" },
-  { name: "Cigarettes", slug: "items/cigarettes", banner: "/banners/native-cigarette-offer-20260822.webp" },
+  { name: "Cigarettes", slug: "native-cigarettes-torbram", banner: "/banners/native-cigarette-offer-20260822.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
   { name: "Resources", slug: "resources", banner: "/banners/01_welcome_to_planets59.webp" },
 ]
@@ -227,6 +229,9 @@ export default function HomePage() {
               <Link href="/exotic-weed" className={styles.homeMenuCta}>EXPLORE EXOTIC WEED</Link>
               <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>EXPLORE WEED DELIVERY</Link>
             </div>
+            <div className={styles.homePillarHub}>
+              <PillarHubCards currentPath="/" heading="24-hour, weed delivery, Native cigarettes, and nic-vape" />
+            </div>
           </div>
 
           {/* Bento Grid */}
@@ -362,7 +367,8 @@ export default function HomePage() {
             </div>
             <div className={styles.resourceActions}>
               <Link href="/resources">Open Resources</Link>
-              <Link href="/resources/native-smokes">Native Smokes</Link>
+              <Link href={PILLAR_PATHS.nativeCig}>Native Cigarettes Torbram</Link>
+              <Link href={PILLAR_PATHS.nicVape}>Nicotine Vape Torbram</Link>
             </div>
           </div>
         </div>
