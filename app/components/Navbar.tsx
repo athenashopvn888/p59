@@ -26,6 +26,7 @@ const CATEGORY_LINKS = [
 
 const GUIDE_LINKS = [
   { href: "/visit", label: "Visit" },
+  { href: "/24-hour-dispensary-torbram", label: "24-Hour" },
   { href: "/careers/budtender", label: "Hiring" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },

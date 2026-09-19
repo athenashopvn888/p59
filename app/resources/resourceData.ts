@@ -66,6 +66,16 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "title": "Native Smokes",
         "href": "/resources/native-smokes",
         "text": "Current cigarette brands and $25 carton notes where listed."
+      },
+      {
+        "title": "Torbram 24-hour walk-in",
+        "href": "/24-hour-dispensary-torbram",
+        "text": "Open-now / 24-hour owner for Unit 59. Delivery stays 10 a.m.–10 p.m."
+      },
+      {
+        "title": "Torbram nicotine vape",
+        "href": "/nicotine-vape-torbram",
+        "text": "Neighbourhood LP for the dedicated nicotine vape category."
       }
     ],
     "sections": [
@@ -292,6 +302,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "text": "Open the current cigarette category before making the trip."
       },
       {
+        "title": "Torbram Native Cigarettes",
+        "href": "/native-cigarettes-torbram",
+        "text": "Neighbourhood LP for Native cigarettes at Unit 59."
+      },
+      {
         "title": "Native Cigarettes Guide",
         "href": "/resources/native-smokes/native-cigarettes-guide",
         "text": "Brand notes and a clean shopping checklist."
@@ -348,6 +363,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "title": "Cigarette Menu",
         "href": "/items/cigarettes",
         "text": "Open the current cigarette category before making the trip."
+      },
+      {
+        "title": "Torbram Native Cigarettes",
+        "href": "/native-cigarettes-torbram",
+        "text": "Neighbourhood LP for Native cigarettes at Unit 59."
       },
       {
         "title": "Native Smokes",

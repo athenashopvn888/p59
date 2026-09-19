@@ -32,7 +32,9 @@ const FAQ_CATEGORIES = [
       { q: "What are your flower tiers?", a: "The menu groups flower into Exotic Weed, Premium Weed, AAA+ Weed, AA Weed, and Budget Weed tiers. Use each tier page for the current menu information presented there." },
       { q: "Where can I browse edibles?", a: "Check the current Edibles menu for the product information presented while you browse." },
       { q: "Where can I browse vapes?", a: "Use the separate Nicotine Vape and THC Vape categories for the product information presented in each menu." },
-      { q: "Where can I find Native smoke information?", a: "Explore the Native Smokes section for the information currently presented there." },
+      { q: "Where can I find Native smoke information?", a: "Use the Torbram Native cigarettes page, then the current cigarette menu for names and carton notes. Explore the Native Smokes resource for extra brand notes." },
+      { q: "Where is the nicotine vape neighbourhood page?", a: "Use the Torbram nicotine vape page, then /items/vapes for current listings. Nicotine is addictive. Adults 19+." },
+      { q: "Is there a 24-hour dispensary page for Torbram Unit 59?", a: "Yes. The 24-hour Torbram page owns overnight / open-now walk-in. Delivery stays 10 a.m. to 10 p.m." },
     ],
   },
   {

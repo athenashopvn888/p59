@@ -18,6 +18,11 @@ const robots = read("app/robots.ts");
 const contact = read("app/contact/page.tsx");
 const faq = read("app/faq/page.tsx");
 const ownerPage = read("app/components/WeedOwnerPage.tsx");
+const pillars = read("app/lib/pillarPages.ts");
+const hoursLp = read("app/24-hour-dispensary-torbram/page.tsx");
+const deliveryLp = read("app/weed-delivery-torbram/page.tsx");
+const cigLp = read("app/native-cigarettes-torbram/page.tsx");
+const vapeLp = read("app/nicotine-vape-torbram/page.tsx");
 
 const publicSurface = [
   local,
@@ -32,6 +37,11 @@ const publicSurface = [
   contact,
   faq,
   ownerPage,
+  pillars,
+  hoursLp,
+  deliveryLp,
+  cigLp,
+  vapeLp,
 ].join("\n");
 
 test("PL501 keeps CannabisStore on the homepage origin and matching FAQPage blocks", () => {

@@ -1,0 +1,56 @@
+.hub {
+  width: 100%;
+  margin: 8px 0 0;
+  text-align: left;
+}
+
+.kicker {
+  margin: 0 0 14px;
+  color: #fbbf24;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 112px;
+  padding: 16px 18px;
+  border: 1px solid rgba(57, 255, 20, 0.22);
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.88);
+  color: #fff;
+  text-decoration: none;
+}
+
+.card span {
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.card small {
+  color: #cbd5e1;
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.card:hover {
+  border-color: rgba(57, 255, 20, 0.7);
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

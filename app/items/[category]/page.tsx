@@ -130,6 +130,21 @@ export default async function ItemsCategoryPage({
             </div>
           )}
 
+          {catInfo.key === "CIGARETTES" && (
+            <p className={styles.seoBody}>
+              Neighbourhood walk-in notes for this category live on the{" "}
+              <Link href="/native-cigarettes-torbram">Torbram Native cigarettes page</Link>.
+              Confirm current names on this menu before you travel.
+            </p>
+          )}
+          {catInfo.key === "VAPE PENS" && (
+            <p className={styles.seoBody}>
+              Neighbourhood walk-in notes for this category live on the{" "}
+              <Link href="/nicotine-vape-torbram">Torbram nicotine vape page</Link>.
+              Adults 19+. Nicotine is addictive.
+            </p>
+          )}
+
           {/* Visit CTA */}
           <div className={styles.visitCta}>
             <h3 className={styles.visitTitle}>Visit PLANETS 59</h3>
