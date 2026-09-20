@@ -55,8 +55,7 @@ export default function WeedDispensaryTorbramPage() {
       <section>
         <h2 className={styles.sectionTitle}>Identity at Unit 59 on Torbram</h2>
         <p>
-          The public name is PLANETS 59. The legal door is{" "}
-          {gbpLocation.streetAddress}, Brampton, ON L6T 5C6. Call{" "}
+          The public name is PLANETS 59. The legal door is 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6. Call{" "}
           <a href={`tel:${gbpLocation.phoneIntl}`}>{gbpLocation.phone}</a> if
           one listing is the only reason for the trip. Neighbouring unit
           numbers in the same plaza are not this store. Airport Road is the
