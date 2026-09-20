@@ -54,6 +54,7 @@ export default function Footer() {
               <Link href="/weed-delivery-torbram">Weed Delivery Torbram</Link>
               <Link href="/native-cigarettes-torbram">Native Cigarettes Torbram</Link>
               <Link href="/nicotine-vape-torbram">Nicotine Vape Torbram</Link>
+              <Link href="/weed-dispensary-torbram">Weed Dispensary Torbram</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/weed-delivery-brampton">Weed Delivery</Link>
               <Link href="/info/cheap-weed-brampton">Cheap Weed Brampton</Link>

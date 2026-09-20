@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/weed-delivery-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE}/native-cigarettes-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/nicotine-vape-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/weed-dispensary-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE}/careers/budtender`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
 

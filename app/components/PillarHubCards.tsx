@@ -4,7 +4,7 @@ import styles from "./PillarHubCards.module.css";
 
 export default function PillarHubCards({
   currentPath = "",
-  heading = "24-hour, weed delivery, Native cigarettes, and nic-vape",
+  heading = "24-hour, weed delivery, Native cigarettes, nic-vape, and weed dispensary",
 }: {
   currentPath?: string;
   heading?: string;

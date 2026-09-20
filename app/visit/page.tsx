@@ -143,15 +143,19 @@ export default function VisitPage() {
           </section>
 
           <section>
-            <h2 className={styles.sectionTitle}>Four Torbram starting points</h2>
+            <h2 className={styles.sectionTitle}>Five Torbram starting points</h2>
             <p>
               After you know the Unit 59 door, pick the lane that matches the
-              visit. The 24-hour page owns overnight walk-in. Weed delivery from
-              Torbram is a separate 10 a.m.–10 p.m. courier. Native cigarettes
-              and nicotine vapes have their own neighbourhood pages that point
-              at the live categories.
+              visit. The neighbourhood weed dispensary page owns Torbram /
+              Unit 59 dispensary identity — not a city-wide Brampton list. The
+              24-hour page owns overnight walk-in. Weed delivery from Torbram
+              is a separate 10 a.m.–10 p.m. courier. Native cigarettes and
+              nicotine vapes have their own neighbourhood pages that point at
+              the live categories.
             </p>
             <p>
+              <Link href="/weed-dispensary-torbram">Weed dispensary on Torbram</Link>
+              {" · "}
               <Link href="/24-hour-dispensary-torbram">24-hour Torbram walk-in</Link>
               {" · "}
               <Link href="/weed-delivery-torbram">Weed delivery from Unit 59</Link>

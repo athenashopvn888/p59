@@ -76,6 +76,11 @@ export const RESOURCE_PAGES: ResourcePage[] = [
         "title": "Torbram nicotine vape",
         "href": "/nicotine-vape-torbram",
         "text": "Neighbourhood LP for the dedicated nicotine vape category."
+      },
+      {
+        "title": "Torbram weed dispensary",
+        "href": "/weed-dispensary-torbram",
+        "text": "Neighbourhood owner for Unit 59. Corridor only — not a city-wide list."
       }
     ],
     "sections": [
