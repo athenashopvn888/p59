@@ -32,8 +32,8 @@ export default function WeedDispensaryTorbramPage() {
       lede={WEED_DISPENSARY_PILLAR.lede}
       faqs={WEED_DISPENSARY_FAQS}
       faqHeading="Torbram weed dispensary — quick answers"
-      primaryHref="/"
-      primaryLabel="Homepage visit hub"
+      primaryHref={PILLAR_PATHS.visit}
+      primaryLabel="Unit 59 visit guide"
     >
       <section>
         <h2 className={styles.sectionTitle}>Neighbourhood owner, not a city directory</h2>
