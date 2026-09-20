@@ -230,7 +230,7 @@ export default function HomePage() {
               <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>EXPLORE WEED DELIVERY</Link>
             </div>
             <div className={styles.homePillarHub}>
-              <PillarHubCards currentPath="/" heading="24-hour, weed delivery, Native cigarettes, and nic-vape" />
+              <PillarHubCards currentPath="/" heading="24-hour, weed delivery, Native cigarettes, nic-vape, and weed dispensary" />
             </div>
           </div>
 
@@ -369,6 +369,7 @@ export default function HomePage() {
               <Link href="/resources">Open Resources</Link>
               <Link href={PILLAR_PATHS.nativeCig}>Native Cigarettes Torbram</Link>
               <Link href={PILLAR_PATHS.nicVape}>Nicotine Vape Torbram</Link>
+              <Link href={PILLAR_PATHS.weedDispensary}>Weed Dispensary Torbram</Link>
             </div>
           </div>
         </div>

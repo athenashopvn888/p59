@@ -84,7 +84,10 @@ export default function TwentyFourHourTorbramPage() {
           hours stay on{" "}
           <Link href={PILLAR_PATHS.delivery}>weed delivery from Torbram</Link>.
           Native cigarettes and nicotine vapes have their own neighbourhood
-          pages. This URL stays the 24-hour / open-now owner.
+          pages. The{" "}
+          <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>{" "}
+          owns neighbourhood identity, not a city-wide list. This URL stays
+          the 24-hour / open-now owner.
         </p>
       </section>
     </PillarLanding>

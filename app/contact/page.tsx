@@ -101,7 +101,7 @@ export default function ContactPage() {
 
           {/* Map */}
           <div className={styles.mapSection}>
-            <p>See the <Link href="/visit">Unit 59 visit guide</Link> for plaza wayfinding, or the <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link> page for store details.</p>
+            <p>See the <Link href="/visit">Unit 59 visit guide</Link> for plaza wayfinding, the <Link href="/weed-dispensary-torbram">Torbram weed dispensary</Link> page for neighbourhood identity, or the <Link href="/weed-dispensary-brampton">Brampton cannabis dispensary</Link> page for store details.</p>
           </div>
         </div>
       </section>

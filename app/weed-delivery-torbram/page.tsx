@@ -81,8 +81,11 @@ export default function WeedDeliveryTorbramPage() {
         </p>
         <p>
           Native cigarettes and nicotine vapes are sold at the walk-in counter
-          and have their own neighbourhood pages. This URL does not replace
-          those shelves and does not promise a 24-hour smoke or vape drop-off.
+          and have their own neighbourhood pages. The{" "}
+          <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>{" "}
+          owns neighbourhood identity for the Unit 59 door. This URL does not
+          replace those shelves and does not promise a 24-hour smoke or vape
+          drop-off.
         </p>
       </section>
     </PillarLanding>

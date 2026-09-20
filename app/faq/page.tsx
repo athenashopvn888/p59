@@ -35,6 +35,7 @@ const FAQ_CATEGORIES = [
       { q: "Where can I find Native smoke information?", a: "Use the Torbram Native cigarettes page, then the current cigarette menu for names and carton notes. Explore the Native Smokes resource for extra brand notes." },
       { q: "Where is the nicotine vape neighbourhood page?", a: "Use the Torbram nicotine vape page, then /items/vapes for current listings. Nicotine is addictive. Adults 19+." },
       { q: "Is there a 24-hour dispensary page for Torbram Unit 59?", a: "Yes. The 24-hour Torbram page owns overnight / open-now walk-in. Delivery stays 10 a.m. to 10 p.m." },
+      { q: "Is there a neighbourhood weed dispensary page for Torbram Unit 59?", a: "Yes. The Torbram weed dispensary page owns Unit 59 neighbourhood identity. It is not a city-wide Brampton directory." },
     ],
   },
   {
@@ -118,7 +119,7 @@ export default function FAQPage() {
             <p className={styles.ctaText}>
               Use the current menu for live product details, or visit us at 8500 Torbram Rd Unit 59, Brampton during listed hours.
             </p>
-            <p className={styles.ctaText}>See the <Link href="/visit">Unit 59 visit guide</Link> and the <Link href="/weed-dispensary-brampton">PLANETS 59 Brampton store</Link> page for location, storefront hours and delivery-hour details.</p>
+            <p className={styles.ctaText}>See the <Link href="/visit">Unit 59 visit guide</Link>, the <Link href="/weed-dispensary-torbram">Torbram weed dispensary</Link> page, and the <Link href="/weed-dispensary-brampton">PLANETS 59 Brampton store</Link> page for location, storefront hours and delivery-hour details.</p>
           </div>
         </div>
         <Footer />

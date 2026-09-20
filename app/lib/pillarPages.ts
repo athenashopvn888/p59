@@ -1,11 +1,12 @@
 import { STORE_ORIGIN, gbpLocation, type StoreFaq } from "./gbp-location";
 
-/** Four-pillar neighbourhood LPs for the Torbram / Unit 59 corridor only. */
+/** Five-pillar neighbourhood LPs for the Torbram / Unit 59 corridor only. */
 export const PILLAR_PATHS = {
   hours: "/24-hour-dispensary-torbram",
   delivery: "/weed-delivery-torbram",
   nativeCig: "/native-cigarettes-torbram",
   nicVape: "/nicotine-vape-torbram",
+  weedDispensary: "/weed-dispensary-torbram",
   deliveryCatalog: "/weed-delivery-brampton",
   storePage: "/weed-dispensary-brampton",
   visit: "/visit",
@@ -66,6 +67,17 @@ export const NIC_VAPE_PILLAR = {
   kicker: "Torbram Unit 59 · Adults 19+ · Nicotine is addictive",
   lede:
     "PLANETS 59 keeps nicotine vapes in a dedicated category at Unit 59 on Torbram Road. Use this page for Torbram / Airport Road nic-vape walk-in intent, then open /items/vapes for current names. THC vapes stay on a different list. Nicotine is addictive.",
+};
+
+export const WEED_DISPENSARY_PILLAR = {
+  path: PILLAR_PATHS.weedDispensary,
+  title: "Weed Dispensary on Torbram | PLANETS 59",
+  h1: "Weed Dispensary at PLANETS 59 on Torbram",
+  description:
+    "PLANETS 59 is the neighbourhood weed dispensary at 8500 Torbram Rd Unit 59 on the Torbram / Airport Road corridor in northeast Brampton. Adults 19+. Call +1 (289) 536-7493.",
+  kicker: "Neighbourhood weed dispensary · Torbram Unit 59 · Adults 19+",
+  lede:
+    "PLANETS 59 is the walk-in weed dispensary at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6. This page owns Torbram / Airport Road / Unit 59 weed-dispensary intent. It is not a city-wide Brampton dispensary directory. Name, phone, map, and hours stay on the homepage visit hub.",
 };
 
 export const HOURS_FAQS: StoreFaq[] = [
@@ -160,6 +172,29 @@ export const NIC_VAPE_FAQS: StoreFaq[] = [
   },
 ];
 
+export const WEED_DISPENSARY_FAQS: StoreFaq[] = [
+  {
+    q: "Is PLANETS 59 the weed dispensary on Torbram at Unit 59?",
+    a: "Yes. PLANETS 59 is the walk-in weed dispensary at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, on the Torbram / Airport Road corridor. Adults 19+ with government photo ID.",
+  },
+  {
+    q: "If I searched weed dispensary near me on this corridor, is this the Unit 59 door?",
+    a: "Only if you mean the Torbram / Airport Road stretch in northeast Brampton near Steeles Avenue East. Match civic 8500 and Unit 59. This URL is not a city-wide Brampton weed-dispensary list.",
+  },
+  {
+    q: "Does this neighbourhood page list every Brampton weed dispensary?",
+    a: "No. It owns one storefront: PLANETS 59 at Unit 59. It does not rank shops, invent a city directory, or speak for other Brampton doors.",
+  },
+  {
+    q: "How is this URL different from the 24-hour Torbram page?",
+    a: "This page owns neighbourhood weed-dispensary identity for Unit 59. The 24-hour page owns overnight / open-now walk-in. Both use the same door, phone, and hours. The homepage remains the NAP hub.",
+  },
+  {
+    q: "Does the Torbram weed dispensary page replace the live menu?",
+    a: "No. Browse current flower tiers and categories on the homepage. This page does not invent stock, prices, or a second shop. Call +1 (289) 536-7493 if one listing is the only reason for the trip.",
+  },
+];
+
 export const PILLAR_HUB_CARDS = [
   {
     href: PILLAR_PATHS.hours,
@@ -180,6 +215,11 @@ export const PILLAR_HUB_CARDS = [
     href: PILLAR_PATHS.nicVape,
     label: "Nicotine vape on Torbram",
     blurb: "Dedicated nic-vape shelf, separate from THC vapes.",
+  },
+  {
+    href: PILLAR_PATHS.weedDispensary,
+    label: "Weed dispensary on Torbram",
+    blurb: "Unit 59 neighbourhood owner. Corridor only — not a city-wide list.",
   },
 ] as const;
 

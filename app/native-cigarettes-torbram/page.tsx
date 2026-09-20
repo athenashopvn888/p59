@@ -83,6 +83,8 @@ export default function NativeCigarettesTorbramPage() {
           <Link href={PILLAR_PATHS.cigInfo}>Native Cigarettes Brampton</Link>.
           Nicotine vapes stay on the{" "}
           <Link href={PILLAR_PATHS.nicVape}>Torbram nicotine vape page</Link>.
+          Neighbourhood weed-dispensary identity stays on the{" "}
+          <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>.
         </p>
       </section>
     </PillarLanding>
