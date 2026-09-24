@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.planets59.com"),
   title: {
     default: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    // Child titles that already include PLANETS 59 must use resolveDocumentTitle()
+    // so this template does not append the brand a second time.
     template: "%s | PLANETS 59",
   },
   description: gbpLocation.metaDescription,

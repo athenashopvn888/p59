@@ -38,6 +38,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const menuGridRef = useRef<HTMLDivElement>(null);
   const [canAdvance, setCanAdvance] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const menuLinks = [...FLOWER_LINKS, ...CATEGORY_LINKS];
   const isStoreMenuActive =
     menuLinks.some((link) => pathname === link.href) ||
@@ -45,6 +46,7 @@ export default function Navbar() {
   const isDeliveryActive = pathname === "/weed-delivery-brampton";
   const updateScrollState = useCallback(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; setCanAdvance(menuGrid.scrollWidth - menuGrid.clientWidth - menuGrid.scrollLeft > 2); }, []);
   useEffect(() => { const menuGrid = menuGridRef.current; if (!menuGrid) return; updateScrollState(); menuGrid.addEventListener("scroll", updateScrollState, { passive: true }); window.addEventListener("resize", updateScrollState); const resizeObserver = new ResizeObserver(updateScrollState); resizeObserver.observe(menuGrid); if (menuGrid.firstElementChild) resizeObserver.observe(menuGrid.firstElementChild); return () => { menuGrid.removeEventListener("scroll", updateScrollState); window.removeEventListener("resize", updateScrollState); resizeObserver.disconnect(); }; }, [pathname, updateScrollState]);
+  useEffect(() => { setMenuOpen(false); }, [pathname]);
   const advanceMenuGrid = () => { const menuGrid = menuGridRef.current; if (!menuGrid) return; const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches; menuGrid.scrollBy({ left: Math.max(180, menuGrid.clientWidth * 0.75), behavior: reduceMotion ? "auto" : "smooth" }); };
 
   return (
@@ -59,6 +61,18 @@ export default function Navbar() {
         </Link>
 
         <div className={styles.topBarRight} aria-label="Choose a menu">
+          <button
+            type="button"
+            className={styles.menuToggle}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-store-nav"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <svg className={styles.menuToggleIcon} viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+              <path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+            </svg>
+          </button>
           <Link
             href="/exotic-weed"
             className={`${styles.primaryTab} ${isStoreMenuActive ? styles.primaryTabActive : ""}`}
@@ -123,6 +137,28 @@ export default function Navbar() {
         </div>
         {canAdvance && <button type="button" className={styles.menuAdvance} aria-label="Show more store menu categories" aria-controls="store-menu-scrollbar" onClick={advanceMenuGrid}><span aria-hidden="true">›</span></button>}
       </div>
+      {menuOpen && (
+        <div id="mobile-store-nav" className={styles.mobileDrawer} role="dialog" aria-modal="true" aria-label="Site menu">
+          <p className={styles.mobileDrawerLabel}>Flower</p>
+          {FLOWER_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
+          <p className={styles.mobileDrawerLabel}>Products</p>
+          {CATEGORY_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
+          <p className={styles.mobileDrawerLabel}>Help</p>
+          {GUIDE_LINKS.map((link) => (
+            <Link key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </Link>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

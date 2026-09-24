@@ -10,7 +10,13 @@ import {
   getTierFromSlug,
   TIER_CONFIG,
 } from "../lib/products";
-import { TIER_SEO } from "../lib/tierSeoContent";
+import {
+  TIER_H1,
+  TIER_META_DESCRIPTION,
+  TIER_SEO,
+} from "../lib/tierSeoContent";
+import { JsonLd } from "../lib/jsonLd";
+import { resolveDocumentTitle, STORE_ID, STORE_ORIGIN } from "../lib/gbp-location";
 import styles from "./tier.module.css";
 
 /* -- Generate all tier pages at build -- */
@@ -30,15 +36,24 @@ export async function generateMetadata({
   const flowers = getFlowersByTier(tierInfo.key);
   const seo = TIER_SEO[tierInfo.key];
 
+  const title =
+    seo?.seoTitle ||
+    `${tierInfo.config.name} on Torbram at Unit 59 — ${flowers.length} Strains`;
+
   return {
-    title: seo?.seoTitle || `${tierInfo.config.name} — ${flowers.length} Strains`,
-    description: seo?.seoIntro || `Shop ${flowers.length} ${tierInfo.config.name.toLowerCase()} cannabis strains at PLANETS 59.`,
+    title: resolveDocumentTitle(title),
+    description:
+      TIER_META_DESCRIPTION[tierInfo.key] ||
+      seo?.seoIntro ||
+      `Explore the ${tierInfo.config.name.toLowerCase()} flower collection at PLANETS 59 on Torbram at Unit 59.`,
     alternates: {
-      canonical: `https://www.planets59.com/${tierSlug}`,
+      canonical: `${STORE_ORIGIN}/${tierSlug}`,
     },
     openGraph: {
-      title: `${tierInfo.config.name} | PLANETS 59`,
-      description: `Explore the ${tierInfo.config.name} & Cannabis Flower collection from PLANETS 59 in Brampton.`,
+      title,
+      description:
+        TIER_META_DESCRIPTION[tierInfo.key] ||
+        `Explore the ${tierInfo.config.name.toLowerCase()} flower tier at PLANETS 59 on Torbram.`,
     },
   };
 }
@@ -66,8 +81,47 @@ export default async function TierPage({
     ? fs.existsSync(path.join(process.cwd(), "public", config.banner))
     : false;
 
+  const pageUrl = `${STORE_ORIGIN}/${tierSlug}`;
+  const tierJsonLd = seo
+    ? {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": `${pageUrl}#webpage`,
+            url: pageUrl,
+            name: seo.seoTitle,
+            description: TIER_META_DESCRIPTION[tierInfo.key] || seo.seoIntro,
+            isPartOf: { "@type": "WebSite", "@id": `${STORE_ORIGIN}/#website` },
+            about: { "@id": STORE_ID },
+            mainEntity: {
+              "@type": "ItemList",
+              numberOfItems: flowers.length,
+              itemListElement: flowers.map((flower, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                name: flower.name,
+                url: `${STORE_ORIGIN}/flower/${flower.slug}`,
+              })),
+            },
+          },
+          {
+            "@type": "FAQPage",
+            "@id": `${pageUrl}#faq`,
+            url: pageUrl,
+            mainEntity: seo.faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
+          },
+        ],
+      }
+    : null;
+
   return (
     <main className={styles.main}>
+      {tierJsonLd && <JsonLd data={tierJsonLd} />}
       <Navbar />
 
       {/* ── Banner Image (standalone, no overlay text) ── */}
@@ -75,7 +129,7 @@ export default async function TierPage({
         <section className={styles.bannerSection}>
           <img
             src={config.banner}
-            alt={`${config.name} at PLANETS 59 — ${config.tagline}`}
+            alt={`${TIER_H1[tierInfo.key] || config.name} at PLANETS 59 — ${config.tagline}`}
             className={styles.bannerImg}
           />
         </section>
@@ -91,7 +145,9 @@ export default async function TierPage({
             <div className={styles.heroTitleRow}>
               <span className={styles.heroIcon}>{config.icon}</span>
               <h1 className={styles.heroTitle}>
-                <span style={{ color: config.color }}>{config.name}</span>
+                <span style={{ color: config.color }}>
+                  {TIER_H1[tierInfo.key] || config.name}
+                </span>
               </h1>
             </div>
             <p className={styles.heroTagline}>{config.tagline}</p>

@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import { allItems, CATEGORY_CONFIG, type ItemProduct } from "../../lib/products";
 import { getItemData } from "../../lib/itemData";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
+import { resolveDocumentTitle } from "../../lib/gbp-location";
 import Magnifier from "../../components/Magnifier";
 import styles from "../../flower/[slug]/flower.module.css";
 
@@ -27,7 +28,7 @@ export async function generateMetadata({
   const itemData = getItemData(item.category, item.name);
 
   return {
-    title: `${item.name} | ${item.category} | PLANETS 59 Brampton`,
+    title: resolveDocumentTitle(`${item.name} | ${item.category} | PLANETS 59 Brampton`),
     description: itemData.metaDescription,
     alternates: {
       canonical: `https://www.planets59.com/item/${slug}`,

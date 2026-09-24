@@ -3,9 +3,10 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
+import { resolveDocumentTitle } from "../lib/gbp-location";
 
 export const metadata: Metadata = {
-  title: "FAQ — PLANETS 59 | Brampton Dispensary Questions",
+  title: resolveDocumentTitle("FAQ — PLANETS 59 | Brampton Dispensary Questions"),
   description:
     "Frequently asked questions about PLANETS 59 in Brampton, including store information, current menu categories and Weed Delivery.",
   alternates: {

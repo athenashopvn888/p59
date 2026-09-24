@@ -53,6 +53,18 @@ export default function NativeCigarettesTorbramPage() {
       </section>
 
       <section>
+        <h2 className={styles.sectionTitle}>The numbered bay, not the arterial</h2>
+        <p>
+          After you park in the Torbram-facing lot at civic 8500, walk the
+          unit numbers until the bay marked 59. That single counter is the
+          only cigarette door this page describes. Airport Road gets you to
+          Steeles Avenue East; it does not host a second PLANETS 59 cigarette
+          counter. A pin that lands on a neighbouring bay in the same building
+          is the wrong door.
+        </p>
+      </section>
+
+      <section>
         <h2 className={styles.sectionTitle}>How to shop the Torbram cigarette category</h2>
         <p>
           Open the cigarette category first. Listings may include carton-style

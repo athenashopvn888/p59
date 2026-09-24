@@ -1,6 +1,37 @@
 /** PL501 PLANETS 59 — standalone Torbram Unit 59 facts. Live-GBP-first NAP; FMD phone is fallback. */
 export const STORE_ORIGIN = "https://www.planets59.com";
 export const STORE_ID = `${STORE_ORIGIN}/#store`;
+export const DOCUMENT_BRAND = "PLANETS 59";
+
+/**
+ * Root layout title template is `%s | PLANETS 59`.
+ * Titles that already name the brand must be absolute, or the template
+ * appends PLANETS 59 a second time.
+ */
+export function resolveDocumentTitle(title: string): string | { absolute: string } {
+  const segments = title
+    .split("|")
+    .map((segment) => segment.trim())
+    .filter(Boolean);
+  let brandSeen = false;
+  const kept: string[] = [];
+
+  for (const segment of segments) {
+    const namesBrand = segment.includes(DOCUMENT_BRAND);
+    if (segment === DOCUMENT_BRAND) {
+      if (brandSeen) continue;
+      brandSeen = true;
+      kept.push(segment);
+      continue;
+    }
+    if (namesBrand) brandSeen = true;
+    kept.push(segment);
+  }
+
+  const cleaned = kept.join(" | ");
+  if (cleaned.includes(DOCUMENT_BRAND)) return { absolute: cleaned };
+  return cleaned;
+}
 export const GBP_MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=PLANETS%2059&query_place_id=ChIJj4B2l5Y9K4gRorxT85ql9Sg";
 export const STOREFRONT_IMAGE = `${STORE_ORIGIN}/wp-content/uploads/2026/04/7Clmh.jpg`;

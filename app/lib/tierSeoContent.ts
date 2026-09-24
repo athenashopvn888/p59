@@ -5,129 +5,171 @@ export interface TierSeoData {
   faqs: { q: string; a: string }[];
 }
 
+export const TIER_H1: Record<string, string> = {
+  EXOTIC: "Exotic Weed on Torbram at Unit 59",
+  PREMIUM: "Premium Weed on Torbram near Airport Road",
+  "AAA+": "AAA+ Weed at Torbram Unit 59",
+  AA: "AA Weed on the Torbram Corridor",
+  BUDGET: "Budget Weed at Torbram and Steeles",
+};
+
+export const TIER_META_DESCRIPTION: Record<string, string> = {
+  EXOTIC:
+    "Exotic Weed at PLANETS 59, Unit 59 on Torbram Road in northeast Brampton. Top flower band for the Torbram / Airport Road walk-in. Adults 19+.",
+  PREMIUM:
+    "Premium Weed on Torbram near Airport Road at PLANETS 59 Unit 59. The band under Exotic Weed for this northeast Brampton counter. Adults 19+.",
+  "AAA+":
+    "AAA+ Weed at Torbram Unit 59 at PLANETS 59. Everyday-plus flower between Premium Weed and AA Weed on the Torbram corridor. Adults 19+.",
+  AA:
+    "AA Weed on the Torbram corridor at PLANETS 59 Unit 59. Daily flower between AAA+ Weed and Budget Weed near Steeles Avenue East. Adults 19+.",
+  BUDGET:
+    "Budget Weed at Torbram and Steeles at PLANETS 59 Unit 59. Value flower for the Torbram / Airport Road walk-in, under AA Weed. Adults 19+.",
+};
+
 export const TIER_SEO: Record<string, TierSeoData> = {
-  "EXOTIC": {
-    "seoTitle": "Exotic Weed & Cannabis Flower in Brampton",
-    "seoIntro": "Explore the Exotic Weed collection at PLANETS 59 and compare the product information presented with each flower listing.",
-    "sections": [
+  EXOTIC: {
+    seoTitle: "Exotic Weed on Torbram at Unit 59 | PLANETS 59",
+    seoIntro:
+      "Exotic Weed is the top flower collection at PLANETS 59 inside Unit 59 of the plaza at civic 8500 on Torbram Road. Adults already on the Torbram / Airport Road stretch use this tier for the loudest jars at this counter — not a Brampton-wide exotic directory.",
+    sections: [
       {
-        "heading": "Start With Exotic Weed",
-        "body": "Exotic Weed is easiest to compare when shoppers stay within this flower collection first. Review the names, formats and details presented while browsing."
+        heading: "Top flower band at the Torbram plaza bay",
+        body: "Exotic Weed sits at the top of the flower wall inside Unit 59. Shoppers who turn off Airport Road onto Torbram, or who are already walking the numbered bays at civic 8500, use this collection when they want the headliner jars rather than a mid-shelf pick.",
       },
       {
-        "heading": "Compare The Collection",
-        "body": "Use the Exotic Weed page to compare its flower listings, then ask PLANETS 59 staff when one product detail matters to your visit."
+        heading: "How Exotic Weed sits beside the other four collections",
+        body: "Premium Weed is the step under this tier, then AAA+ Weed, AA Weed, and Budget Weed. Stay on Exotic Weed when the stop is specifically the top band at this Torbram door. Move to a sibling collection when the spend or style should change.",
       },
-      {
-        "heading": "Torbram Visit Notes",
-        "body": "Use the PLANETS 59 store page for location and visit information, then return to Exotic Weed when this is the flower collection you want to explore."
-      }
     ],
-    "faqs": [
+    faqs: [
       {
-        "q": "How should shoppers compare Exotic Weed?",
-        "a": "Open the Exotic Weed collection and compare the product information presented with each listing."
+        q: "What makes Exotic Weed different from Premium Weed at Unit 59?",
+        a: "Exotic Weed is the top flower band at this Torbram counter. Premium Weed is the collection directly under it for shoppers who want a strong jar without stepping all the way into Exotic.",
       },
       {
-        "q": "Where can I ask about one Exotic Weed item?",
-        "a": "Ask PLANETS 59 staff when one item detail is important to your visit."
-      }
-    ]
+        q: "Who usually shops Exotic Weed on Torbram Road?",
+        a: "Adults already on the Torbram / Airport Road corridor near Steeles Avenue East who came for the loudest flower this Unit 59 counter puts out — not a city-wide catalogue.",
+      },
+      {
+        q: "Which other flower collections sit under Exotic Weed?",
+        a: "Premium Weed, AAA+ Weed, AA Weed, and Budget Weed. Each collection is a separate band at this Torbram walk-in.",
+      },
+    ],
   },
-  "PREMIUM": {
-    "seoTitle": "Premium Weed & Cannabis Flower in Brampton",
-    "seoIntro": "Explore the Premium Weed collection at PLANETS 59 without mixing the comparison into unrelated cannabis categories.",
-    "sections": [
+  PREMIUM: {
+    seoTitle: "Premium Weed on Torbram near Airport Road | PLANETS 59",
+    seoIntro:
+      "Premium Weed is the polished flower collection at PLANETS 59 for people who reach Unit 59 from Airport Road. It is the band under Exotic Weed at this Torbram counter, not a city premium list.",
+    sections: [
       {
-        "heading": "Premium Weed In Its Own Collection",
-        "body": "Premium Weed is easier to explore within its own flower collection. That keeps the visit focused and avoids mixing flower decisions with edibles, vapes or concentrates."
+        heading: "Polished flower west of Airport Road",
+        body: "Premium Weed is for adults who finish the approach on Torbram Road and want a refined jar without jumping to Exotic Weed. The plaza face is civic 8500. Unit 59 is the bay. Airport Road is the arterial you use to get here, not a second storefront.",
       },
       {
-        "heading": "Review The Product Information",
-        "body": "Compare the names, formats and details presented with the Premium Weed listings, and ask staff when a product question needs clarification."
-      }
+        heading: "Premium Weed beside Exotic, AAA+, AA, and Budget",
+        body: "Exotic Weed sits above this tier. AAA+ Weed, AA Weed, and Budget Weed sit below it. Use Premium Weed when that upper-middle band is the point of the Torbram stop.",
+      },
     ],
-    "faqs": [
+    faqs: [
       {
-        "q": "Where should Premium Weed shoppers start?",
-        "a": "Start with the Premium Weed page, then compare the information presented with its flower listings."
+        q: "When is Premium Weed the better pick than Exotic Weed on Torbram?",
+        a: "Choose Premium Weed when you want a polished jar at Unit 59 without stepping into the Exotic Weed band. Exotic Weed stays the top collection.",
       },
       {
-        "q": "Can Premium Weed listings change?",
-        "a": "Yes. Ask staff when one item is the reason for your visit."
-      }
-    ]
+        q: "Is Premium Weed a Torbram collection or a Brampton-wide list?",
+        a: "It is the Premium Weed collection for this Unit 59 walk-in on Torbram Road, near Airport Road and Steeles Avenue East. It is not a city directory.",
+      },
+      {
+        q: "Which collections sit beside Premium Weed?",
+        a: "Exotic Weed above, then AAA+ Weed, AA Weed, and Budget Weed below.",
+      },
+    ],
   },
   "AAA+": {
-    "seoTitle": "AAA+ Weed & Cannabis Flower in Brampton",
-    "seoIntro": "Explore the AAA+ Weed collection at PLANETS 59 as a focused place to compare flower listings.",
-    "sections": [
+    seoTitle: "AAA+ Weed at Torbram Unit 59 | PLANETS 59",
+    seoIntro:
+      "AAA+ Weed is the everyday-plus flower collection at PLANETS 59 Unit 59. It sits between Premium Weed and AA Weed for Torbram walk-ins. Adults 19+.",
+    sections: [
       {
-        "heading": "Compare AAA+ Weed Clearly",
-        "body": "AAA+ Weed works best as its own flower collection. Review the information presented with each listing and ask staff when a close choice needs clarification."
+        heading: "Everyday-plus flower inside Unit 59",
+        body: "AAA+ Weed is the workhorse-plus band at the numbered bay on Torbram Road. Shoppers coming from Steeles Avenue East or down from the Airport Road spine use it when they want a heavier jar that is still not Premium Weed or Exotic Weed.",
       },
       {
-        "heading": "Stay Within The Collection",
-        "body": "Use the AAA+ Weed page to compare its flower listings before moving to a different PLANETS 59 collection."
-      }
+        heading: "Where AAA+ Weed sits on the flower wall",
+        body: "Premium Weed and Exotic Weed sit above AAA+ Weed. AA Weed and Budget Weed sit below it. Stay here when that middle band is the reason for the Unit 59 stop.",
+      },
     ],
-    "faqs": [
+    faqs: [
       {
-        "q": "What should shoppers compare in AAA+ Weed?",
-        "a": "Compare the product name, format and other information presented with each AAA+ Weed listing."
+        q: "What does AAA+ Weed cover at the Torbram counter?",
+        a: "AAA+ Weed is the middle flower band at Unit 59 — heavier jars that sit under Premium Weed and above AA Weed.",
       },
       {
-        "q": "Where can shoppers ask about AAA+ Weed?",
-        "a": "Ask PLANETS 59 staff when a specific product detail matters."
-      }
-    ]
+        q: "Is AAA+ Weed closer to AA Weed or to Premium Weed?",
+        a: "It sits between them. Choose AAA+ Weed when AA Weed feels too light and Premium Weed is more jar than you want for this Torbram stop.",
+      },
+      {
+        q: "Can I compare AAA+ Weed with the other Unit 59 collections?",
+        a: "Yes. Exotic Weed, Premium Weed, AA Weed, and Budget Weed are the sibling collections at this same Torbram door.",
+      },
+    ],
   },
-  "AA": {
-    "seoTitle": "AA Weed & Cannabis Flower in Brampton",
-    "seoIntro": "Explore the AA Weed collection at PLANETS 59 for a straightforward flower comparison.",
-    "sections": [
+  AA: {
+    seoTitle: "AA Weed on the Torbram Corridor | PLANETS 59",
+    seoIntro:
+      "AA Weed is the daily-driver flower collection at PLANETS 59 on the Torbram corridor. Familiar jars at Unit 59, between AAA+ Weed and Budget Weed. Adults 19+.",
+    sections: [
       {
-        "heading": "Start With AA Weed",
-        "body": "AA Weed gives flower shoppers a clear place to start before moving into another collection. Compare the information presented with each listing."
+        heading: "Daily flower on the Torbram face",
+        body: "AA Weed is the collection northeast Brampton walk-ins use when they want a reliable jar at civic 8500 without climbing into AAA+ Weed. It is written for people already on Torbram Road, not a city-wide AA list.",
       },
       {
-        "heading": "Review The Flower Listings",
-        "body": "Use the AA Weed page to compare its flower listings and ask staff when one item detail is important."
-      }
+        heading: "AA Weed versus Budget Weed and AAA+ Weed",
+        body: "Budget Weed sits under AA Weed for the value band. AAA+ Weed, Premium Weed, and Exotic Weed sit above it. Stay here when a steady daily jar at Unit 59 is the point.",
+      },
     ],
-    "faqs": [
+    faqs: [
       {
-        "q": "Where can value-minded flower shoppers start?",
-        "a": "AA Weed and Budget Weed are two distinct PLANETS 59 flower collections to explore."
+        q: "What is AA Weed for Torbram corridor shoppers?",
+        a: "AA Weed is the daily-driver flower collection at Unit 59 — familiar jars for walk-ins who are not shopping Budget Weed or AAA+ Weed.",
       },
       {
-        "q": "Can AA Weed listings change?",
-        "a": "Yes. Ask staff when one item is the reason for your visit."
-      }
-    ]
+        q: "How is AA Weed different from Budget Weed at this door?",
+        a: "Budget Weed is the value band under AA Weed. AA Weed is the step up for shoppers who want a steadier daily jar without moving into AAA+ Weed.",
+      },
+      {
+        q: "Where else can I browse flower besides AA Weed?",
+        a: "Budget Weed sits below. AAA+ Weed, Premium Weed, and Exotic Weed sit above, all at the same Torbram Unit 59 counter.",
+      },
+    ],
   },
-  "BUDGET": {
-    "seoTitle": "Budget Weed & Cannabis Flower in Brampton",
-    "seoIntro": "Explore the Budget Weed collection at PLANETS 59 when value-minded flower shopping is your starting point.",
-    "sections": [
+  BUDGET: {
+    seoTitle: "Budget Weed at Torbram and Steeles | PLANETS 59",
+    seoIntro:
+      "Budget Weed is the value flower collection at PLANETS 59 where Torbram Road meets Steeles Avenue East. It is the lowest band at Unit 59, under AA Weed. Adults 19+.",
+    sections: [
       {
-        "heading": "Start With Budget Weed",
-        "body": "Budget Weed is a focused first stop for value-minded flower shoppers. Compare the product information presented with each listing."
+        heading: "Value flower at the Torbram and Steeles crossing",
+        body: "Budget Weed is the lowest flower band at this Unit 59 counter. Shoppers who meet Steeles Avenue East and turn onto Torbram Road use it when the stop is about the value jars, kept separate from AA Weed.",
       },
       {
-        "heading": "Compare The Collection",
-        "body": "Use the Budget Weed page to compare its flower listings before exploring AA Weed or another PLANETS 59 collection."
-      }
+        heading: "Budget Weed under AA, AAA+, Premium, and Exotic",
+        body: "AA Weed is the next band up, then AAA+ Weed, Premium Weed, and Exotic Weed. Budget Weed stays the narrow owner for value flower at this Torbram plaza bay.",
+      },
     ],
-    "faqs": [
+    faqs: [
       {
-        "q": "Where can value-minded shoppers start?",
-        "a": "Start with Budget Weed, then explore AA Weed if you want another flower collection."
+        q: "What is Budget Weed at PLANETS 59 on Torbram?",
+        a: "Budget Weed is the value flower collection at Unit 59 — the lowest band, kept separate from AA Weed so shoppers can compare without mixing the two.",
       },
       {
-        "q": "Where can shoppers ask about one Budget Weed item?",
-        "a": "Ask PLANETS 59 staff when one item detail is important to your visit."
-      }
-    ]
-  }
+        q: "Is Budget Weed only for people already at Steeles and Torbram?",
+        a: "That crossing is the landmark, but Budget Weed is for any adult 19+ walking into Unit 59 who wants the value band at this counter.",
+      },
+      {
+        q: "Which collections sit above Budget Weed?",
+        a: "AA Weed, AAA+ Weed, Premium Weed, and Exotic Weed. Each is a separate flower band at this Torbram shop.",
+      },
+    ],
+  },
 };

@@ -33,7 +33,7 @@ test("tier owners use Tier Name plus Weed and weed-bearing canonicals", () => {
     assert.ok(products.includes(`slug: "${canonical}"`));
     assert.match(tierCopy, new RegExp(label.replace("+", "\\+")));
   }
-  assert.match(tierPage, /canonical: `https:\/\/www\.planets59\.com\/\$\{tierSlug\}`/);
+  assert.match(tierPage, /canonical: `\$\{STORE_ORIGIN\}\/\$\{tierSlug\}`/);
 });
 
 test("legacy Weed campaign routes redirect directly to sole canonicals", () => {
@@ -85,7 +85,7 @@ test("evergreen public copy omits reversed tiers and known workflow debt", () =>
   assert.doesNotMatch(products, /full edibles selection in store/i);
   assert.match(faq, /Exotic Weed, Premium Weed, AAA\+ Weed, AA Weed, and Budget Weed/);
   assert.match(faq, /PLANETS 59 Weed Delivery page/);
-  assert.match(tierPage, /Explore the \$\{tierInfo\.config\.name\} & Cannabis Flower collection/);
+  assert.match(tierPage, /TIER_META_DESCRIPTION\[tierInfo\.key\]/);
   assert.doesNotMatch(layout, /priceRange:/);
 });
 

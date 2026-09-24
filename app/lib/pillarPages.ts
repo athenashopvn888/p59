@@ -197,6 +197,11 @@ export const WEED_DISPENSARY_FAQS: StoreFaq[] = [
 
 export const PILLAR_HUB_CARDS = [
   {
+    href: PILLAR_PATHS.weedDispensary,
+    label: "Weed dispensary on Torbram",
+    blurb: "Unit 59 neighbourhood owner. Corridor only — not a city-wide list.",
+  },
+  {
     href: PILLAR_PATHS.hours,
     label: "24-hour Torbram walk-in",
     blurb: "Open now at Unit 59. Walk-in is 24 hours; delivery is not.",
@@ -217,9 +222,9 @@ export const PILLAR_HUB_CARDS = [
     blurb: "Dedicated nic-vape shelf, separate from THC vapes.",
   },
   {
-    href: PILLAR_PATHS.weedDispensary,
-    label: "Weed dispensary on Torbram",
-    blurb: "Unit 59 neighbourhood owner. Corridor only — not a city-wide list.",
+    href: PILLAR_PATHS.visit,
+    label: "Visit Unit 59",
+    blurb: "Plaza parking on Torbram and Brampton Transit route 14.",
   },
 ] as const;
 
