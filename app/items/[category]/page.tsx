@@ -7,6 +7,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SafeImage from "../../components/SafeImage";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
+import { resolveDocumentTitle } from "../../lib/gbp-location";
 import {
   getItemsByCategory,
   getCategoryFromSlug,
@@ -32,7 +33,9 @@ export async function generateMetadata({
   const items = getItemsByCategory(catInfo.key);
 
   return {
-    title: catInfo.config.seoTitle || `${catInfo.config.name} — ${items.length} Products`,
+    title: resolveDocumentTitle(
+      catInfo.config.seoTitle || `${catInfo.config.name} on Torbram — ${items.length} Products`,
+    ),
     description: catInfo.config.seoIntro || `Shop ${items.length} ${catInfo.config.name.toLowerCase()} at PLANETS 59.`,
     alternates: {
       canonical: `https://www.planets59.com/items/${catSlug}`,
@@ -78,14 +81,14 @@ export default async function ItemsCategoryPage({
               style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
             />
             <div className={styles.heroContent} style={{ padding: "28px 24px 8px", textAlign: "center" }}>
-              <h1 className={styles.heroTitle}>{config.name} in Brampton</h1>
+              <h1 className={styles.heroTitle}>{config.name} in Brampton on Torbram at Unit 59</h1>
             </div>
           </>
         ) : (
           <div className={styles.heroContent} style={{ background: config.color, padding: "60px 24px", textAlign: "center" }}>
             <span className={styles.heroIcon}>{config.icon}</span>
             <h1 className={styles.heroTitle}>
-              <span style={{ color: "#fff" }}>{config.name} in Brampton</span>
+              <span style={{ color: "#fff" }}>{config.name} in Brampton on Torbram at Unit 59</span>
             </h1>
             <p className={styles.heroSub} style={{ color: "rgba(255,255,255,0.8)" }}>{items.length} products available</p>
           </div>

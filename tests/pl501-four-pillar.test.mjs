@@ -58,7 +58,8 @@ test("five neighbourhood LPs exist with unique H1s and FAQPage", () => {
 
 test("homepage hub cards point at all five pillars", () => {
   assert.match(home, /PillarHubCards/);
-  assert.match(home, /24-hour, weed delivery, Native cigarettes, nic-vape, and weed dispensary/);
+  assert.match(home, /Torbram weed, 24-hour walk-in, delivery, Native cigarettes, nicotine vape, and visit/);
+  assert.match(pillars, /href: PILLAR_PATHS\.visit/);
   assert.match(home, /slug: "native-cigarettes-torbram"/);
   assert.match(home, /slug: "nicotine-vape-torbram"/);
   assert.match(hub, /PILLAR_HUB_CARDS/);

@@ -67,11 +67,12 @@ test("identity stays PLANETS 59 / Unit 59; no city-wide spam", () => {
   assert.match(pillars, /does not rank shops, invent a city directory/);
   assert.doesNotMatch(weed, /sister store|our other locations|Athena|Queen West|Parkdale|Jane Finch|The Planet 60|Planet X|\bP60\b|Vaughan|Caledon|Etobicoke/i);
   assert.doesNotMatch(pillars, /medical cannabis|prescription|patient|doctor/i);
-  assert.match(city, /weed-dispensary-brampton/);
+  assert.match(city, /index: false/);
+  assert.match(city, /weed-dispensary-torbram/);
 });
 
 test("fifth pillar is linked from hub chrome and does not touch the menu swimlane", () => {
-  assert.match(home, /nic-vape, and weed dispensary/);
+  assert.match(home, /nicotine vape, and visit/);
   assert.match(footer, /href="\/weed-dispensary-torbram"/);
   assert.match(sitemap, /\$\{BASE\}\/weed-dispensary-torbram/);
   assert.match(visit, /Five Torbram starting points/);

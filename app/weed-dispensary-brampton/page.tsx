@@ -1,16 +1,19 @@
 import { Metadata } from "next";
 import { WeedOwnerPage } from "@/app/components/WeedOwnerPage";
 import { DeliveryCoverage } from "@/app/components/DeliveryCoverage";
+import { resolveDocumentTitle, STORE_ORIGIN } from "@/app/lib/gbp-location";
+
+const CORRIDOR_OWNER = `${STORE_ORIGIN}/weed-dispensary-torbram`;
 
 export const metadata: Metadata = {
-  title: { absolute: "24-Hour Weed Dispensary in Brampton | PLANETS 59" },
+  title: resolveDocumentTitle("Legacy Brampton city URL | PLANETS 59"),
   description:
-    "Visit PLANETS 59 at 8500 Torbram Rd Unit 59 in Brampton, near Steeles Ave E. Store open 24 hours daily. Brampton delivery runs 10 a.m.–10 p.m.",
+    "Legacy city URL for PLANETS 59. The neighbourhood owner is the Torbram Unit 59 weed dispensary page at 8500 Torbram Rd. Adults 19+.",
   alternates: {
-    canonical: "https://www.planets59.com/weed-dispensary-brampton",
+    canonical: CORRIDOR_OWNER,
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

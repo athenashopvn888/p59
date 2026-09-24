@@ -54,6 +54,18 @@ export default function NicotineVapeTorbramPage() {
       </section>
 
       <section>
+        <h2 className={styles.sectionTitle}>One civic address, two vape lists</h2>
+        <p>
+          The nicotine shelf is a walk-up counter inside Unit 59, on the
+          Torbram plaza face and west of the Airport Road industrial spine.
+          People coming off Steeles Avenue East should finish on Torbram Road
+          and match bay 59 before they ask for a device. The nicotine list and
+          the THC disposable list stay separate in the menu even though they
+          share this one civic address.
+        </p>
+      </section>
+
+      <section>
         <h2 className={styles.sectionTitle}>Keep nicotine vapes separate from THC vapes</h2>
         <p>
           Nicotine vapes live under /items/vapes. THC and cannabis vapour

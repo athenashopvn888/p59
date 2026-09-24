@@ -17,7 +17,8 @@
     "verify:ready-workflow": "node scripts/verify-ready-workflow.mjs",
     "test:nicotine-vapes": "node --experimental-strip-types --test tests/nicotine-vape-landing.test.ts",
     "test:four-pillar": "node --test tests/pl501-four-pillar.test.mjs",
-    "test:five-pillar": "node --test tests/pl501-five-pillar.test.mjs tests/pl501-four-pillar.test.mjs"
+    "test:five-pillar": "node --test tests/pl501-five-pillar.test.mjs tests/pl501-four-pillar.test.mjs",
+    "test:aggsix-parity": "node --experimental-strip-types --test tests/pl501-aggsix-parity.test.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.6.1",

@@ -22,10 +22,10 @@ const faqs = [
 
 export function WeedOwnerPage() {
   const schema = [
-    { "@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.planets59.com/weed-dispensary-brampton/#webpage", url: "https://www.planets59.com/weed-dispensary-brampton", name: "24-Hour Weed Dispensary in Brampton | PLANETS 59", description: "Visit PLANETS 59 at 8500 Torbram Rd Unit 59 in Brampton, near Steeles Ave E. Store open 24 hours daily. Brampton delivery runs 10 a.m.–10 p.m.", about: { "@id": "https://www.planets59.com/#store" }, mainEntity: { "@id": "https://www.planets59.com/#store" } },
+    { "@context": "https://schema.org", "@type": "WebPage", "@id": "https://www.planets59.com/weed-dispensary-torbram/#webpage", url: "https://www.planets59.com/weed-dispensary-torbram", name: "Weed Dispensary on Torbram | PLANETS 59", description: "Legacy city URL. Neighbourhood owner is PLANETS 59 at 8500 Torbram Rd Unit 59 on the Torbram / Airport Road corridor.", about: { "@id": "https://www.planets59.com/#store" }, mainEntity: { "@id": "https://www.planets59.com/#store" } },
     { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://www.planets59.com/" },
-      { "@type": "ListItem", position: 2, name: "Brampton Cannabis Dispensary", item: "https://www.planets59.com/weed-dispensary-brampton" },
+      { "@type": "ListItem", position: 2, name: "Torbram weed dispensary", item: "https://www.planets59.com/weed-dispensary-torbram" },
     ] },
     { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) },
   ];
@@ -35,7 +35,7 @@ export function WeedOwnerPage() {
     <header className={styles.hero}>
       <p className={styles.eyebrow}>PLANETS 59 · Torbram / Airport Road · Unit 59</p>
       <h1>24-Hour Cannabis Dispensary in Brampton</h1>
-      <p>PLANETS 59 is a Brampton cannabis store at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, in the Torbram / Airport Road corridor near Steeles Avenue East. The storefront is open 24 hours daily. Whether you already know which part of the menu you want to explore or simply need the store location before heading out, this page brings the essential Brampton visit information together in one place.</p>
+      <p>This city URL is a legacy path. Neighbourhood weed-dispensary intent for PLANETS 59 lives on the Torbram Unit 59 page, not a Brampton-wide directory. The walk-in is still 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, on the Torbram / Airport Road corridor near Steeles Avenue East. The storefront is open 24 hours daily.</p>
       <div className={styles.actions}><Link href="/visit" className={styles.primary}>Unit 59 visit guide</Link><Link href="/weed-dispensary-torbram" className={styles.secondary}>Torbram weed dispensary</Link><Link href="/24-hour-dispensary-torbram" className={styles.secondary}>24-hour Torbram FAQ</Link><Link href="/weed-delivery-torbram" className={styles.secondary}>Torbram weed delivery</Link></div>
     </header>
     <section className={styles.section}><h2>Visit PLANETS 59 on Torbram Road</h2><address className={styles.address}><strong>PLANETS 59</strong><br />8500 Torbram Rd Unit 59<br />Brampton, ON L6T 5C6<br /><a href="tel:+12895367493">+1 289-536-7493</a><br />Open 24 Hours Daily</address><p>Use the <Link href="/visit">Unit 59 visit guide</Link> for plaza wayfinding, then check a current map or transit service before leaving.</p></section>

@@ -1,4 +1,8 @@
 .overlay {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   position: fixed;
   inset: 0;
   z-index: 99999;
@@ -18,8 +22,9 @@
   border: 1px solid rgba(168, 85, 247, 0.2);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.15);
   border-radius: 24px;
-  width: min(100%, 440px);
-  max-width: 440px;
+  width: 100%;
+  max-width: min(440px, calc(100vw - 32px));
+  min-width: 0;
   padding: 40px 32px;
   text-align: center;
   position: relative;
@@ -83,6 +88,11 @@
   display: flex;
   gap: 12px;
   margin-bottom: 24px;
+  min-width: 0;
+}
+
+.btnRow > * {
+  min-width: 0;
 }
 
 .yesBtn {
@@ -160,7 +170,7 @@
   }
 
   .modal {
-    max-width: calc(100vw - 32px);
+    max-width: 100%;
     padding: 30px 20px;
     border-radius: 18px;
   }
@@ -180,15 +190,18 @@
   }
 
   .btnRow {
+    flex-direction: column;
     gap: 8px;
     margin-bottom: 18px;
   }
 
   .yesBtn,
   .noBtn {
+    width: 100%;
     min-height: 48px;
     padding: 12px 10px;
     font-size: 12px;
+    white-space: normal;
   }
 }
 

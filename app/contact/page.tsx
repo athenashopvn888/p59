@@ -3,9 +3,10 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./contact.module.css";
+import { resolveDocumentTitle } from "../lib/gbp-location";
 
 export const metadata: Metadata = {
-  title: "Contact Us — PLANETS 59 | 8500 Torbram Rd Unit 59, Brampton",
+  title: resolveDocumentTitle("Contact Us — PLANETS 59 | 8500 Torbram Rd Unit 59, Brampton"),
   description:
     "Visit PLANETS 59 at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6. We are open 24 hours daily. Walk-ins welcome.",
   alternates: {

@@ -230,7 +230,7 @@ export default function HomePage() {
               <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>EXPLORE WEED DELIVERY</Link>
             </div>
             <div className={styles.homePillarHub}>
-              <PillarHubCards currentPath="/" heading="24-hour, weed delivery, Native cigarettes, nic-vape, and weed dispensary" />
+              <PillarHubCards currentPath="/" heading="Torbram weed, 24-hour walk-in, delivery, Native cigarettes, nicotine vape, and visit" />
             </div>
           </div>
 

@@ -35,12 +35,12 @@ export default function AgeGate() {
   if (!show) return null;
 
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
       <div className={styles.modal}>
         {underage ? (
           <div className={styles.underageState}>
             <span className={styles.warningIcon}>⚠️</span>
-            <h2 className={styles.title}>Access Denied</h2>
+            <h2 id="age-gate-title" className={styles.title}>Access Denied</h2>
             <p className={styles.text}>
               You must be 19 years of age or older to enter this website.
             </p>
@@ -58,7 +58,7 @@ export default function AgeGate() {
                 className={styles.logo}
               />
             </div>
-            <h2 className={styles.title}>Age Verification</h2>
+            <h2 id="age-gate-title" className={styles.title}>Age Verification</h2>
             <p className={styles.text}>
               PLANETS 59 requires all visitors to be of legal age.
               Are you <strong>19 years of age or older</strong>?

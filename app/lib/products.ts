@@ -172,7 +172,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   "VAPE PENS": {
     banner: "/banners/01_Vape_Pens.webp",
     name: "Nicotine Vape", slug: "vapes", color: "#8b5cf6", icon: "💨",
-    seoTitle: "Nicotine Vapes Brampton",
+    seoTitle: "Nicotine Vape Menu at Torbram Unit 59 | PLANETS 59",
     seoIntro: "Explore PLANETS 59 nicotine vape products in a category kept separate from THC Vape products. Nicotine products are for adults 19+ and contain nicotine, which is addictive.",
     seoDescription: "Compare the nicotine vape products listed in this PLANETS 59 category. Check the current product information while browsing. Adults 19+. Nicotine is addictive.",
     faqs: [
@@ -235,7 +235,7 @@ export const CATEGORY_CONFIG: Record<string, CategoryInfo> = {
   CIGARETTES: {
     banner: "/banners/native-cigarette-offer-20260822.webp",
     name: "Cigarettes", slug: "cigarettes", color: "#78716c", icon: "CG",
-    seoTitle: "Native Cigarettes Brampton | PLANETS 59",
+    seoTitle: "Native Cigarettes Menu at Torbram Unit 59 | PLANETS 59",
     seoIntro: "PLANETS 59 lists Native smokes in Brampton. Current cigarette menu brands include Rolled Gold Full, Rolled Gold Lights, BB Full Carton, BB Lights Carton, Canadian Classics Original, Canadian Classics Silver, Canadian Full, Canadian Goose Full, Canadian Goose Lights, Canadian Lights, Canadian Menthol, Nexus Full, Nexus Lights, Playfare Ultra Lights, Putters, Time Full, Time Lights, with $25/carton pricing shown where listed.",
     seoDescription: "Use the cigarette category to compare current Native smoke listings at PLANETS 59. Brands, carton options, and prices can change, so check the current menu or ask staff before visiting.",
     faqs: [

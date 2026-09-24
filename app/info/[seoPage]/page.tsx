@@ -7,6 +7,7 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { SEO_PAGES, getSeoPageBySlug } from "../../lib/seoPages";
+import { resolveDocumentTitle } from "../../lib/gbp-location";
 import { TIER_CONFIG } from "../../lib/products";
 import styles from "./seo.module.css";
 
@@ -26,7 +27,7 @@ export async function generateMetadata({
   if (!page) return {};
 
   return {
-    title: page.absoluteTitle ? { absolute: page.title } : page.title,
+    title: resolveDocumentTitle(page.title),
     description: page.metaDescription,
     alternates: {
       canonical: `https://www.planets59.com/info/${slug}`,
