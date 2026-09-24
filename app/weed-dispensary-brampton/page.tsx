@@ -6,9 +6,9 @@ import { resolveDocumentTitle, STORE_ORIGIN } from "@/app/lib/gbp-location";
 const CORRIDOR_OWNER = `${STORE_ORIGIN}/weed-dispensary-torbram`;
 
 export const metadata: Metadata = {
-  title: resolveDocumentTitle("Legacy Brampton city URL | PLANETS 59"),
+  title: resolveDocumentTitle("Weed Dispensary Brampton (city redirect) | PLANETS 59"),
   description:
-    "Legacy city URL for PLANETS 59. The neighbourhood owner is the Torbram Unit 59 weed dispensary page at 8500 Torbram Rd. Adults 19+.",
+    "City-level Brampton URL for PLANETS 59 (demoted; noindex). The neighbourhood owner is the Torbram Unit 59 weed dispensary page at 8500 Torbram Rd. Adults 19+.",
   alternates: {
     canonical: CORRIDOR_OWNER,
   },

@@ -50,6 +50,7 @@ export default function Footer() {
               <Link href="/items/vapes">Nicotine Vape</Link>
               <Link href="/resources">Resources</Link>
               <Link href="/visit">Visit Unit 59</Link>
+              <Link href="/hours">Store Hours</Link>
               <Link href="/24-hour-dispensary-torbram">24-Hour Torbram</Link>
               <Link href="/weed-delivery-torbram">Weed Delivery Torbram</Link>
               <Link href="/native-cigarettes-torbram">Native Cigarettes Torbram</Link>
