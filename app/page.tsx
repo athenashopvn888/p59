@@ -2,10 +2,11 @@
 import HomePage from "./HomePage";
 import { JsonLd } from "./lib/jsonLd";
 import { STORE_ORIGIN, faqPageJsonLd, HOME_FAQS } from "./lib/gbp-location";
+import { HOME_TITLE } from "./lib/homeDelivery";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    absolute: HOME_TITLE,
   },
   description:
     "Walk in at PLANETS 59, 8500 Torbram Rd Unit 59 in northeast Brampton on the Torbram / Airport Road corridor. Open 24 hours. Adults 19+. Call +1 (289) 536-7493.",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     canonical: STORE_ORIGIN,
   },
   openGraph: {
-    title: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    title: HOME_TITLE,
     description:
       "Walk-in cannabis at 8500 Torbram Rd Unit 59, Brampton. Torbram / Airport Road corridor. Open 24 hours. Adults 19+.",
     url: STORE_ORIGIN,

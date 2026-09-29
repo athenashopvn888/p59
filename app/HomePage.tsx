@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import Navbar from "./components/Navbar";
+import HomeDeliverySection from "./components/HomeDeliverySection";
 import Footer from "./components/Footer";
 import DeliveryBanner from "./components/DeliveryBanner";
 import FlowerCard from "./components/FlowerCard";
@@ -13,6 +14,7 @@ import { gbpLocation, HOME_CORRIDOR_COPY, HOME_FAQS } from "./lib/gbp-location";
 import PillarHubCards from "./components/PillarHubCards";
 import { PILLAR_PATHS } from "./lib/pillarPages";
 import Papa from "papaparse";
+import { HOME_TITLE } from "./lib/homeDelivery";
 
 /* -- Bento Mosaic Config -- */
 const BENTO_TIERS = [
@@ -173,9 +175,8 @@ export default function HomePage() {
 
   return (
     <main className={styles.main}>
-      <FleetAnnouncementBanner />
-      {/* -- NAVBAR -- */}
       <Navbar />
+      <FleetAnnouncementBanner />
 
       <DeliveryBanner />
 
@@ -218,7 +219,7 @@ export default function HomePage() {
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <img src="/storeFavicon.webp" alt="PLANETS 59 Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
-            <h1 className={styles.brandTitle}>PLANETS 59</h1>
+            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
             <p className={styles.brandSub}>Unit 59 · Torbram / Airport Road · Brampton northeast</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
             <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">
@@ -226,8 +227,8 @@ export default function HomePage() {
               <p>PLANETS 59 Weed Delivery serves Brampton daily from 10 a.m. to 10 p.m. Browse the flower delivery menu and use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p>
             </aside>
             <div className={styles.homeMenuActions} aria-label="Choose a PLANETS 59 menu">
-              <Link href="/exotic-weed" className={styles.homeMenuCta}>EXPLORE EXOTIC WEED</Link>
-              <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>EXPLORE WEED DELIVERY</Link>
+              <Link href="/exotic-weed" className={`${styles.homeMenuCta} ${styles.homeMenuPrimary}`}>STORE MENU</Link>
+              <Link href="/weed-delivery-brampton" className={`${styles.homeMenuCta} ${styles.homeDeliveryCta}`}>Delivery</Link>
             </div>
             <div className={styles.homePillarHub}>
               <PillarHubCards currentPath="/" heading="Torbram weed, 24-hour walk-in, delivery, Native cigarettes, nicotine vape, and visit" />
@@ -256,6 +257,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <HomeDeliverySection />
 
       {/* -- EXPLORE CATEGORIES -- */}
       <section className={styles.identitySection} aria-label="PLANETS 59 local identity">
