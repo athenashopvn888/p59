@@ -3,11 +3,12 @@ import Link from "next/link";
 import "./globals.css";
 import AgeGate from "./components/AgeGate";
 import { cannabisStoreJsonLd, gbpLocation, jsonLdScript } from "./lib/gbp-location";
+import { HOME_TITLE } from "./lib/homeDelivery";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.planets59.com"),
   title: {
-    default: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    default: HOME_TITLE,
     // Child titles that already include PLANETS 59 must use resolveDocumentTitle()
     // so this template does not append the brand a second time.
     template: "%s | PLANETS 59",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://www.planets59.com",
     siteName: "PLANETS 59",
-    title: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    title: HOME_TITLE,
     description: gbpLocation.metaDescription,
     images: [
       {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PLANETS 59 | Torbram Unit 59 Dispensary, Brampton",
+    title: HOME_TITLE,
     description: gbpLocation.metaDescription,
     images: ["https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },

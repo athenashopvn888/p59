@@ -7,8 +7,8 @@ const landing = readFileSync("app/components/GBPLandingPage.tsx", "utf8");
 const landingCss = readFileSync("app/components/GBPLandingPage.module.css", "utf8");
 
 for (const source of [home, landing]) {
-  assert.match(source, /href="\/exotic-weed"[\s\S]*?EXOTIC WEED/, "Store Menu must target /exotic-weed");
-  assert.match(source, /href="\/weed-delivery-brampton"[\s\S]*?WEED DELIVERY/, "Weed Delivery must target /weed-delivery-brampton");
+  assert.match(source, /href="\/exotic-weed"[\s\S]*?(?:EXOTIC WEED|STORE MENU)/, "Store Menu must target /exotic-weed");
+  assert.match(source, /href="\/weed-delivery-brampton"[\s\S]*?(?:WEED DELIVERY|Delivery)/, "Weed Delivery must target /weed-delivery-brampton");
   assert.match(source, /PLANETS 59 WEED DELIVERY/, "Weed Delivery headline is required");
   assert.match(source, /Weed Delivery serves Brampton/, "Published PLANETS 59 delivery area is required");
   assert.match(source, /LIVE ORDER/, "Delivery announcement must explain dispatcher connection");

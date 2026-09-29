@@ -10,7 +10,6 @@
   color: #f8fafc;
   font-family: 'Outfit', system-ui, sans-serif;
   overflow-x: hidden;
-  padding-top: 92px;
   padding-bottom: 60px;
 }
 
@@ -255,6 +254,7 @@
   color: #03131d;
   background: #38bdf8;
 }
+.homeMenuCta.homeMenuPrimary{color:#111827;background:linear-gradient(180deg,#fde68a,#fbbf24);border-color:#fbbf24;box-shadow:0 10px 24px rgba(251,191,36,.32)}
 
 .homeMenuCta:focus-visible {
   outline: 3px solid #ffffff;
