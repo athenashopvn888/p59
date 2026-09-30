@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import HomePage from "./HomePage";
+import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
 import { JsonLd } from "./lib/jsonLd";
 import { STORE_ORIGIN, faqPageJsonLd, HOME_FAQS } from "./lib/gbp-location";
 import { HOME_TITLE } from "./lib/homeDelivery";
@@ -25,6 +26,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={faqPageJsonLd(HOME_FAQS, `${STORE_ORIGIN}/`)} />
+      <FleetAnnouncementBanner holidayOnly />
       <HomePage />
     </>
   );
