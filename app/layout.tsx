@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import AgeGate from "./components/AgeGate";
 import { cannabisStoreJsonLd, gbpLocation, jsonLdScript } from "./lib/gbp-location";
 import { HOME_TITLE } from "./lib/homeDelivery";
 
@@ -98,7 +97,6 @@ export default function RootLayout({
           PLANETS 59 WEED DELIVERY — CLICK TO EXPLORE
         </Link>
         {children}
-        <AgeGate />
       </body>
     </html>
   );
