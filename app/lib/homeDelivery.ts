@@ -19,3 +19,6 @@ export const HOME_DELIVERY_FAQS = [
   { q: "Do I need photo ID?", a: "Yes. Cannabis service is for adults 19+ with valid government-issued photo ID." },
   { q: "Can I visit PLANETS 59 instead?", a: "Yes. Use the Visit page for the 8500 Torbram Rd Unit 59 plaza directions." },
 ] as const;
+
+// Document <title> only (exact Google name | area). H1 keeps HOME_TITLE.
+export const HOME_DOC_TITLE = "Planets 59 Dispensary Weed Delivery | Brampton";
