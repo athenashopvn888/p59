@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { cannabisStoreJsonLd, gbpLocation, jsonLdScript } from "./lib/gbp-location";
-import { HOME_TITLE } from "./lib/homeDelivery";
+import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.planets59.com"),
   title: {
-    default: HOME_TITLE,
+    default: HOME_DOC_TITLE,
     // Child titles that already include PLANETS 59 must use resolveDocumentTitle()
     // so this template does not append the brand a second time.
     template: "%s | PLANETS 59",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://www.planets59.com",
     siteName: "PLANETS 59",
-    title: HOME_TITLE,
+    title: HOME_DOC_TITLE,
     description: gbpLocation.metaDescription,
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: HOME_TITLE,
+    title: HOME_DOC_TITLE,
     description: gbpLocation.metaDescription,
     images: ["https://www.planets59.com/wp-content/uploads/2026/04/46Oi5.jpg"],
   },
