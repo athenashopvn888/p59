@@ -9,12 +9,15 @@ import SafeImage from "../../components/SafeImage";
 import { getItemPriceDisplay } from "../../lib/itemPricing";
 import { resolveDocumentTitle } from "../../lib/gbp-location";
 import {
-  getItemsByCategory,
   getCategoryFromSlug,
   CATEGORY_CONFIG,
   type ItemProduct,
 } from "../../lib/products";
 import styles from "./items.module.css";
+import { liveItemsByCategory } from "../../lib/liveMenu";
+
+// Read the live menu feed on every request (never a build-time snapshot).
+export const dynamic = "force-dynamic";
 
 /* ── Generate all category pages ── */
 export function generateStaticParams() {
@@ -30,7 +33,7 @@ export async function generateMetadata({
   const { category: catSlug } = await params;
   const catInfo = getCategoryFromSlug(catSlug);
   if (!catInfo) return {};
-  const items = getItemsByCategory(catInfo.key);
+  const items = (await liveItemsByCategory(catInfo.key));
 
   return {
     title: resolveDocumentTitle(
@@ -53,9 +56,9 @@ export default async function ItemsCategoryPage({
   if (!catInfo) notFound();
 
   /* Pre-Rolls also shows accessories (ADD ONS) */
-  let items = getItemsByCategory(catInfo.key);
+  let items = (await liveItemsByCategory(catInfo.key));
   if (catInfo.key === "PREROLLS") {
-    const accessories = getItemsByCategory("ADD ONS");
+    const accessories = (await liveItemsByCategory("ADD ONS"));
     const existingIds = new Set(items.map(i => i.sku));
     const uniqueAccessories = accessories.filter(a => !existingIds.has(a.sku));
     items = [...items, ...uniqueAccessories];
