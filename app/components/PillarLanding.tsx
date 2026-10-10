@@ -7,6 +7,7 @@ import { JsonLd } from "../lib/jsonLd";
 import { faqPageJsonLd, type StoreFaq } from "../lib/gbp-location";
 import { CORRIDOR_TAGS, pillarNapLines } from "../lib/pillarPages";
 import styles from "./pillarLanding.module.css";
+import VapeActionPanel from "./VapeActionPanel";
 
 export function PillarLanding({
   pageUrl,
@@ -42,6 +43,8 @@ export function PillarLanding({
           <p className={styles.kicker}>{kicker}</p>
           <h1 className={styles.pageTitle}>{h1}</h1>
           <p className={styles.lede}>{lede}</p>
+
+          {currentPath === "/nicotine-vape-torbram" && <VapeActionPanel compact />}
 
           <section className={styles.nap} aria-labelledby="pillar-nap-title">
             <h2 id="pillar-nap-title" className={styles.sectionTitle}>
