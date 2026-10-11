@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import HomePage from "./HomePage";
+import { getLiveMenu } from "./lib/liveMenu";
 import { JsonLd } from "./lib/jsonLd";
 import { STORE_ORIGIN, faqPageJsonLd, HOME_FAQS } from "./lib/gbp-location";
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
@@ -21,11 +22,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Page() {
+export const dynamic = "force-dynamic";
+
+export default async function Page() {
+  const { flowers } = await getLiveMenu();
   return (
     <>
       <JsonLd data={faqPageJsonLd(HOME_FAQS, `${STORE_ORIGIN}/`)} />
-      <HomePage />
+      <HomePage initialFlowers={flowers} />
     </>
   );
 }
