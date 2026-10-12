@@ -14,11 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQ_IDS: Record<string, string> = {
+  "Why are delivery prices different from in-store prices?": "delivery-price-rule",
+  "Can I get the store price on a delivery order?": "store-price-on-delivery",
+};
+
 const FAQ_CATEGORIES = [
   {
     title: "Store and Delivery Prices",
     faqs: [
-      { q: "Can I get the store price on a delivery order?", a: "In-store prices are for purchases made in the store. Delivery orders always use delivery prices." },
+      { q: "Why are delivery prices different from in-store prices?", a: "Store and delivery are two separate menus. Delivery uses bulk pricing: larger packages, starting at 7 grams, with a minimum order, so the price is set for bigger orders brought to your door. In-store prices and deals, like Buy 2g Get 1g FREE, are for smaller amounts you pick up in person, and they don't apply to delivery. If you only want a small amount or want it right now, our store at 8500 Torbram Rd Unit 59 is the fastest way to get it." },
+      { q: "Can I get the store price on a delivery order?", a: "No. Delivery orders always use delivery prices, and store prices only apply to in-store purchases. See the answer above for why." },
     ],
   },
   {
@@ -113,7 +119,7 @@ export default function FAQPage() {
             <div key={cat.title} className={styles.category}>
               <h2 className={styles.categoryTitle}>{cat.title}</h2>
               {cat.faqs.map((faq) => (
-                <details key={faq.q} id={faq.q === "Can I get the store price on a delivery order?" ? "delivery-price-rule" : undefined} open={faq.q === "Can I get the store price on a delivery order?"} className={styles.faqItem}>
+                <details key={faq.q} id={FAQ_IDS[faq.q]} open={faq.q === "Why are delivery prices different from in-store prices?" || faq.q === "Can I get the store price on a delivery order?"} className={styles.faqItem}>
                   <summary className={styles.faqQuestion}>{faq.q}</summary>
                   <p className={styles.faqAnswer}>{faq.a}</p>
                 </details>

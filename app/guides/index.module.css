@@ -1,0 +1,5 @@
+.list { list-style: none; margin: 0 0 28px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.list a { display: block; padding: 12px 14px; border: 1px solid rgba(27, 94, 32, 0.28); border-radius: 10px; background: #f6fbf6; color: #17371a; font-weight: 700; text-decoration: none; line-height: 1.35; }
+.list a:hover, .list a:focus-visible { background: #e3f3e5; text-decoration: underline; text-underline-offset: 3px; }
+.intro { max-width: 760px; margin: 0 0 22px; line-height: 1.6; }
+.groupTitle { margin: 26px 0 12px; font-size: 1.2rem; }
