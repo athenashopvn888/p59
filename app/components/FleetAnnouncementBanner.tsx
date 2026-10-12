@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 import { useEffect, useState } from "react";
-import FlowerBogoStrip from "./FlowerBogoStrip";
 
 function isThanksgivingNoticeActive(date: Date) {
   const parts = new Intl.DateTimeFormat("en-CA", {
@@ -37,7 +36,6 @@ export default function FleetAnnouncementBanner() {
           Thanksgiving Monday (Oct 12): We are open regular hours.
         </p>
       ) : null}
-      <FlowerBogoStrip hero />
       <Link href="/exotic-weed" data-exotic-tier-banner="" aria-label="Shop Exotic Premium AAA+ tier weed">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

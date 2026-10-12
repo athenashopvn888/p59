@@ -54,7 +54,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar} id="main-nav">
-      {pathname !== "/" ? <FlowerBogoStrip /> : null}
+      <FlowerBogoStrip />
       <div className={styles.topBar}>
         <Link href="/" className={styles.logo}>
           <img src="/storeFavicon.webp" alt="PLANETS 59 Logo" className={styles.logoMark} />
