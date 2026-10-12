@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 import FleetAnnouncementBanner from "./components/FleetAnnouncementBanner";
+import HomeTitleBlock from "./components/HomeTitleBlock";
 import Navbar from "./components/Navbar";
 import HomeDeliverySection from "./components/HomeDeliverySection";
 import Footer from "./components/Footer";
@@ -184,6 +185,7 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
   return (
     <main className={styles.main}>
       <Navbar />
+      <HomeTitleBlock />
       <FleetAnnouncementBanner />
 
       <DeliveryBanner />
@@ -227,7 +229,7 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
           {/* Brand branding */}
           <div className={styles.brandBlock}>
             <img src="/storeFavicon.webp" alt="PLANETS 59 Icon" style={{ height: "60px", width: "60px", objectFit: "contain", borderRadius: "8px", marginBottom: "8px" }} />
-            <h1 className={styles.brandTitle}>{HOME_TITLE}</h1>
+            <p className={styles.brandTitle}>{HOME_TITLE}</p>
             <p className={styles.brandSub}>Unit 59 · Torbram / Airport Road · Brampton northeast</p>
             <div className={styles.brandBadge}>Open 24 Hours</div>
             <aside className={styles.homeDeliveryNotice} aria-labelledby="home-delivery-title">

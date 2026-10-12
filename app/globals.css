@@ -496,3 +496,12 @@ button { cursor: pointer; font-family: inherit; }
 .tier-range-list ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;padding:0;list-style:none}
 .tier-range-list li{display:flex;flex-direction:column;gap:4px;padding:12px;border:1px solid currentColor;border-radius:10px}
 .delivery-price-rule{margin-top:18px}
+
+/* Homepage title block sits under the fixed nav; the core banners follow it directly. */
+[data-home-title-block] {
+  margin-top: var(--homepage-nav-clearance);
+}
+
+[data-home-title-block] + [data-fleet-homepage-announcement] {
+  margin-top: 0;
+}
