@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import FlowerBogoStrip from "./FlowerBogoStrip";
 
 const FLOWER_LINKS = [
   { href: "/exotic-weed", label: "Exotic Weed" },
@@ -30,6 +31,7 @@ const GUIDE_LINKS = [
   { href: "/24-hour-dispensary-torbram", label: "24-Hour" },
   { href: "/weed-dispensary-torbram", label: "Dispensary" },
   { href: "/careers/budtender", label: "Hiring" },
+  { href: "/guides", label: "Guides" },
   { href: "/resources", label: "Resources" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
@@ -52,6 +54,7 @@ export default function Navbar() {
 
   return (
     <nav className={styles.navbar} id="main-nav">
+      <FlowerBogoStrip />
       <div className={styles.topBar}>
         <Link href="/" className={styles.logo}>
           <img src="/storeFavicon.webp" alt="PLANETS 59 Logo" className={styles.logoMark} />

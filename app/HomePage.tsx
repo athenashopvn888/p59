@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -184,7 +184,6 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
   return (
     <main className={styles.main}>
       <Navbar />
-      <FleetAnnouncementBanner />
 
       <DeliveryBanner />
 
@@ -244,7 +243,6 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
           </div>
 
           {/* Bento Grid */}
-          <p className="price-rule-notice"><strong>IN-STORE PRICES ONLY.</strong> These prices do not apply to delivery orders. Delivery has its own prices. Why? <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>
           <div className={styles.bentoGrid}>
             {BENTO_TIERS.map((tier) => (
               <Link
@@ -266,6 +264,9 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
           </div>
         </div>
       </section>
+      <FleetAnnouncementBanner />
+
+      <p className={`price-rule-notice ${styles.homePriceNotice}`}><strong>IN-STORE PRICES ONLY.</strong> These prices do not apply to delivery orders. Delivery has its own prices. Why? <Link href="/faq#delivery-price-rule">See the FAQ</Link></p>
 
       <HomeDeliverySection />
 

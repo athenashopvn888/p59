@@ -4,18 +4,6 @@ import Link from "next/link";
 
 import { useEffect, useState } from "react";
 
-const lineStyle = {
-  margin: 0,
-  padding: "14px 16px",
-  color: "#fff",
-  fontSize: "clamp(18px, 3vw, 32px)",
-  fontWeight: 900,
-  lineHeight: 1.15,
-  letterSpacing: "0.02em",
-  textAlign: "center" as const,
-  textTransform: "uppercase" as const,
-};
-
 function isThanksgivingNoticeActive(date: Date) {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone: "America/Toronto",
@@ -42,28 +30,20 @@ export default function FleetAnnouncementBanner() {
   }, []);
 
   return (
-    <aside
-      data-fleet-homepage-announcement=""
-      aria-label="Store announcements"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "100%",
-        height: "auto",
-        minHeight: 0,
-        position: "relative",
-        zIndex: 50,
-      }}
-    >
+    <aside data-fleet-homepage-announcement="" aria-label="Store announcements">
       {showThanksgivingNotice ? (
-        <p
-          data-thanksgiving-hours-notice=""
-          style={{ ...lineStyle, background: "#166534" }}
-        >
+        <p data-thanksgiving-hours-notice="">
           Thanksgiving Monday (Oct 12): We are open regular hours.
         </p>
       ) : null}
-<Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop the 2 packs for $5 mix and match cigarette offer">
+      <Link href="/exotic-weed" data-exotic-tier-banner="" aria-label="Shop Exotic Premium AAA+ tier weed">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/banners/top-weed-tier-p59.webp"
+          alt="TOP WEED TIER at PLANETS 59 \u2014 Exotic, Premium, and AAA+ weed with Buy 2g Get 1g FREE and Buy 3g Get 3g FREE."
+        />
+      </Link>
+      <Link href="/items/cigarettes" data-cig-mix-banner="" aria-label="Shop the 2 packs for $5 mix and match cigarette offer">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/banners/native-cigarette-offer-20260822.webp"
@@ -71,6 +51,6 @@ export default function FleetAnnouncementBanner() {
           style={{ display: "block", width: "100%", height: "auto" }}
         />
       </Link>
-</aside>
+    </aside>
   );
 }

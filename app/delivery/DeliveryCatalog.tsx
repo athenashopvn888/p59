@@ -110,7 +110,7 @@ export default function Catalog() {
       <section className="hero" id="top">
         <div className="heroOrbit" aria-hidden="true" />
         <div className="heroCopy"><p className="eyebrow">PLANETS 59 WEED DELIVERY</p><h1>PLANETS 59 Weed Delivery in Brampton</h1><p>Browse the flower delivery menu, then use LIVE ORDER to connect with the PLANETS 59 dispatcher.</p><div className="heroActions"><a href="#delivery-menu">Explore Weed Delivery</a><a href="#how-to-order">How delivery works</a></div></div>
-        <div className="launchCard"><span>HOW TO ORDER</span><strong>LIVE ORDER</strong><p>{products.length} flower products are ready to browse.</p><small>The dispatcher confirms availability and delivery details.</small></div>
+        <div className="launchCard"><span>HOW TO ORDER</span><strong>LIVE ORDER</strong><p>{products.length} flower products are ready to browse.</p><small>The dispatcher confirms availability and delivery details. Delivery prices apply.</small></div>
       </section>
 
       <section className="serviceStrip" aria-label="Delivery menu details"><div><strong>{products.length} products</strong><span>Browse the flower menu</span></div><div><strong>Five flower tiers</strong><span>Sorted from least to most by entry price</span></div><div><strong>LIVE ORDER</strong><span>Connect with the dispatcher</span></div><div><strong>Adults only</strong><span>19+ access</span></div></section>

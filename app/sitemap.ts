@@ -27,6 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/weed-dispensary-brampton`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     { url: `${BASE}/hours`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/weed-delivery-brampton`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/24-hour-dispensary-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
