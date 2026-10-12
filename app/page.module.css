@@ -1184,3 +1184,15 @@
 .resourceActions a + a { color: #fff; background: rgba(255, 255, 255, 0.08); border: 1px solid #38bdf8; }
 @media (max-width: 980px) { .identityGrid, .resourceBandInner { grid-template-columns: 1fr; } .resourceActions { justify-content: flex-start; } }
 @media (max-width: 560px) { .identitySection, .resourceBand { padding: 42px 0; } .identityIntro, .identityCard, .resourceBandInner { padding: 20px; } .resourceActions a { width: 100%; } }
+
+/* Grok 2026-10-12: keep IN-STORE PRICES notice as a slim full-width line below the title + tier tiles (was a stray 3rd grid cell) */
+.heroContent > :global(.price-rule-notice) {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 10px 16px;
+  text-align: center;
+}
+
