@@ -473,10 +473,11 @@ button { cursor: pointer; font-family: inherit; }
 }
 
 [data-fleet-homepage-announcement] {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: var(--fleet-homepage-announcement-height);
+  height: auto;
+  min-height: 0;
   margin-top: var(--homepage-nav-clearance);
 }
 
