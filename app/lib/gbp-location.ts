@@ -103,6 +103,10 @@ export const HOME_CORRIDOR_COPY = [
 
 export const HOME_FAQS: StoreFaq[] = [
   {
+    q: "Looking for a cannabis store near me in northeast Brampton?",
+    a: "PLANETS 59 is at 8500 Torbram Rd Unit 59, Brampton, on the Torbram / Airport Road corridor. The walk-in is open 24 hours, for adults 19+ with valid photo ID.",
+  },
+  {
     q: "Where is PLANETS 59 Unit 59 in Brampton?",
     a: "PLANETS 59 is at 8500 Torbram Rd Unit 59, Brampton, ON L6T 5C6, in the Torbram / Airport Road corridor of northeast Brampton near Steeles Avenue East. Call +1 (289) 536-7493.",
   },

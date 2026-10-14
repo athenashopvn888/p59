@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import DeliveryCatalog from "./DeliveryCatalog";
 import P59WebChat from "./P59WebChat";
 import menu from "./delivery-menu.json";
+import NearMeFaq from "../components/NearMeFaq";
+import nearMeFaq from "../lib/nearMeFaq.json";
 
 export const metadata: Metadata = {
   title: { absolute: "Weed Delivery Brampton | PLANETS 59" },
@@ -60,6 +62,7 @@ export default function DeliveryPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       <DeliveryCatalog />
       <P59WebChat />
+      <NearMeFaq id="delivery-near-me" q={nearMeFaq.delivery!.q} a={nearMeFaq.delivery!.a} />
     </>
   );
 }
