@@ -5,17 +5,20 @@ import test from "node:test";
 const component = fs.readFileSync(new URL("../app/delivery/P59WebChat.tsx", import.meta.url), "utf8");
 const styles = fs.readFileSync(new URL("../app/delivery/delivery.css", import.meta.url), "utf8");
 
-test("P59 ordering intake requires explicit intent and blank optional details", () => {
+test("P59 ordering intake requires explicit intent and nonblank order details", () => {
   assert.match(component, /useState<CustomerIntent \| "">\(""\)/);
   assert.match(component, /value="NEW_CUSTOMER"/);
   assert.match(component, /value="RETURNING_CUSTOMER"/);
   assert.match(component, /customerName: intent === "NEW_CUSTOMER" \? name : ""/);
   assert.match(component, /const \[firstMessage, setFirstMessage\] = useState\(""\)/);
+  assert.match(component, /if \(!firstMessage\.trim\(\)\)/);
+  assert.match(component, /<label>Order details<textarea required/);
+  assert.match(component, /disabled=\{busy \|\| !smsConsent \|\| !firstMessage\.trim\(\)\}/);
   assert.doesNotMatch(component, /Hi, I need help with ID verification|Use the customer|separate P59 customer account|<label>Message/);
 });
 
 test("P59 customer paths and mobile interaction contract are accessible", () => {
-  for (const text of ["I&apos;m new", "I&apos;m returning", "Canadian mobile number", "Order details (optional)", "What would you like to order today?", "Start order chat"]) assert.ok(component.includes(text));
+  for (const text of ["I&apos;m new", "I&apos;m returning", "Canadian mobile number", "Order details", "What would you like to order today?", "Start order chat"]) assert.ok(component.includes(text));
   assert.match(component, /intent === "NEW_CUSTOMER" && <><div className="sod-chat-welcome"/);
   assert.match(component, /intent && <><label>Canadian mobile number/);
   assert.doesNotMatch(component, /<div className="sod-chat-welcome"><h2>Ready to order\?/);
