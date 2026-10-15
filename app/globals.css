@@ -505,3 +505,10 @@ button { cursor: pointer; font-family: inherit; }
 [data-home-title-block] + [data-fleet-homepage-announcement] {
   margin-top: 0;
 }
+/* Pinned nav: opaque (no content showing through) and above page content, in the store's own nav colour so nav text stays readable. */
+#main-nav {
+  z-index: 1000 !important;
+  background: #000000 !important;
+  background-color: #000000 !important;
+  backdrop-filter: none !important;
+}
