@@ -13,7 +13,11 @@ export const FULL_NAME_NAP = {
   "phoneTel": "tel:+12895367493",
   "hours": "Open 24 hours, 7 days a week",
   "mapsUrl": "https://www.google.com/maps/place/?q=place_id:ChIJj4B2l5Y9K4gRorxT85ql9Sg",
-  "placeId": "ChIJj4B2l5Y9K4gRorxT85ql9Sg"
+  "placeId": "ChIJj4B2l5Y9K4gRorxT85ql9Sg",
+  "neighbourhood": "Torbram / Airport Road, Brampton",
+  "intersection": "Torbram Rd & Steeles Ave E",
+  "transit": "Brampton Transit route 14 Torbram stops at 8500 Torbram Rd, on the same street as the plaza.",
+  "visitPath": "/visit"
 } as const;
 
 export const FULL_NAME_NAP_ADDRESS = `${FULL_NAME_NAP.street}, ${FULL_NAME_NAP.city}, ${FULL_NAME_NAP.region} ${FULL_NAME_NAP.postal}`;
