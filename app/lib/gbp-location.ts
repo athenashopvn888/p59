@@ -175,7 +175,8 @@ export function cannabisStoreJsonLd() {
       {
         "@type": "CannabisStore",
         "@id": STORE_ID,
-        name: gbpLocation.storeName,
+        name: "Planets 59 Dispensary Weed Delivery",
+        alternateName: gbpLocation.storeName,
         description:
           "Walk-in cannabis store at 8500 Torbram Rd Unit 59 in northeast Brampton, on the Torbram / Airport Road corridor. Open 24 hours daily. Adults 19+.",
         url: `${STORE_ORIGIN}/`,
