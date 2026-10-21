@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ResourceView from "../ResourceView";
-import { getResourcePage, RESOURCE_PAGES } from "../resourceData";
+import { getResourcePage, presentResourcePage, RESOURCE_PAGES } from "../resourceData";
+import { isHiddenResourceSlug } from "../../lib/cigaretteGate";
 
 type ResourceRouteProps = {
   params: Promise<{ slug?: string[] }>;
@@ -18,10 +19,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ResourceRouteProps): Promise<Metadata> {
   const { slug } = await params;
   const page = getResourcePage(routeSlug(slug));
-  if (!page) return {};
+  if (!page || isHiddenResourceSlug(page.slug)) return {};
+  const visible = presentResourcePage(page);
   return {
-    title: { absolute: page.seoTitle },
-    description: page.description,
+    title: { absolute: visible.seoTitle },
+    description: visible.description,
     alternates: { canonical: "https://www.planets59.com/resources/" + page.slug },
   };
 }
@@ -29,6 +31,6 @@ export async function generateMetadata({ params }: ResourceRouteProps): Promise<
 export default async function ResourcePage({ params }: ResourceRouteProps) {
   const { slug } = await params;
   const page = getResourcePage(routeSlug(slug));
-  if (!page) notFound();
-  return <ResourceView page={page} />;
+  if (!page || isHiddenResourceSlug(page.slug)) notFound();
+  return <ResourceView page={presentResourcePage(page)} />;
 }

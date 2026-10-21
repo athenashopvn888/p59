@@ -3,6 +3,7 @@ import CigaretteSeasonalNotice from "./CigaretteSeasonalNotice";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 const STORE_NAME = "PLANETS 59";
 const STORE_AREA = "Torbram Road, Brampton";
@@ -12,11 +13,14 @@ const CIGARETTE_IMAGE = "/banners/native-cigarette-offer-20260822.webp";
 const VAPE_IMAGE = "/banners/core-vapes-nicotine-thc.webp";
 const PREMIUM_CIGARETTE_IMAGE = "/banners/core-premium-bb-marlboro-belmont.webp";
 
+const cigaretteImageObjects = [
+  { name: `${STORE_NAME} cigarette mix and match`, description: `Two packs for $5 mix and match and $25 carton cigarette offer at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${CIGARETTE_IMAGE}` },
+  { name: `${STORE_NAME} premium cigarette offer`, description: `BB Full Flavor and Lights two packs for $5 plus Marlboro and Belmont for $10 per pack at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${PREMIUM_CIGARETTE_IMAGE}` },
+];
 const imageObjects = [
   { name: `${STORE_NAME} top weed tiers`, description: `Exotic, Premium and AAA+ weed tiers at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${TOP_WEED_IMAGE}` },
   { name: `${STORE_NAME} nicotine and THC vapes`, description: `Nicotine vapes and THC vapes at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${VAPE_IMAGE}` },
-  { name: `${STORE_NAME} cigarette mix and match`, description: `Two packs for $5 mix and match and $25 carton cigarette offer at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${CIGARETTE_IMAGE}` },
-  { name: `${STORE_NAME} premium cigarette offer`, description: `BB Full Flavor and Lights two packs for $5 plus Marlboro and Belmont for $10 per pack at ${STORE_NAME} in ${STORE_AREA}.`, contentUrl: `${STORE_ORIGIN}${PREMIUM_CIGARETTE_IMAGE}` },
+  ...(SHOW_CIGARETTES ? cigaretteImageObjects : []),
 ].map((image) => ({ "@type": "ImageObject", ...image, caption: image.description }));
 
 function isHalloweenNoticeActive(date: Date) {
@@ -61,8 +65,9 @@ export default function FleetAnnouncementBanner() {
         <figcaption style={captionStyle}>Nicotine vapes + THC vapes · <Link href="/items/vapes" style={captionLinkStyle}>Shop vapes</Link></figcaption>
       </figure>
 
-      <CigaretteSeasonalNotice />
+      {SHOW_CIGARETTES ? <CigaretteSeasonalNotice /> : null}
 
+      {SHOW_CIGARETTES ? (
       <figure data-core-banner="cigarettes" data-cig-mix-banner="" style={figureStyle}>
         <Link href="/items/cigarettes" aria-label={`Shop cigarette mix and match offers at ${STORE_NAME}`} style={linkStyle}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -70,7 +75,9 @@ export default function FleetAnnouncementBanner() {
         </Link>
         <figcaption style={captionStyle}>2 packs $5 mix &amp; match · $25 carton · <Link href="/items/cigarettes" style={captionLinkStyle}>Shop cigarettes</Link></figcaption>
       </figure>
+      ) : null}
 
+      {SHOW_CIGARETTES ? (
       <figure data-core-banner="premium-cigarettes" data-premium-cigarette-banner="" style={figureStyle}>
         <Link href="/items/cigarettes" aria-label={`Shop BB, Marlboro and Belmont cigarette offers at ${STORE_NAME}`} style={linkStyle}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -78,6 +85,7 @@ export default function FleetAnnouncementBanner() {
         </Link>
         <figcaption style={captionStyle}>BB Full Flavor + Lights — 2 packs $5 · Marlboro &amp; Belmont — $10/pack · <Link href="/items/cigarettes" style={captionLinkStyle}>Shop cigarettes</Link></figcaption>
       </figure>
+      ) : null}
       {showHalloweenNotice ? <p data-halloween-hours-notice="">Happy Halloween! {STORE_NAME} is open regular hours on Saturday, October 31.</p> : null}
     </aside>
   );

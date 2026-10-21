@@ -1,4 +1,5 @@
 import CigaretteSeasonalNotice from "./CigaretteSeasonalNotice";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
@@ -40,7 +41,7 @@ export function PillarLanding({
       <JsonLd data={faqPageJsonLd(faqs, pageUrl)} />
       <main className={styles.main}>
         <Navbar />
-        {currentPath.includes("native-cigarettes") && <CigaretteSeasonalNotice sticky />}
+        {SHOW_CIGARETTES && currentPath.includes("native-cigarettes") && <CigaretteSeasonalNotice sticky />}
         <article className={styles.content}>
           <p className={styles.kicker}>{kicker}</p>
           <h1 className={styles.pageTitle}>{h1}</h1>

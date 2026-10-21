@@ -10,6 +10,7 @@ import {
   gbpLocation,
 } from "../lib/gbp-location";
 import styles from "./visit.module.css";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: "Visit PLANETS 59 at Torbram Unit 59, Brampton" },
@@ -144,6 +145,7 @@ export default function VisitPage() {
 
           <section>
             <h2 className={styles.sectionTitle}>Five Torbram starting points</h2>
+            {SHOW_CIGARETTES ? (
             <p>
               After you know the Unit 59 door, pick the lane that matches the
               visit. The neighbourhood weed dispensary page owns Torbram /
@@ -153,14 +155,28 @@ export default function VisitPage() {
               nicotine vapes have their own neighbourhood pages that point at
               the live categories.
             </p>
+            ) : (
+            <p>
+              After you know the Unit 59 door, pick the lane that matches the
+              visit. The neighbourhood weed dispensary page owns Torbram /
+              Unit 59 dispensary identity — not a city-wide Brampton list. The
+              24-hour page owns overnight walk-in. Weed delivery from Torbram
+              is a separate 10 a.m.–10 p.m. courier. Nicotine vapes have their
+              own neighbourhood page that points at the live category.
+            </p>
+            )}
             <p>
               <Link href="/weed-dispensary-torbram">Weed dispensary on Torbram</Link>
               {" · "}
               <Link href="/24-hour-dispensary-torbram">24-hour Torbram walk-in</Link>
               {" · "}
               <Link href="/weed-delivery-torbram">Weed delivery from Unit 59</Link>
-              {" · "}
-              <Link href="/native-cigarettes-torbram">Native cigarettes</Link>
+              {SHOW_CIGARETTES ? (
+                <>
+                  {" · "}
+                  <Link href="/native-cigarettes-torbram">Native cigarettes</Link>
+                </>
+              ) : null}
               {" · "}
               <Link href="/nicotine-vape-torbram">Nicotine vape</Link>
             </p>

@@ -18,6 +18,8 @@ import {
 import styles from "./items.module.css";
 import { liveItemsByCategory } from "../../lib/liveMenu";
 import VapeActionPanel from "../../components/VapeActionPanel";
+import { SHOW_CIGARETTES } from "../../lib/siteConfig";
+import { isHiddenCigaretteProduct } from "../../lib/cigaretteGate";
 
 // Read the live menu feed on every request (never a build-time snapshot).
 export const dynamic = "force-dynamic";
@@ -59,7 +61,7 @@ export default async function ItemsCategoryPage({
   if (!catInfo) notFound();
 
   /* Pre-Rolls also shows accessories (ADD ONS) */
-  let items = (await liveItemsByCategory(catInfo.key));
+  let items = (await liveItemsByCategory(catInfo.key)).filter((item) => !isHiddenCigaretteProduct(item));
   if (catInfo.key === "PREROLLS") {
     const accessories = (await liveItemsByCategory("ADD ONS"));
     const existingIds = new Set(items.map(i => i.sku));
@@ -76,7 +78,7 @@ export default async function ItemsCategoryPage({
   return (
     <main className={styles.main}>
       <Navbar />
-      {catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
+      {SHOW_CIGARETTES && catSlug === "cigarettes" && <CigaretteSeasonalNotice sticky />}
 
       {/* Hero Banner */}
       <section style={{ width: "100%", overflow: "hidden", marginTop: "92px", marginBottom: "24px" }}>
@@ -84,8 +86,8 @@ export default async function ItemsCategoryPage({
           <>
             <img
               src={config.banner}
-              alt={catSlug === "cigarettes" ? cigaretteCategoryImage.alt : config.name}
-              title={catSlug === "cigarettes" ? cigaretteCategoryImage.title : config.name}
+              alt={SHOW_CIGARETTES && catSlug === "cigarettes" ? cigaretteCategoryImage.alt : config.name}
+              title={SHOW_CIGARETTES && catSlug === "cigarettes" ? cigaretteCategoryImage.title : config.name}
               style={{ width: "100%", height: "auto", display: "block", objectFit: "contain" }}
             />
             <div className={styles.heroContent} style={{ padding: "28px 24px 8px", textAlign: "center" }}>
@@ -104,7 +106,7 @@ export default async function ItemsCategoryPage({
       </section>
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <CategoryCoreBanners kind="vapes" />}
-      {catSlug === "cigarettes" && <CategoryCoreBanners kind="cigarettes" />}
+      {SHOW_CIGARETTES && catSlug === "cigarettes" && <CategoryCoreBanners kind="cigarettes" />}
 
       {(catSlug === "vapes" || catSlug === "vape-disposables") && <VapeActionPanel compact />}
 
@@ -146,7 +148,7 @@ export default async function ItemsCategoryPage({
             </div>
           )}
 
-          {catInfo.key === "CIGARETTES" && (
+          {SHOW_CIGARETTES && catInfo.key === "CIGARETTES" && (
             <p className={styles.seoBody}>
               Neighbourhood walk-in notes for this category live on the{" "}
               <Link href="/native-cigarettes-torbram">Torbram Native cigarettes page</Link>.

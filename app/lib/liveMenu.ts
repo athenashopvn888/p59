@@ -1,5 +1,6 @@
 import { allFlowers, allItems, type FlowerProduct, type ItemProduct } from "./products";
 import { getTvData } from "./tvStock";
+import { isHiddenCigaretteProduct } from "./cigaretteGate";
 
 /**
  * ONE product loader for every web page (Grok 2026-10-08/09): the same getTvData() call /api/tv-data uses
@@ -11,9 +12,10 @@ export async function getLiveMenu(): Promise<{ flowers: FlowerProduct[]; items: 
     getTvData({ type: "flowers", staticFlowers: allFlowers, staticItems: allItems }),
     getTvData({ type: "items", staticFlowers: allFlowers, staticItems: allItems }),
   ]);
+  const items = Array.isArray(i?.body) ? (i.body as unknown as ItemProduct[]) : allItems;
   return {
     flowers: Array.isArray(f?.body) ? (f.body as unknown as FlowerProduct[]) : allFlowers,
-    items: Array.isArray(i?.body) ? (i.body as unknown as ItemProduct[]) : allItems,
+    items: items.filter((item) => !isHiddenCigaretteProduct(item)),
   };
 }
 

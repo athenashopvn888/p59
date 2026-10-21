@@ -5,6 +5,8 @@ import { TIER_CONFIG, CATEGORY_CONFIG } from "./lib/products";
 import { SEO_PAGES } from "./lib/seoPages";
 import { RESOURCE_PAGES } from "./resources/resourceData";
 import { STRAIN_GUIDES } from "./lib/strainGuides";
+import { isHiddenCigaretteCategorySlug, isHiddenCigaretteGuide, isHiddenCigaretteProduct, isHiddenResourceSlug, isHiddenSeoSlug } from "./lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
 
 // Products come from the same loader as /api/tv-data on every request.
 export const dynamic = "force-dynamic";
@@ -32,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/weed-delivery-brampton`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE}/24-hour-dispensary-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE}/weed-delivery-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
-    { url: `${BASE}/native-cigarettes-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    ...(SHOW_CIGARETTES ? [{ url: `${BASE}/native-cigarettes-torbram`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.8 }] : []),
     { url: `${BASE}/nicotine-vape-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/vape-shop-torbram`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
     { url: `${BASE}/weed-dispensary-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
@@ -46,7 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }));
 
-  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG).map((c) => ({
+  const itemPages: MetadataRoute.Sitemap = Object.values(CATEGORY_CONFIG).filter((c) => !isHiddenCigaretteCategorySlug(c.slug)).map((c) => ({
     url: `${BASE}/items/${c.slug}`,
     lastModified: now,
     changeFrequency: "daily" as const,
@@ -60,14 +62,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  const itemDetailPages: MetadataRoute.Sitemap = __menu.items.map((i) => ({
+  const itemDetailPages: MetadataRoute.Sitemap = __menu.items.filter((i) => !isHiddenCigaretteProduct(i)).map((i) => ({
     url: `${BASE}/item/${i.slug}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.7,
   }));
 
-  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.map((page) => ({
+  const seoPages: MetadataRoute.Sitemap = SEO_PAGES.filter((page) => !isHiddenSeoSlug(page.slug)).map((page) => ({
     url: `${BASE}/info/${page.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
@@ -75,14 +77,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
 
-  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.map((page) => ({
+  const resourcePages: MetadataRoute.Sitemap = RESOURCE_PAGES.filter((page) => !isHiddenResourceSlug(page.slug)).map((page) => ({
     url: page.slug ? `${BASE}/resources/${page.slug}` : `${BASE}/resources`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: page.slug ? 0.6 : 0.7,
   }));
 
-  const deliveryGuidePages: MetadataRoute.Sitemap = DELIVERY_GUIDE_REGISTRY.map((guide) => ({ url: `https://${DELIVERY_GUIDE_STORE.domain}/guides/${guide.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.75 }));
+  const deliveryGuidePages: MetadataRoute.Sitemap = DELIVERY_GUIDE_REGISTRY.filter((guide) => !isHiddenCigaretteGuide(guide)).map((guide) => ({ url: `https://${DELIVERY_GUIDE_STORE.domain}/guides/${guide.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.75 }));
   const strainGuidePages: MetadataRoute.Sitemap = [`${BASE}/guides`, ...STRAIN_GUIDES.map((guide) => `${BASE}/guides/${guide.slug}`)].map((url) => ({ url, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 }));
   return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages];
 }

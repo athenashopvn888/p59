@@ -1,4 +1,5 @@
 import { STORE_ORIGIN, gbpLocation, type StoreFaq } from "./gbp-location";
+import { SHOW_CIGARETTES } from "./siteConfig";
 
 /** Five-pillar neighbourhood LPs for the Torbram / Unit 59 corridor only. */
 export const PILLAR_PATHS = {
@@ -194,6 +195,27 @@ export const WEED_DISPENSARY_FAQS: StoreFaq[] = [
     a: "No. Browse current flower tiers and categories on the homepage. This page does not invent stock, prices, or a second shop. Call +1 (289) 536-7493 if one listing is the only reason for the trip.",
   },
 ];
+
+export function publicHoursFaqs(): StoreFaq[] {
+  if (SHOW_CIGARETTES) return HOURS_FAQS;
+  return HOURS_FAQS.map((faq) =>
+    faq.q === "Can I walk in 24 hours for Native cigarettes or nicotine vapes?"
+      ? {
+          q: "Can I walk in 24 hours for nicotine vapes?",
+          a: "Yes, when that category is listed. The 24-hour clock is the Torbram walk-in. Use the nicotine vape neighbourhood page for the category path, then confirm the live menu.",
+        }
+      : faq,
+  );
+}
+
+export function publicNicVapeFaqs(): StoreFaq[] {
+  if (SHOW_CIGARETTES) return NIC_VAPE_FAQS;
+  return NIC_VAPE_FAQS.map((faq) =>
+    faq.q === "Does PLANETS 59 have a separate nicotine pouches landing page?"
+      ? { q: faq.q, a: "No. This page is for the sold nicotine vape category only." }
+      : faq,
+  );
+}
 
 export const PILLAR_HUB_CARDS = [
   {

@@ -8,7 +8,9 @@ import {
   HOURS_PILLAR,
   PILLAR_PATHS,
   pillarUrl,
+  publicHoursFaqs,
 } from "../lib/pillarPages";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: HOURS_PILLAR.title },
@@ -30,7 +32,7 @@ export default function TwentyFourHourTorbramPage() {
       kicker={HOURS_PILLAR.kicker}
       h1={HOURS_PILLAR.h1}
       lede={HOURS_PILLAR.lede}
-      faqs={HOURS_FAQS}
+      faqs={SHOW_CIGARETTES ? HOURS_FAQS : publicHoursFaqs()}
       faqHeading="Open now / 24-hour Torbram — quick answers"
       primaryHref="/"
       primaryLabel="Homepage map and hours"
@@ -70,6 +72,7 @@ export default function TwentyFourHourTorbramPage() {
 
       <section>
         <h2 className={styles.sectionTitle}>What the overnight counter can browse</h2>
+        {SHOW_CIGARETTES ? (
         <p>
           The overnight counter is the same menu lanes as daytime: flower tiers,
           pre-rolls, edibles, vapes, concentrates, accessories, and listed
@@ -78,6 +81,16 @@ export default function TwentyFourHourTorbramPage() {
           one item is the only reason to come out. No medical claims — adult
           retail only.
         </p>
+        ) : (
+        <p>
+          The overnight counter is the same menu lanes as daytime: flower tiers,
+          pre-rolls, edibles, vapes, concentrates, and accessories. Names and posted prices move. Call{" "}
+          <a href={`tel:${gbpLocation.phoneIntl}`}>{gbpLocation.phone}</a> if
+          one item is the only reason to come out. No medical claims — adult
+          retail only.
+        </p>
+        )}
+        {SHOW_CIGARETTES ? (
         <p>
           Prefer the last-turn notes? Use the{" "}
           <Link href={PILLAR_PATHS.visit}>Unit 59 visit guide</Link>. Courier
@@ -89,6 +102,18 @@ export default function TwentyFourHourTorbramPage() {
           owns neighbourhood identity, not a city-wide list. This URL stays
           the 24-hour / open-now owner.
         </p>
+        ) : (
+        <p>
+          Prefer the last-turn notes? Use the{" "}
+          <Link href={PILLAR_PATHS.visit}>Unit 59 visit guide</Link>. Courier
+          hours stay on{" "}
+          <Link href={PILLAR_PATHS.delivery}>weed delivery from Torbram</Link>.
+          Nicotine vapes have their own neighbourhood page. The{" "}
+          <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>{" "}
+          owns neighbourhood identity, not a city-wide list. This URL stays
+          the 24-hour / open-now owner.
+        </p>
+        )}
       </section>
     </PillarLanding>
   );

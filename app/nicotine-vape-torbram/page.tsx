@@ -8,7 +8,9 @@ import {
   NIC_VAPE_PILLAR,
   PILLAR_PATHS,
   pillarUrl,
+  publicNicVapeFaqs,
 } from "../lib/pillarPages";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: NIC_VAPE_PILLAR.title },
@@ -30,7 +32,7 @@ export default function NicotineVapeTorbramPage() {
       kicker={NIC_VAPE_PILLAR.kicker}
       h1={NIC_VAPE_PILLAR.h1}
       lede={NIC_VAPE_PILLAR.lede}
-      faqs={NIC_VAPE_FAQS}
+      faqs={SHOW_CIGARETTES ? NIC_VAPE_FAQS : publicNicVapeFaqs()}
       faqHeading="FAQ: nicotine vape Torbram"
       primaryHref={PILLAR_PATHS.nicVapeMenu}
       primaryLabel="Browse nicotine vapes"
@@ -90,6 +92,7 @@ export default function NicotineVapeTorbramPage() {
           northeast Brampton — not an Airport Road civic number and not a
           second Brampton shop.
         </p>
+        {SHOW_CIGARETTES ? (
         <p>
           For overnight walk-in, use the{" "}
           <Link href={PILLAR_PATHS.hours}>24-hour Torbram FAQ</Link>. Native
@@ -100,6 +103,16 @@ export default function NicotineVapeTorbramPage() {
           Neighbourhood weed-dispensary identity stays on the{" "}
           <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>.
         </p>
+        ) : (
+        <p>
+          For overnight walk-in, use the{" "}
+          <Link href={PILLAR_PATHS.hours}>24-hour Torbram FAQ</Link>.
+          A product-card resource still lives at{" "}
+          <Link href={PILLAR_PATHS.nicVapeInfo}>Nicotine Vapes Brampton</Link>.
+          Neighbourhood weed-dispensary identity stays on the{" "}
+          <Link href={PILLAR_PATHS.weedDispensary}>Torbram weed dispensary page</Link>.
+        </p>
+        )}
       </section>
     </PillarLanding>
   );

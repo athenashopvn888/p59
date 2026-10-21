@@ -9,6 +9,7 @@ import {
   WEED_DISPENSARY_PILLAR,
   pillarUrl,
 } from "../lib/pillarPages";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: { absolute: WEED_DISPENSARY_PILLAR.title },
@@ -81,10 +82,16 @@ export default function WeedDispensaryTorbramPage() {
           hours stay on{" "}
           <Link href={PILLAR_PATHS.delivery}>weed delivery from Torbram</Link>.
         </p>
+        {SHOW_CIGARETTES ? (
         <p>
           Native cigarettes and nicotine vapes keep their own neighbourhood
           pages. Adults 19+ retail only — no medical claims.
         </p>
+        ) : (
+        <p>
+          Nicotine vapes keep their own neighbourhood page. Adults 19+ retail only — no medical claims.
+        </p>
+        )}
       </section>
     </PillarLanding>
   );
