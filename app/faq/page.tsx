@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./faq.module.css";
 import { resolveDocumentTitle } from "../lib/gbp-location";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 export const metadata: Metadata = {
   title: resolveDocumentTitle("FAQ — PLANETS 59 | Brampton Dispensary Questions"),
@@ -68,12 +69,21 @@ const FAQ_CATEGORIES = [
   },
 ];
 
+function visibleFaqCategories() {
+  if (SHOW_CIGARETTES) return FAQ_CATEGORIES;
+  return FAQ_CATEGORIES.map((category) => ({
+    ...category,
+    faqs: category.faqs.filter((faq) => !/cigarette|native smoke/i.test(`${faq.q} ${faq.a}`)),
+  }));
+}
+
 export default function FAQPage() {
+  const categories = visibleFaqCategories();
   // JSON-LD for FAQ page
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQ_CATEGORIES.flatMap((cat) =>
+    mainEntity: categories.flatMap((cat) =>
       cat.faqs.map((faq) => ({
         "@type": "Question",
         name: faq.q,
@@ -109,7 +119,7 @@ export default function FAQPage() {
             Everything you need to know about PLANETS 59 at 8500 Torbram Rd Unit 59 in Brampton.
           </p>
 
-          {FAQ_CATEGORIES.map((cat) => (
+          {categories.map((cat) => (
             <div key={cat.title} className={styles.category}>
               <h2 className={styles.categoryTitle}>{cat.title}</h2>
               {cat.faqs.map((faq) => (

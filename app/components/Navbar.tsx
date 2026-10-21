@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import styles from "./Navbar.module.css";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 
 const FLOWER_LINKS = [
   { href: "/exotic-weed", label: "Exotic Weed" },
@@ -22,7 +23,7 @@ const CATEGORY_LINKS = [
   { href: "/items/magic", label: "Magic Stuff" },
   { href: "/items/cigarettes", label: "Cigarettes" },
   { href: "/items/add-ons", label: "Accessories" },
-];
+].filter((link) => SHOW_CIGARETTES || link.href !== "/items/cigarettes");
 
 const GUIDE_LINKS = [
   { href: "/visit", label: "Visit" },

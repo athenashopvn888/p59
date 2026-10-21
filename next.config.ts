@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 
+// Same rule as app/lib/siteConfig.ts. Default off until the env var is "true".
+const SHOW_CIGARETTES = process.env.NEXT_PUBLIC_SHOW_CIGARETTES === "true";
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -12,7 +15,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [
+    const routes: { source: string; destination: string; permanent: boolean }[] = [
       { source: "/blog", destination: "/resources", permanent: true },
       { source: "/blog/:path*", destination: "/resources", permanent: true },
       { source: "/games", destination: "/resources", permanent: true },
@@ -23,7 +26,6 @@ const nextConfig: NextConfig = {
       { source: "/concentrates", destination: "/items/concentrates", permanent: true },
       { source: "/prerolls", destination: "/items/prerolls", permanent: true },
       { source: "/add-ons", destination: "/items/add-ons", permanent: true },
-      { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
       { source: "/magic", destination: "/items/magic", permanent: true },
       { source: "/exotic", destination: "/exotic-weed", permanent: true },
       { source: "/premium", destination: "/premium-weed", permanent: true },
@@ -36,10 +38,16 @@ const nextConfig: NextConfig = {
       { source: "/info/brampton-weed-dispensary", destination: "/weed-dispensary-brampton", permanent: true },
       { source: "/info/york-weed-dispensary", destination: "/weed-dispensary-brampton", permanent: true },
       { source: "/info/cheap-weed-york", destination: "/info/cheap-weed-brampton", permanent: true },
-      { source: "/info/native-cigarettes-york", destination: "/info/native-cigarettes-brampton", permanent: true },
       { source: "/info/dispensary-near-me-brampton", destination: "/weed-dispensary-brampton", permanent: true },
       { source: "/info/dispensary-near-me-york", destination: "/weed-dispensary-brampton", permanent: true },
     ];
+    if (SHOW_CIGARETTES) {
+      routes.push(
+        { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
+        { source: "/info/native-cigarettes-york", destination: "/info/native-cigarettes-brampton", permanent: true },
+      );
+    }
+    return routes;
   },
 };
 

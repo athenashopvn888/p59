@@ -15,6 +15,7 @@ import PillarHubCards from "./components/PillarHubCards";
 import { PILLAR_PATHS } from "./lib/pillarPages";
 import Papa from "papaparse";
 import { HOME_TITLE } from "./lib/homeDelivery";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import { useLiveFlowers } from "./lib/useLiveMenu";
 import { storeTierRange, tierRangeText } from "./lib/tierPriceRanges";
 
@@ -80,7 +81,7 @@ const EXPLORE_CATEGORIES = [
   { name: "Cigarettes", slug: "native-cigarettes-torbram", banner: "/banners/native-cigarette-offer-20260822.webp" },
   { name: "Magic Stuff", slug: "items/magic", banner: "/banners/09_Magic_Stuff.webp" },
   { name: "Resources", slug: "resources", banner: "/banners/01_welcome_to_planets59.webp" },
-]
+].filter((cat) => SHOW_CIGARETTES || cat.slug !== "native-cigarettes-torbram");
 
 interface Review {
   name: string;
@@ -377,11 +378,11 @@ export default function HomePage({ initialFlowers }: { initialFlowers: Parameter
             <div>
               <p className={styles.identityTag}>Resource Centre</p>
               <h2>Guides for PLANETS 59 shoppers.</h2>
-              <p>Explore Weed flower collections, value-minded shopping, pre-rolls and Native smokes with practical category-by-category guidance.</p>
+              <p>{SHOW_CIGARETTES ? "Explore Weed flower collections, value-minded shopping, pre-rolls and Native smokes with practical category-by-category guidance." : "Explore Weed flower collections, value-minded shopping, and pre-rolls with practical category-by-category guidance."}</p>
             </div>
             <div className={styles.resourceActions}>
               <Link href="/resources">Open Resources</Link>
-              <Link href={PILLAR_PATHS.nativeCig}>Native Cigarettes Torbram</Link>
+              {SHOW_CIGARETTES ? <Link href={PILLAR_PATHS.nativeCig}>Native Cigarettes Torbram</Link> : null}
               <Link href={PILLAR_PATHS.nicVape}>Nicotine Vape Torbram</Link>
               <Link href={PILLAR_PATHS.weedDispensary}>Weed Dispensary Torbram</Link>
             </div>

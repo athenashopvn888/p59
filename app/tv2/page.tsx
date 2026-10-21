@@ -1,6 +1,8 @@
 "use client";
 import { isNicotineItem } from "../tv/flashMessages";
 import { CIGARETTE_FLASH_MESSAGE, isCigaretteFlashWindow } from "../tv/flashMessages";
+import { isHiddenCigaretteProduct } from "../lib/cigaretteGate";
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
 import { useState, useEffect, useCallback, useRef } from "react";
 import styles from "./tv2.module.css";
 import HiringRibbon from "../components/HiringRibbon";
@@ -186,7 +188,7 @@ function VerticalTicker() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [exitIdx, setExitIdx] = useState(-1);
   const [showCigaretteFlash, setShowCigaretteFlash] = useState(() => isCigaretteFlashWindow());
-  const slides = showCigaretteFlash ? [CIGARETTE_FLASH_MESSAGE, ...TICKER_SLIDES] : TICKER_SLIDES;
+  const slides = SHOW_CIGARETTES && showCigaretteFlash ? [CIGARETTE_FLASH_MESSAGE, ...TICKER_SLIDES] : TICKER_SLIDES;
 
   useEffect(() => {
     const update = () => setShowCigaretteFlash(isCigaretteFlashWindow());
@@ -315,8 +317,9 @@ export default function TV2Page() {
           <HiringRibbon hiring={tvHiring} />
           <div className={styles.grid}>
             {CARD_CONFIG.map(card => {
-              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it)));
-              const promo = getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
+              const filtered = items.filter(card.filter).filter(it => !(daytime && isNicotineItem(it))).filter(it => !isHiddenCigaretteProduct(it));
+              const promo = card.id === "CIGARETTES" && !SHOW_CIGARETTES ? undefined : getTv2DaytimePromo(card.id, daytime, promoElapsedMs);
+              if (!SHOW_CIGARETTES && card.id === "CIGARETTES" && filtered.length === 0 && !promo) return null;
 
               if (promo && card.id === "CIGARETTES") {
                 return (
@@ -367,7 +370,7 @@ export default function TV2Page() {
               return (
                 <ItemCard key={card.id} title={card.title} accent={card.accent}
                   items={filtered} hiIdx={highlights[card.id]||0} preset={card.preset}
-                  offerPromo={card.id === "CIGARETTES" ? getCigaretteOfferPromo(daytime, promoElapsedMs) : undefined} />
+                  offerPromo={card.id === "CIGARETTES" && SHOW_CIGARETTES ? getCigaretteOfferPromo(daytime, promoElapsedMs) : undefined} />
               );
             })}
           </div>

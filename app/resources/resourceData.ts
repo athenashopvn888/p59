@@ -1,3 +1,5 @@
+import { SHOW_CIGARETTES } from "../lib/siteConfig";
+
 export interface ResourceCard {
   title: string;
   href: string;
@@ -420,6 +422,37 @@ export const RESOURCE_PAGES: ResourcePage[] = [
     ]
   }
 ];
+
+const CIGARETTE_RESOURCE_HREFS = new Set([
+  "/resources/native-smokes",
+  "/resources/native-smokes/native-cigarettes-guide",
+  "/items/cigarettes",
+  "/native-cigarettes-torbram",
+  "/info/native-cigarettes-brampton",
+]);
+
+function withoutCigaretteMention(text: string): string {
+  return text
+    .replace("accessories, and cigarettes", "and accessories")
+    .replace(", cigarettes,", ",")
+    .replace(", and cigarettes", "")
+    .replace(", or cigarettes", "");
+}
+
+export function presentResourcePage(page: ResourcePage): ResourcePage {
+  if (SHOW_CIGARETTES) return page;
+  return {
+    ...page,
+    description: withoutCigaretteMention(page.description),
+    intro: withoutCigaretteMention(page.intro),
+    cards: page.cards.filter((card) => !CIGARETTE_RESOURCE_HREFS.has(card.href) && !card.href.startsWith("/resources/native-smokes")),
+    sections: page.sections.map((section) => ({
+      ...section,
+      body: withoutCigaretteMention(section.body),
+      extraParagraphs: section.extraParagraphs?.map(withoutCigaretteMention),
+    })),
+  };
+}
 
 export const RESOURCE_HOME = RESOURCE_PAGES[0];
 
