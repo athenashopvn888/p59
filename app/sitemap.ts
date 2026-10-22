@@ -6,6 +6,7 @@ import { SEO_PAGES } from "./lib/seoPages";
 import { RESOURCE_PAGES } from "./resources/resourceData";
 import { STRAIN_GUIDES } from "./lib/strainGuides";
 import { isHiddenCigaretteCategorySlug, isHiddenCigaretteGuide, isHiddenCigaretteProduct, isHiddenResourceSlug, isHiddenSeoSlug } from "./lib/cigaretteGate";
+import { loadFleetArticles } from "./lib/fleet/articles";
 import { SHOW_CIGARETTES } from "./lib/siteConfig";
 
 // Products come from the same loader as /api/tv-data on every request.
@@ -86,5 +87,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const deliveryGuidePages: MetadataRoute.Sitemap = DELIVERY_GUIDE_REGISTRY.filter((guide) => !isHiddenCigaretteGuide(guide)).map((guide) => ({ url: `https://${DELIVERY_GUIDE_STORE.domain}/guides/${guide.slug}`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.75 }));
   const strainGuidePages: MetadataRoute.Sitemap = [`${BASE}/guides`, ...STRAIN_GUIDES.map((guide) => `${BASE}/guides/${guide.slug}`)].map((url) => ({ url, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.7 }));
-  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages];
+  let fleetArticlePages: MetadataRoute.Sitemap = [];
+  try {
+    const loaded = await loadFleetArticles();
+    if (loaded.ok) {
+      const codedSlugs = new Set(RESOURCE_PAGES.map((page) => page.slug));
+      fleetArticlePages = loaded.articles.filter((article) => article.slug && !codedSlugs.has(article.slug)).map((article) => ({
+        url: `${BASE}/articles/${article.slug}`,
+        lastModified: article.publishedAt,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+      }));
+    }
+  } catch {
+    fleetArticlePages = [];
+  }
+  return [...deliveryGuidePages, ...strainGuidePages, ...staticPages, ...tierPages, ...itemPages, ...flowerPages, ...itemDetailPages, ...resourcePages, ...seoPages, ...fleetArticlePages];
 }
