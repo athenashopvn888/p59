@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
+import { hiddenCigaretteRedirects } from "./app/lib/cigaretteRedirects";
 
 // Same rule as app/lib/siteConfig.ts. Default off until the env var is "true".
 const SHOW_CIGARETTES = process.env.NEXT_PUBLIC_SHOW_CIGARETTES === "true";
+
+type ConfigRedirect =
+  | { source: string; destination: string; permanent: true }
+  | { source: string; destination: string; statusCode: 302 };
 
 const nextConfig: NextConfig = {
   images: {
@@ -15,7 +20,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    const routes: { source: string; destination: string; permanent: boolean }[] = [
+    const routes: ConfigRedirect[] = [
       { source: "/blog", destination: "/resources", permanent: true },
       { source: "/blog/:path*", destination: "/resources", permanent: true },
       { source: "/games", destination: "/resources", permanent: true },
@@ -46,6 +51,8 @@ const nextConfig: NextConfig = {
         { source: "/cigarettes", destination: "/items/cigarettes", permanent: true },
         { source: "/info/native-cigarettes-york", destination: "/info/native-cigarettes-brampton", permanent: true },
       );
+    } else {
+      routes.push(...hiddenCigaretteRedirects());
     }
     return routes;
   },
