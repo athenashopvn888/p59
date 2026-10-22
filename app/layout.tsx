@@ -1,12 +1,20 @@
+import CigaretteStateProvider from "./components/CigaretteStateProvider";
+import FleetContentProvider from "./components/FleetContentProvider";
 import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
+import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
+import { getFleetContent } from "./lib/fleetContent";
+import type { Nap } from "./lib/fleet/types";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import { cannabisStoreJsonLd, gbpLocation, jsonLdScript } from "./lib/gbp-location";
 import { HOME_DOC_TITLE } from "./lib/homeDelivery";
 
-export const metadata: Metadata = {
+// Sheet content refreshes about every minute even when the revalidate secret is unset.
+export const revalidate = 60;
+
+const ROOT_METADATA: Metadata = {
   metadataBase: new URL("https://www.planets59.com"),
   title: {
     default: HOME_DOC_TITLE,
@@ -56,16 +64,59 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = cannabisStoreJsonLd();
+export async function generateMetadata(): Promise<Metadata> {
+  const fleet = await getFleetContent();
+  if (!fleet.active) return ROOT_METADATA;
+  const description = fleet.pages.Home?.metaDescription || "";
+  if (!description || description === ROOT_METADATA.description) return ROOT_METADATA;
+  return {
+    ...ROOT_METADATA,
+    description,
+    openGraph: { ...ROOT_METADATA.openGraph, description },
+    twitter: { ...ROOT_METADATA.twitter, description },
+  };
+}
 
-export default function RootLayout({
+function withFleetNap(data: ReturnType<typeof cannabisStoreJsonLd>, nap: Nap) {
+  return {
+    ...data,
+    "@graph": data["@graph"].map((node) => {
+      if (node["@type"] !== "CannabisStore") return node;
+      return {
+        ...node,
+        name: nap.schemaName,
+        alternateName: nap.name,
+        telephone: nap.phoneTel,
+        hasMap: nap.mapsSearchUrl,
+        address: {
+          ...node.address,
+          streetAddress: nap.street,
+          addressLocality: nap.city,
+          addressRegion: nap.province,
+          postalCode: nap.postalCode,
+        },
+        geo: {
+          ...node.geo,
+          latitude: Number(nap.lat),
+          longitude: Number(nap.lng),
+        },
+      };
+    }),
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [cigaretteSnapshot, fleet] = await Promise.all([getCigaretteSnapshot(), getFleetContent()]);
+  const cigarettes = toPublicCigaretteState(cigaretteSnapshot);
+  const jsonLd = fleet.active ? withFleetNap(cannabisStoreJsonLd(), fleet.nap) : cannabisStoreJsonLd();
   return (
     <html lang="en">
       <head>
+        <meta name="fleet-content-version" content={fleet.version} />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Torbram / Airport Road, Brampton" />
         <meta name="geo.position" content="43.7231;-79.69274" />
@@ -98,9 +149,13 @@ export default function RootLayout({
         <Link className="deliveryAnnouncement" href="/weed-delivery-brampton">
           PLANETS 59 WEED DELIVERY — CLICK TO EXPLORE
         </Link>
-        {children}
-        <FullNameNap />
-        <PinnedNavClearance />
+        <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
+          <CigaretteStateProvider value={cigarettes}>
+            {children}
+            <FullNameNap />
+            <PinnedNavClearance />
+          </CigaretteStateProvider>
+        </FleetContentProvider>
       </body>
     </html>
   );

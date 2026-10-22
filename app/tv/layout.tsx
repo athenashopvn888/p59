@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: { absolute: "PLANETS 59 In-Store Flower Display" },
   description: "Operational in-store flower menu display for PLANETS 59.",

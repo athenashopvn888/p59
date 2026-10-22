@@ -4,6 +4,9 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "./contact.module.css";
 import { resolveDocumentTitle } from "../lib/gbp-location";
+import { getFleetContent } from "../lib/fleetContent";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: resolveDocumentTitle("Contact Us — PLANETS 59 | 8500 Torbram Rd Unit 59, Brampton"),
@@ -19,7 +22,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const fleet = await getFleetContent();
+  const street = fleet.active ? fleet.nap.street : "8500 Torbram Rd Unit 59";
+  const cityLine = fleet.active ? fleet.nap.cityLine : "Brampton, ON L6T 5C6";
   return (
     <main className={styles.main}>
       <Navbar />
@@ -41,9 +47,9 @@ export default function ContactPage() {
               <div className={styles.infoIcon}>📍</div>
               <h2 className={styles.infoTitle}>Location</h2>
               <p className={styles.infoText}>
-                8500 Torbram Rd Unit 59
+                {street}
                 <br />
-                Brampton, ON L6T 5C6
+                {cityLine}
                 <br />
                 <span className={styles.infoMuted}>Torbram / Airport Road · Unit 59</span>
               </p>
