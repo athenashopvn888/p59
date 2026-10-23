@@ -100,6 +100,28 @@ export function decideCigaretteSurface(input: {
   return { show: true, reason: "on", wording };
 }
 
+/**
+ * Website flag. The coded switch stays in front of the feed.
+ * A feed error or a missing block stays off, even when that switch is on.
+ * TV does not use this.
+ */
+export function publicWebsiteCigaretteFlag(decision: CigaretteSurfaceDecision, codedOn: boolean): boolean {
+  if (!codedOn) return false;
+  if (decision.reason === "error" || decision.reason === "missing") return false;
+  return decision.show;
+}
+
+/**
+ * TV shelf. Only a usable feed whose TV flag resolves on shows cigarettes.
+ * A feed error or a missing block hides the card and the cigarette items.
+ * A present block, including a last-good snapshot still inside the kit cache
+ * window, follows tvOn. Wraps and pouches are not decided here.
+ */
+export function publicTvCigaretteFlag(decision: CigaretteSurfaceDecision): boolean {
+  if (decision.reason === "error" || decision.reason === "missing") return false;
+  return decision.show;
+}
+
 /** Guide pages follow the master switch (`master`, otherwise `on`), not the web/TV split. */
 export function decideCigaretteGuide(input: {
   cig: unknown;
@@ -134,10 +156,11 @@ export function reconcileSurfaceItems<T extends ShelfItem>(menuItems: T[], liveI
 }
 
 /**
- * TV follows tvOn, and a missing or failed feed leaves the TV board open.
- * A live website feed follows webOn alone. When the feed is missing or errors,
- * the website stays on the coded switch (`codedShow`). An env hard-off still
- * hides both surfaces inside decideCigaretteSurface.
+ * Website show is `codedShow ? feed.web : false`, and false on a feed error
+ * or a missing block. TV follows tvOn. A feed error or a missing block hides
+ * TV. A present block (including a last-good snapshot the kit still serves
+ * inside its cache window) follows tvOn. An env hard-off still hides both
+ * surfaces inside decideCigaretteSurface. Guides stay on their own switch.
  */
 export function snapshotCigaretteSurfaces(input: {
   cig: unknown;
@@ -152,13 +175,23 @@ export function snapshotCigaretteSurfaces(input: {
   wording: CigaretteWording;
 } {
   const items = input.items;
-  const feedMissing = !input.cig || typeof input.cig !== "object" || Array.isArray(input.cig);
-  const webCig = input.errored || feedMissing
-    ? (input.codedShow === true ? { on: true, webOn: true, tvOn: true } : { on: false, webOn: false, tvOn: false })
-    : input.cig;
-  const web = decideCigaretteSurface({ cig: webCig, items, surface: "web", errored: false, envRaw: input.envRaw });
-  const tv = decideCigaretteSurface({ cig: input.cig, items, surface: "tv", errored: input.errored, envRaw: input.envRaw });
+  const webDecision = decideCigaretteSurface({
+    cig: input.cig,
+    items,
+    surface: "web",
+    errored: input.errored,
+    envRaw: input.envRaw,
+  });
+  const tvDecision = decideCigaretteSurface({
+    cig: input.cig,
+    items,
+    surface: "tv",
+    errored: input.errored,
+    envRaw: input.envRaw,
+  });
   const guides = decideCigaretteGuide({ cig: input.cig, items, errored: input.errored, envRaw: input.envRaw });
+  const web = { ...webDecision, show: publicWebsiteCigaretteFlag(webDecision, input.codedShow === true) };
+  const tv = { ...tvDecision, show: publicTvCigaretteFlag(tvDecision) };
   return { web, tv, guides, wording: web.wording };
 }
 

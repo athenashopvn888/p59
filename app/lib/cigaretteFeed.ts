@@ -2,6 +2,7 @@ import { cache } from "react";
 import {
   snapshotCigaretteSurfaces,
   cigarettePublicHeaders,
+  publicWebsiteCigaretteFlag,
   type CigaretteSurfaceDecision,
   type CigaretteWording,
   reconcileSurfaceItems,
@@ -41,7 +42,7 @@ function snapshotFrom(cig: unknown, items: ItemProduct[], live: boolean, errored
   return { ...surfaces, live, items };
 }
 
-/** Live sheet flag. TV reads tvOn. Web reads webOn, and a missing feed stays on the coded website switch. */
+/** Live sheet flag. TV reads tvOn and hides when the feed errors or the block is missing. Web is the coded switch in front of webOn, and stays off on a feed error or a missing block. A last-good cig block still inside the kit cache is not an error. */
 export async function readCigaretteFeed(): Promise<CigaretteSnapshot> {
   if (cigaretteEnvHardOff()) return snapshotFrom(null, [], false, false);
   try {
@@ -61,11 +62,20 @@ export async function readCigaretteFeed(): Promise<CigaretteSnapshot> {
 export const getCigaretteSnapshot = cache(readCigaretteFeed);
 
 export function toPublicCigaretteState(snap: CigaretteSnapshot): PublicCigaretteState {
-  return { web: snap.web.show, tv: snap.tv.show, wording: snap.wording };
+  return {
+    web: publicWebsiteCigaretteFlag(snap.web, SHOW_CIGARETTES),
+    tv: snap.tv.show,
+    wording: snap.wording,
+  };
 }
 
 export function snapshotHeaders(snap: CigaretteSnapshot): Record<string, string> {
-  return cigarettePublicHeaders({ web: snap.web.show, tv: snap.tv.show, wording: snap.wording });
+  const state = toPublicCigaretteState(snap);
+  return cigarettePublicHeaders({
+    web: SHOW_CIGARETTES ? state.web : false,
+    tv: state.tv,
+    wording: state.wording,
+  });
 }
 
 export { reconcileSurfaceItems };
