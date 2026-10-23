@@ -21,7 +21,7 @@ export const CIG_WORDING_FALLBACK: CigaretteWording = {
   bannerText: "2 PACKS $5 / $25 CARTON",
   promoBrands: "BB Full Flavor + Lights 2 packs $5 · Marlboro & Belmont $10/pack",
   tv2BoardTitle: "🚬 CIGARETTES",
-  wrapsTitle: "🚬 WRAPS & POUCHES",
+  wrapsTitle: "🍂 WRAPS & POUCHES",
   tickerLine1: "CIGARETTES 2 PACK $5 MIX MATCH !",
   priceTwoPack: "2 PACKS $5",
   priceCarton: "$25 CARTON",
@@ -131,6 +131,35 @@ export function reconcileSurfaceItems<T extends ShelfItem>(menuItems: T[], liveI
     return Boolean(key) && !seen.has(key) && isRealCigaretteItem(item);
   });
   return extras.length ? [...menuItems, ...extras] : menuItems;
+}
+
+/**
+ * TV follows tvOn, and a missing or failed feed leaves the TV board open.
+ * A live website feed follows webOn alone. When the feed is missing or errors,
+ * the website stays on the coded switch (`codedShow`). An env hard-off still
+ * hides both surfaces inside decideCigaretteSurface.
+ */
+export function snapshotCigaretteSurfaces(input: {
+  cig: unknown;
+  items?: ShelfItem[] | null;
+  errored?: boolean;
+  codedShow?: boolean;
+  envRaw?: string;
+}): {
+  web: CigaretteSurfaceDecision & { wording: CigaretteWording };
+  tv: CigaretteSurfaceDecision & { wording: CigaretteWording };
+  guides: CigaretteSurfaceDecision;
+  wording: CigaretteWording;
+} {
+  const items = input.items;
+  const feedMissing = !input.cig || typeof input.cig !== "object" || Array.isArray(input.cig);
+  const webCig = input.errored || feedMissing
+    ? (input.codedShow === true ? { on: true, webOn: true, tvOn: true } : { on: false, webOn: false, tvOn: false })
+    : input.cig;
+  const web = decideCigaretteSurface({ cig: webCig, items, surface: "web", errored: false, envRaw: input.envRaw });
+  const tv = decideCigaretteSurface({ cig: input.cig, items, surface: "tv", errored: input.errored, envRaw: input.envRaw });
+  const guides = decideCigaretteGuide({ cig: input.cig, items, errored: input.errored, envRaw: input.envRaw });
+  return { web, tv, guides, wording: web.wording };
 }
 
 export function cigarettePublicHeaders(state: { web: boolean; tv: boolean; wording: CigaretteWording }): Record<string, string> {

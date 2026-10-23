@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import type { TvHiringConfig } from "../lib/tvHiring";
 import { TV_POLICY_MESSAGE } from "../lib/tvPolicy";
 import { CIGARETTE_FLASH_MESSAGE, isCigaretteFlashWindow } from "../tv/flashMessages";
-import { SHOW_CIGARETTES } from "../lib/siteConfig";
+import { useCigaretteState } from "./CigaretteStateProvider";
 import styles from "./HiringRibbon.module.css";
 
 const PHASE_CLASS = [styles.phaseHeadline, styles.phaseApply, styles.phaseUrl];
@@ -54,12 +54,22 @@ function fitPolicyLine(node: HTMLSpanElement) {
   node.style.textOverflow = "";
 }
 
-export default function HiringRibbon({ hiring }: { hiring: TvHiringConfig | null }) {
-  const [showCigaretteFlash, setShowCigaretteFlash] = useState(() => SHOW_CIGARETTES && isCigaretteFlashWindow());
+export default function HiringRibbon({
+  hiring,
+  cigarette,
+}: {
+  hiring: TvHiringConfig | null;
+  cigarette?: { show: boolean; line?: string } | null;
+}) {
+  const seeded = useCigaretteState();
+  const show = cigarette ? cigarette.show : seeded.tv;
+  const line = trimmed(cigarette?.line || seeded.wording.tickerLine1) || CIGARETTE_FLASH_MESSAGE;
+  const [flashHour, setFlashHour] = useState(() => isCigaretteFlashWindow());
+  const showCigaretteFlash = show && flashHour && line.length > 0;
   const policy = trimmed(TV_POLICY_MESSAGE);
   const hiringOn = hiring !== null && trimmed(hiring.displayUrl).length > 0;
   const messages = [
-    ...(SHOW_CIGARETTES && showCigaretteFlash ? [CIGARETTE_FLASH_MESSAGE] : []),
+    ...(showCigaretteFlash ? [line] : []),
     ...(hiringOn ? hiringLines(hiring) : []),
     ...(policy ? [policy] : []),
   ];
@@ -73,7 +83,7 @@ export default function HiringRibbon({ hiring }: { hiring: TvHiringConfig | null
   const policyRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const update = () => setShowCigaretteFlash(SHOW_CIGARETTES && isCigaretteFlashWindow());
+    const update = () => setFlashHour(isCigaretteFlashWindow());
     const timer = window.setInterval(update, 60_000);
     return () => window.clearInterval(timer);
   }, []);
