@@ -60,6 +60,7 @@ test("only an explicit false flag, no real items, or the env override hides ciga
 
 test("wording uses the feed and falls back to the current copy field by field", () => {
   assert.equal(resolveCigWording({ bannerText: "  FEED BANNER  ", wrapsTitle: "" }).bannerText, "FEED BANNER");
+  assert.equal(CIG_WORDING_FALLBACK.wrapsTitle, "🍂 WRAPS & POUCHES");
   assert.equal(resolveCigWording({ bannerText: "  FEED BANNER  " }).wrapsTitle, CIG_WORDING_FALLBACK.wrapsTitle);
   assert.equal(resolveCigWording(undefined).tickerLine1, CIG_WORDING_FALLBACK.tickerLine1);
   assert.equal(decideCigaretteSurface({ cig: cig({ webOn: false }), items: [backwoods], surface: "web" }).wording.wrapsTitle, "🍂 WRAPS & POUCHES");

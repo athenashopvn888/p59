@@ -6,6 +6,7 @@ import { beforeEach, test } from "node:test";
 const require = createRequire(import.meta.url);
 const {
   DEFAULT_APPS_SCRIPT_URL,
+  getCigaretteDataset,
   getTvData,
   postprocessFlowers,
   postprocessItems,
@@ -300,4 +301,41 @@ test("prebuild uses the shared post-processor", () => {
   assert.equal(itemsFixed, 1);
   assert.equal(items[0].price, "");
   assert.equal(items[1].price, "$12");
+});
+
+test("cigarette dataset keeps the feed tvOn and webOn flags", async () => {
+  const flowers = list(57, (index) => flower(`FLOWER ${index}`));
+  const items = list(56, (index) => item(`ITEM ${index}`));
+  const cig = { on: true, tvOn: true, webOn: false, master: true, wording: { wrapsTitle: "🍂 WRAPS & POUCHES" } };
+  const { fetchImpl, calls } = mockFetch({
+    flowers,
+    items,
+    stockDate: "2026-10-23T02:34:26.000Z",
+    cig,
+  });
+  const dataset = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    appsScriptUrl: "",
+    now: 5_000,
+  });
+  assert.equal(dataset.source, "live");
+  assert.equal(dataset.cig.tvOn, true);
+  assert.equal(dataset.cig.webOn, false);
+  assert.equal(dataset.cig.wording.wrapsTitle, "🍂 WRAPS & POUCHES");
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].opts.next.revalidate, 60);
+  assert.equal(calls[0].opts.cache, undefined);
+
+  const again = await getCigaretteDataset({
+    staticFlowers,
+    staticItems,
+    fetchImpl,
+    appsScriptUrl: "",
+    now: 35_000,
+  });
+  assert.equal(calls.length, 1);
+  assert.equal(again.cig.tvOn, true);
+  assert.equal(again.cig.webOn, false);
 });
