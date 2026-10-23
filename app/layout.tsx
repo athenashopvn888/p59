@@ -4,6 +4,7 @@ import FullNameNap from "./components/FullNameNap";
 import PinnedNavClearance from "./components/PinnedNavClearance";
 import { getCigaretteSnapshot, toPublicCigaretteState } from "./lib/cigaretteFeed";
 import { getFleetContent } from "./lib/fleetContent";
+import { SHOW_CIGARETTES } from "./lib/siteConfig";
 import type { Nap } from "./lib/fleet/types";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -150,7 +151,7 @@ export default async function RootLayout({
           PLANETS 59 WEED DELIVERY — CLICK TO EXPLORE
         </Link>
         <FleetContentProvider value={{ active: fleet.active, version: fleet.version, nap: fleet.nap }}>
-          <CigaretteStateProvider value={cigarettes}>
+          <CigaretteStateProvider value={{ ...cigarettes, web: SHOW_CIGARETTES ? cigarettes.web : false }}>
             {children}
             <FullNameNap />
             <PinnedNavClearance />

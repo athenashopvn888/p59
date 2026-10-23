@@ -83,7 +83,26 @@ test("the website stays hidden when the TV flag is on", () => {
   assert.equal(forced.tv.show, false);
   const missing = snapshotCigaretteSurfaces({ cig: null, items: [carton], errored: true, codedShow: false });
   assert.equal(missing.web.show, false);
-  assert.equal(missing.tv.show, true);
+  assert.equal(missing.tv.show, false);
+  assert.equal(missing.guides.show, true);
+  const gated = snapshotCigaretteSurfaces({
+    cig: { on: true, webOn: true, tvOn: true },
+    items: [carton, ...kept],
+    codedShow: false,
+  });
+  assert.equal(gated.web.show, false);
+  assert.equal(gated.tv.show, true);
+  const failed = snapshotCigaretteSurfaces({
+    cig: { on: true, webOn: true, tvOn: true },
+    items: [vape, carton, ...kept],
+    codedShow: true,
+    errored: true,
+  });
+  assert.equal(failed.web.show, false);
+  assert.equal(failed.tv.show, false);
+  const hiddenOnError = reconcileSurfaceItems([vape, carton, ...kept], [carton, ...kept], failed.tv.show);
+  assert.equal(hiddenOnError.some((item) => item.slug === carton.slug), false);
+  for (const item of kept) assert.ok(hiddenOnError.some((entry) => entry.slug === item.slug), item.slug);
   for (const file of ["app/HomePage.tsx", "app/sitemap.ts", "app/components/Footer.tsx", "app/faq/page.tsx", "app/components/Navbar.tsx"]) {
     assert.match(readFileSync(new URL(`../${file}`, import.meta.url), "utf8"), /SHOW_CIGARETTES/);
   }
@@ -109,6 +128,13 @@ test("TV boards read the live header and do not build the card list from the cod
   assert.doesNotMatch(route, /SHOW_CIGARETTES|isHiddenCigaretteProduct|type === "cig"/);
   assert.match(feed, /codedShow: SHOW_CIGARETTES/);
   assert.match(feed, /getCigaretteDataset/);
+  assert.match(feed, /publicWebsiteCigaretteFlag\(snap\.web, SHOW_CIGARETTES\)/);
+  assert.match(feed, /SHOW_CIGARETTES \? state\.web : false/);
+  assert.match(readFileSync(new URL("../app/layout.tsx", import.meta.url), "utf8"), /SHOW_CIGARETTES \? cigarettes\.web : false/);
+  assert.match(readFileSync(new URL("../app/api/content-status/route.ts", import.meta.url), "utf8"), /SHOW_CIGARETTES \? cigarettes\.web : false/);
+  assert.match(readFileSync(new URL("../app/components/FleetAnnouncementBanner.tsx", import.meta.url), "utf8"), /SHOW_CIGARETTES \? cigarettes\.web : false/);
+  assert.match(readFileSync(new URL("../app/lib/cigDecision.ts", import.meta.url), "utf8"), /export function publicWebsiteCigaretteFlag/);
+  assert.doesNotMatch(route, /SHOW_CIGARETTES/);
 });
 
 test("tv-data cigarette headers follow the TV flag and the page can read them", () => {
