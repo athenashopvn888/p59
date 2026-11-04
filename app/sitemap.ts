@@ -41,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE}/weed-dispensary-torbram`, lastModified: now, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE}/careers/budtender`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/resources/sugar-leaf-vs-fan-leaf`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/resources/how-fine-to-grind-weed`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const tierPages: MetadataRoute.Sitemap = Object.values(TIER_CONFIG).map((t) => ({
