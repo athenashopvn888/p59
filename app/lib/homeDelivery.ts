@@ -20,5 +20,7 @@ export const HOME_DELIVERY_FAQS = [
   { q: "Can I visit PLANETS 59 instead?", a: "Yes. Use the Visit page for the 8500 Torbram Rd Unit 59 plaza directions." },
 ] as const;
 
-// Document <title> only (exact Google name | area). H1 keeps HOME_TITLE.
+// Root layout default <title>. Other routes inherit this when they do not set one.
+// Homepage document title is HOME_PAGE_TITLE. H1 keeps HOME_TITLE.
 export const HOME_DOC_TITLE = "Planets 59 Dispensary Weed Delivery | Brampton";
+export const HOME_PAGE_TITLE = "Planets 59 Dispensary near me | Weed Delivery | Brampton";
