@@ -72,7 +72,7 @@ export const NIC_VAPE_PILLAR = {
 
 export const WEED_DISPENSARY_PILLAR = {
   path: PILLAR_PATHS.weedDispensary,
-  title: "Weed Dispensary on Torbram | PLANETS 59",
+  title: "Weed Dispensary on Torbram | PLANETS 59 | Dispensary near me",
   h1: "Weed Dispensary at PLANETS 59 on Torbram",
   description:
     "PLANETS 59 is the neighbourhood weed dispensary at 8500 Torbram Rd Unit 59 on the Torbram / Airport Road corridor in northeast Brampton. Adults 19+. Call +1 (289) 536-7493.",
