@@ -26,10 +26,6 @@ export const CIGARETTE_PROMOS = [
 export const TV2_DAYTIME_PROMOS: Readonly<
   Partial<Record<string, Tv2DaytimePromo>>
 > = {
-  CIGARETTES: {
-    src: "/banners/07_planets59_thc_vape.webp",
-    alt: "Planet S59 THC Vape",
-  },
   VAPES: {
     src: "https://pub-eb3e1fe18a43477eabc885cfb791d97c.r2.dev/products/cannabis_banner_mashup_variation_01_600x600.webp",
     fallbackSrc:
